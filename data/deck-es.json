@@ -1,0 +1,18 @@
+{
+  "id": "es-frequentes",
+  "idioma": "es",
+  "titulo": "Espanhol: palavras mais frequentes",
+  "versao": 1,
+  "cartoes": [
+    { "id": "es-freq-0001", "palavra": "hola", "classe": "interjection", "en": "hello, hi", "pt": "olá, oi", "exemplo": "Hola, ¿cómo estás?", "exemploEn": "Hi, how are you?", "exemploPt": "Oi, como você está?" },
+    { "id": "es-freq-0002", "palavra": "gracias", "classe": "interjection", "en": "thank you, thanks", "pt": "obrigado, obrigada", "exemplo": "Muchas gracias por tu ayuda.", "exemploEn": "Thank you very much for your help.", "exemploPt": "Muito obrigado pela sua ajuda." },
+    { "id": "es-freq-0003", "palavra": "pero", "classe": "conjunction", "en": "but", "pt": "mas", "exemplo": "Quiero ir, pero no tengo tiempo.", "exemploEn": "I want to go, but I don't have time.", "exemploPt": "Quero ir, mas não tenho tempo." },
+    { "id": "es-freq-0004", "palavra": "muy", "classe": "adverb", "en": "very", "pt": "muito", "exemplo": "La comida está muy rica.", "exemploEn": "The food is very tasty.", "exemploPt": "A comida está muito gostosa.", "nota": "Use \"muy\" before adjectives and adverbs; \"mucho\" goes with nouns and verbs." },
+    { "id": "es-freq-0005", "palavra": "hacer", "classe": "verb", "en": "to do, to make", "pt": "fazer", "exemplo": "¿Qué vas a hacer mañana?", "exemploEn": "What are you going to do tomorrow?", "exemploPt": "O que você vai fazer amanhã?" },
+    { "id": "es-freq-0006", "palavra": "hoy", "classe": "adverb", "en": "today", "pt": "hoje", "exemplo": "Hoy es lunes.", "exemploEn": "Today is Monday.", "exemploPt": "Hoje é segunda-feira." },
+    { "id": "es-freq-0007", "palavra": "también", "classe": "adverb", "en": "also, too", "pt": "também", "exemplo": "Yo también quiero un café.", "exemploEn": "I want a coffee too.", "exemploPt": "Eu também quero um café." },
+    { "id": "es-freq-0008", "palavra": "trabajo", "classe": "noun", "en": "work, job", "pt": "trabalho", "exemplo": "Tengo mucho trabajo hoy.", "exemploEn": "I have a lot of work today.", "exemploPt": "Tenho muito trabalho hoje." },
+    { "id": "es-freq-0009", "palavra": "niño", "classe": "noun", "en": "child, boy", "pt": "criança, menino", "exemplo": "El niño juega en el parque.", "exemploEn": "The boy plays in the park.", "exemploPt": "O menino brinca no parque." },
+    { "id": "es-freq-0010", "palavra": "largo", "classe": "adjective", "en": "long", "pt": "comprido, longo", "exemplo": "El camino es muy largo.", "exemploEn": "The road is very long.", "exemploPt": "O caminho é muito comprido.", "nota": "False friend: \"largo\" means long, not wide. Portuguese \"largo\" is \"ancho\" in Spanish." }
+  ]
+}
