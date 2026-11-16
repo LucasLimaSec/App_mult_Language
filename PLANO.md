@@ -95,6 +95,8 @@ Objetivo: um esqueleto de app nativo que abre no Android e guarda dados sem inte
 
 Pronto quando: o app abre no seu Android, salva dados em modo avião e você sabe se ouvir e falar funcionam offline nas 3 línguas.
 
+> Situação em 16/11/2026: o app abre no celular (Android 16) e o banco guarda dados entre aberturas, conferido no aparelho. As telas de teste de voz e de áudio existem, mas o teste em modo avião nas 3 línguas ficou pendente por decisão do Lucas; se aparecer erro, vira tarefa de bug.
+
 ```text
 Leia CLAUDE.md e PLANO.md. Implemente a Fase 0. Antes de codar, me mostre a estrutura de pastas e o schema do banco (Drizzle) para eu aprovar.
 ```
