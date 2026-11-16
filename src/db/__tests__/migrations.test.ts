@@ -20,13 +20,13 @@ function criarBanco(): DatabaseSync {
   return banco;
 }
 
-function inserirCard(banco: DatabaseSync, conteudoId: string | null): number {
+function inserirCard(banco: DatabaseSync, conteudoId: string, direcao = 'reconhecimento'): number {
   const resultado = banco
     .prepare(
-      `INSERT INTO cards (idioma, frente, verso, origem, conteudo_id, due, criado_em)
-       VALUES ('es', 'casa', 'casa', 'deck', ?, 0, 0)`,
+      `INSERT INTO cards (idioma, frente, direcao, verso_en, verso_pt, origem, conteudo_id, due, criado_em)
+       VALUES ('es', 'trabajo', ?, 'work, job', 'trabalho', 'deck', ?, 0, 0)`,
     )
-    .run(conteudoId);
+    .run(direcao, conteudoId);
   return Number(resultado.lastInsertRowid);
 }
 
@@ -48,13 +48,11 @@ describe('migrations', () => {
     expect(card).toMatchObject({ state: 0, reps: 0, lapses: 0, stability: 0, suspenso: 0 });
   });
 
-  it('não deixa importar o mesmo conteúdo duas vezes', () => {
+  it('aceita um cartão por direção e recusa repetir a mesma palavra na mesma direção', () => {
     const banco = criarBanco();
-    inserirCard(banco, 'es-0001');
-    expect(() => inserirCard(banco, 'es-0001')).toThrow(/UNIQUE/);
-    // Cartões manuais não têm conteudo_id e podem se repetir.
-    inserirCard(banco, null);
-    inserirCard(banco, null);
+    inserirCard(banco, 'es-0001', 'reconhecimento');
+    inserirCard(banco, 'es-0001', 'producao');
+    expect(() => inserirCard(banco, 'es-0001', 'producao')).toThrow(/UNIQUE/);
   });
 
   it('apaga as revisões junto com o cartão', () => {
@@ -62,7 +60,7 @@ describe('migrations', () => {
     const id = inserirCard(banco, 'es-0001');
     banco
       .prepare(
-        `INSERT INTO reviews (card_id, rating, state, due, stability, difficulty, elapsed_days, scheduled_days, revisado_em)
+        `INSERT INTO reviews (card_id, rating, state, due, stability, difficulty, scheduled_days, learning_steps, revisado_em)
          VALUES (?, 3, 0, 0, 1.5, 5.0, 0, 1, 0)`,
       )
       .run(id);
@@ -75,7 +73,7 @@ describe('migrations', () => {
     expect(() =>
       banco
         .prepare(
-          `INSERT INTO reviews (card_id, rating, state, due, stability, difficulty, elapsed_days, scheduled_days, revisado_em)
+          `INSERT INTO reviews (card_id, rating, state, due, stability, difficulty, scheduled_days, learning_steps, revisado_em)
            VALUES (999, 3, 0, 0, 1.5, 5.0, 0, 1, 0)`,
         )
         .run(),

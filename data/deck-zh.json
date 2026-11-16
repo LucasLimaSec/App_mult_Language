@@ -2,17 +2,16 @@
   "id": "zh-hsk1",
   "idioma": "zh",
   "titulo": "Chinês: HSK 1 (padrão HSK 3.0)",
-  "versao": 1,
   "cartoes": [
-    { "id": "zh-hsk1-0001", "palavra": "你好", "pinyin": "nǐ hǎo", "classe": "interjection", "en": "hello", "pt": "olá" },
-    { "id": "zh-hsk1-0002", "palavra": "谢谢", "pinyin": "xièxie", "classe": "verb", "en": "thank you; to thank", "pt": "obrigado; agradecer" },
-    { "id": "zh-hsk1-0003", "palavra": "我", "pinyin": "wǒ", "classe": "pronoun", "en": "I, me", "pt": "eu" },
-    { "id": "zh-hsk1-0004", "palavra": "是", "pinyin": "shì", "classe": "verb", "en": "to be", "pt": "ser" },
-    { "id": "zh-hsk1-0005", "palavra": "不", "pinyin": "bù", "classe": "adverb", "en": "not, no", "pt": "não" },
-    { "id": "zh-hsk1-0006", "palavra": "人", "pinyin": "rén", "classe": "noun", "en": "person, people", "pt": "pessoa" },
-    { "id": "zh-hsk1-0007", "palavra": "学习", "pinyin": "xuéxí", "classe": "verb", "en": "to study, to learn", "pt": "estudar, aprender" },
-    { "id": "zh-hsk1-0008", "palavra": "朋友", "pinyin": "péngyou", "classe": "noun", "en": "friend", "pt": "amigo, amiga" },
-    { "id": "zh-hsk1-0009", "palavra": "今天", "pinyin": "jīntiān", "classe": "noun", "en": "today", "pt": "hoje" },
-    { "id": "zh-hsk1-0010", "palavra": "喝", "pinyin": "hē", "classe": "verb", "en": "to drink", "pt": "beber" }
+    {"id": "zh-hsk1-0001", "palavra": "你好", "pinyin": "nǐ hǎo", "classe": "interjection", "en": "hello", "pt": "olá"},
+    {"id": "zh-hsk1-0002", "palavra": "谢谢", "pinyin": "xiè xie", "classe": "verb", "en": "thank you; to thank", "pt": "obrigado; agradecer"},
+    {"id": "zh-hsk1-0003", "palavra": "我", "pinyin": "wǒ", "classe": "pronoun", "en": "I, me", "pt": "eu"},
+    {"id": "zh-hsk1-0004", "palavra": "是", "pinyin": "shì", "classe": "verb", "en": "to be", "pt": "ser"},
+    {"id": "zh-hsk1-0005", "palavra": "不", "pinyin": "bù", "classe": "adverb", "en": "not, no", "pt": "não"},
+    {"id": "zh-hsk1-0006", "palavra": "人", "pinyin": "rén", "classe": "noun", "en": "person, people", "pt": "pessoa"},
+    {"id": "zh-hsk1-0007", "palavra": "学习", "pinyin": "xué xí", "classe": "verb", "en": "to study, to learn", "pt": "estudar, aprender"},
+    {"id": "zh-hsk1-0008", "palavra": "朋友", "pinyin": "péng you", "classe": "noun", "en": "friend", "pt": "amigo, amiga"},
+    {"id": "zh-hsk1-0009", "palavra": "今天", "pinyin": "jīn tiān", "classe": "noun", "en": "today", "pt": "hoje"},
+    {"id": "zh-hsk1-0010", "palavra": "喝", "pinyin": "hē", "classe": "verb", "en": "to drink", "pt": "beber"}
   ]
 }

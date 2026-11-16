@@ -41,3 +41,6 @@ example
 # generated native folders
 /ios
 /android
+
+# downloads usados pelos scripts de geração de conteúdo
+.cache/

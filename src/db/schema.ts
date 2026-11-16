@@ -1,8 +1,16 @@
-import { index, integer, real, sqliteTable, text } from 'drizzle-orm/sqlite-core';
+import { index, integer, real, sqliteTable, text, uniqueIndex } from 'drizzle-orm/sqlite-core';
 
 import { CODIGOS_IDIOMA } from '../voz/idiomas';
 
-/** Flashcards. Guarda o conteúdo do cartão e o estado do FSRS (ts-fsrs). */
+export const DIRECOES = ['reconhecimento', 'producao'] as const;
+
+/**
+ * Flashcards. Guarda o conteúdo do cartão e o estado do FSRS (ts-fsrs).
+ *
+ * Cada palavra vira dois cartões com o mesmo conteúdo e o mesmo `conteudoId`:
+ * um de reconhecimento (vê a palavra, lembra o significado) e um de produção
+ * (vê o significado, lembra a palavra). Cada um tem a própria agenda.
+ */
 export const cards = sqliteTable(
   'cards',
   {
@@ -10,22 +18,31 @@ export const cards = sqliteTable(
     idioma: text('idioma', { enum: CODIGOS_IDIOMA }).notNull(),
     /** Palavra ou caractere. */
     frente: text('frente').notNull(),
-    /** Tradução ou significado. */
-    verso: text('verso').notNull(),
-    /** Só no chinês. */
+    direcao: text('direcao', { enum: DIRECOES }).notNull(),
+    /** Significado em inglês e em português; pelo menos um dos dois é preenchido. */
+    versoEn: text('verso_en'),
+    versoPt: text('verso_pt'),
+    /** Classe gramatical, em inglês (noun, verb...). */
+    classe: text('classe'),
+    /** Só no chinês: sílabas com acento de tom separadas por espaço ("xué xí"). */
     pinyin: text('pinyin'),
     exemplo: text('exemplo'),
-    exemploTraducao: text('exemplo_traducao'),
+    exemploEn: text('exemplo_en'),
+    exemploPt: text('exemplo_pt'),
+    /** Observação curta em inglês, por exemplo um falso amigo. */
+    nota: text('nota'),
     origem: text('origem', { enum: ['deck', 'licao', 'manual'] }).notNull(),
-    /** Id do item em /data; evita duplicar o cartão ao reimportar o conteúdo. */
-    conteudoId: text('conteudo_id').unique(),
+    /**
+     * Id da palavra: o id do item em /data ou um id gerado para palavras manuais.
+     * Liga os dois cartões da mesma palavra e evita duplicar ao reimportar o deck.
+     */
+    conteudoId: text('conteudo_id').notNull(),
     licaoId: text('licao_id'),
 
     // Estado do FSRS
     due: integer('due', { mode: 'timestamp' }).notNull(),
     stability: real('stability').notNull().default(0),
     difficulty: real('difficulty').notNull().default(0),
-    elapsedDays: integer('elapsed_days').notNull().default(0),
     scheduledDays: integer('scheduled_days').notNull().default(0),
     learningSteps: integer('learning_steps').notNull().default(0),
     reps: integer('reps').notNull().default(0),
@@ -37,7 +54,10 @@ export const cards = sqliteTable(
     suspenso: integer('suspenso', { mode: 'boolean' }).notNull().default(false),
     criadoEm: integer('criado_em', { mode: 'timestamp' }).notNull(),
   },
-  (t) => [index('cards_idioma_due_idx').on(t.idioma, t.due)],
+  (t) => [
+    uniqueIndex('cards_conteudo_direcao_idx').on(t.conteudoId, t.direcao),
+    index('cards_idioma_due_idx').on(t.idioma, t.due),
+  ],
 );
 
 /** Histórico de revisões: uma linha por resposta dada a um cartão. */
@@ -55,12 +75,12 @@ export const reviews = sqliteTable(
     due: integer('due', { mode: 'timestamp' }).notNull(),
     stability: real('stability').notNull(),
     difficulty: real('difficulty').notNull(),
-    elapsedDays: integer('elapsed_days').notNull(),
     scheduledDays: integer('scheduled_days').notNull(),
+    learningSteps: integer('learning_steps').notNull().default(0),
     duracaoMs: integer('duracao_ms'),
     revisadoEm: integer('revisado_em', { mode: 'timestamp' }).notNull(),
   },
-  (t) => [index('reviews_card_idx').on(t.cardId)],
+  (t) => [index('reviews_card_idx').on(t.cardId), index('reviews_revisado_idx').on(t.revisadoEm)],
 );
 
 /** Progresso nas lições. O conteúdo da lição fica em /data, não no banco. */
@@ -104,6 +124,7 @@ export const settings = sqliteTable('settings', {
   valor: text('valor').notNull(),
 });
 
+export type Direcao = (typeof DIRECOES)[number];
 export type Card = typeof cards.$inferSelect;
 export type NovoCard = typeof cards.$inferInsert;
 export type Review = typeof reviews.$inferSelect;
