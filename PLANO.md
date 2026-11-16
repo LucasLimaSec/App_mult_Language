@@ -89,7 +89,7 @@ Objetivo: um esqueleto de app nativo que abre no Android e guarda dados sem inte
 - [x] Criar o projeto Expo (TypeScript, Expo Router, NativeWind) e o repositório no GitHub
 - [x] Criar o banco local com expo-sqlite + Drizzle (tabelas: cards, reviews, lessons, sessions, settings)
 - [x] Criar o arquivo de interruptores `src/config/features.ts` com `iaAtiva: false`; telas de IA ficam escondidas
-- [ ] Criar um development build (APK) com EAS e instalar direto no celular: a biblioteca de voz usa código nativo e não roda no Expo Go
+- [x] Criar um development build (APK) com EAS e instalar direto no celular: a biblioteca de voz usa código nativo e não roda no Expo Go
 - [ ] Tela de teste de voz: verificar se os modelos offline de inglês, espanhol e chinês estão instalados, pedir o download e testar em modo avião
 - [ ] Tela de teste de áudio: a voz do sistema lê uma frase em cada língua
 
