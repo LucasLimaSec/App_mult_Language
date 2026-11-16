@@ -30,11 +30,10 @@ export default function Inicio() {
         ))}
       </Cartao>
 
-      <Cartao titulo="Fundação pronta">
+      <Cartao titulo="Por onde começar">
         <Paragrafo>
-          Os flashcards, as lições e a prática de fala chegam nas próximas fases. Por enquanto, use
-          a aba Ajustes para testar o banco de dados, o áudio e o reconhecimento de voz no seu
-          celular.
+          Abra a aba Cartões para revisar o vocabulário de espanhol e de chinês. As lições e a
+          prática de fala chegam nas próximas fases.
         </Paragrafo>
       </Cartao>
     </Tela>
