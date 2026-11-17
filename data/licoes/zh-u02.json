@@ -1,0 +1,681 @@
+{
+  "id": "zh-u02",
+  "idioma": "zh",
+  "titulo": "Hello, my name is...",
+  "licoes": [
+    {
+      "id": "zh-u02-l01",
+      "titulo": "Hello and goodbye",
+      "explicacao": [
+        {
+          "tipo": "texto",
+          "texto": "你好 nǐ hǎo is the basic greeting. To greet a group, say 你们好. To greet someone politely, such as an older person or a customer, say 您好 nín hǎo."
+        },
+        {
+          "tipo": "tabela",
+          "cabecalho": [
+            "Chinese",
+            "Pinyin",
+            "Meaning"
+          ],
+          "linhas": [
+            [
+              "你好",
+              "nǐ hǎo",
+              "hello"
+            ],
+            [
+              "您好",
+              "nín hǎo",
+              "hello (polite)"
+            ],
+            [
+              "你们好",
+              "nǐ men hǎo",
+              "hello, everyone"
+            ],
+            [
+              "早上好",
+              "zǎo shang hǎo",
+              "good morning"
+            ],
+            [
+              "晚上好",
+              "wǎn shang hǎo",
+              "good evening"
+            ],
+            [
+              "再见",
+              "zài jiàn",
+              "goodbye"
+            ],
+            [
+              "明天见",
+              "míng tiān jiàn",
+              "see you tomorrow"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Close friends rarely say 你好 to each other: they just say the name. As a learner, 你好 is always fine."
+        },
+        {
+          "tipo": "tabela",
+          "cabecalho": [
+            "Chinese",
+            "Pinyin",
+            "Meaning"
+          ],
+          "linhas": [
+            [
+              "谢谢",
+              "xiè xie",
+              "thank you"
+            ],
+            [
+              "不客气",
+              "bú kè qi",
+              "you're welcome"
+            ],
+            [
+              "对不起",
+              "duì bu qǐ",
+              "sorry"
+            ],
+            [
+              "没关系",
+              "méi guān xi",
+              "it's OK, never mind"
+            ]
+          ]
+        },
+        {
+          "tipo": "dica",
+          "texto": "您 nín, the polite \"you\", has 心 (heart) at the bottom: an easy way to remember that it shows respect."
+        }
+      ],
+      "exemplos": [
+        {
+          "frase": "你好！",
+          "pinyin": "nǐ hǎo",
+          "en": "Hello!",
+          "pt": "Olá!"
+        },
+        {
+          "frase": "老师好！",
+          "pinyin": "lǎo shī hǎo",
+          "en": "Hello, teacher!",
+          "pt": "Bom dia, professor!"
+        },
+        {
+          "frase": "谢谢你。",
+          "pinyin": "xiè xie nǐ",
+          "en": "Thank you.",
+          "pt": "Obrigado."
+        },
+        {
+          "frase": "不客气。",
+          "pinyin": "bú kè qi",
+          "en": "You're welcome.",
+          "pt": "De nada."
+        },
+        {
+          "frase": "明天见！",
+          "pinyin": "míng tiān jiàn",
+          "en": "See you tomorrow!",
+          "pt": "Até amanhã!"
+        }
+      ],
+      "palavras": [
+        {
+          "palavra": "您好",
+          "pinyin": "nín hǎo",
+          "classe": "phrase",
+          "en": "hello (polite)",
+          "pt": "olá (formal)"
+        },
+        {
+          "palavra": "你们好",
+          "pinyin": "nǐ men hǎo",
+          "classe": "phrase",
+          "en": "hello, everyone",
+          "pt": "olá, pessoal"
+        },
+        {
+          "palavra": "早上好",
+          "pinyin": "zǎo shang hǎo",
+          "classe": "phrase",
+          "en": "good morning",
+          "pt": "bom dia"
+        },
+        {
+          "palavra": "晚上好",
+          "pinyin": "wǎn shang hǎo",
+          "classe": "phrase",
+          "en": "good evening",
+          "pt": "boa noite"
+        },
+        {
+          "palavra": "明天见",
+          "pinyin": "míng tiān jiàn",
+          "classe": "phrase",
+          "en": "see you tomorrow",
+          "pt": "até amanhã"
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "escolha",
+          "pergunta": "How do you greet your teacher politely?",
+          "opcoes": [
+            "您好 nín hǎo",
+            "你们好 nǐ men hǎo",
+            "再见 zài jiàn",
+            "谢谢 xiè xie"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "ouvir",
+          "audio": "再见",
+          "pergunta": "What did you hear?",
+          "opcoes": [
+            "goodbye",
+            "hello",
+            "thank you",
+            "sorry"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "Someone says 谢谢. You answer:",
+          "opcoes": [
+            "不客气 bú kè qi",
+            "没关系 méi guān xi",
+            "再见 zài jiàn",
+            "对不起 duì bu qǐ"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "Someone says 对不起. You answer:",
+          "opcoes": [
+            "没关系 méi guān xi",
+            "不客气 bú kè qi",
+            "你好 nǐ hǎo",
+            "谢谢 xiè xie"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "montar",
+          "traducao": "See you tomorrow!",
+          "blocos": [
+            "明天",
+            "见"
+          ],
+          "extras": [
+            "再",
+            "好"
+          ],
+          "pinyin": "míng tiān jiàn"
+        },
+        {
+          "tipo": "ditado",
+          "frase": "你好",
+          "resposta": "nǐ hǎo",
+          "aceitas": [
+            "ní hǎo"
+          ],
+          "traducao": "hello",
+          "explicacao": "Write the dictionary tones: ni3 hao3. The spoken form ni2 hao3 is also accepted."
+        },
+        {
+          "tipo": "ouvir",
+          "audio": "早上好",
+          "pergunta": "What did you hear?",
+          "opcoes": [
+            "good morning",
+            "good evening",
+            "goodbye",
+            "see you tomorrow"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "falar",
+          "frase": "老师好！",
+          "pinyin": "lǎo shī hǎo",
+          "traducao": "Hello, teacher!"
+        }
+      ]
+    },
+    {
+      "id": "zh-u02-l02",
+      "titulo": "What's your name?",
+      "explicacao": [
+        {
+          "tipo": "texto",
+          "texto": "To ask a name, say 你叫什么名字？nǐ jiào shén me míng zi? Word by word: you / are called / what / name."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Answer with 我叫... wǒ jiào... (I am called...). In Chinese the question word stays in the place of the answer: 你叫什么？→ 我叫李明。"
+        },
+        {
+          "tipo": "tabela",
+          "cabecalho": [
+            "Chinese",
+            "Pinyin",
+            "Meaning"
+          ],
+          "linhas": [
+            [
+              "你叫什么名字？",
+              "nǐ jiào shén me míng zi",
+              "What's your name?"
+            ],
+            [
+              "我叫李明。",
+              "wǒ jiào Lǐ Míng",
+              "My name is Li Ming."
+            ],
+            [
+              "您贵姓？",
+              "nín guì xìng",
+              "What is your surname? (polite)"
+            ],
+            [
+              "我姓李。",
+              "wǒ xìng Lǐ",
+              "My surname is Li."
+            ]
+          ]
+        },
+        {
+          "tipo": "dica",
+          "texto": "Chinese names put the surname first: in 李明, 李 Lǐ is the family name and 明 Míng is the given name."
+        },
+        {
+          "tipo": "texto",
+          "texto": "呢 ne turns the question back to the other person: 我叫Lucas，你呢？ (My name is Lucas, and you?)"
+        },
+        {
+          "tipo": "dica",
+          "texto": "Chinese verbs never change form: 我叫, 你叫 and 他叫 all use the same 叫."
+        }
+      ],
+      "exemplos": [
+        {
+          "frase": "你叫什么名字？",
+          "pinyin": "nǐ jiào shén me míng zi",
+          "en": "What's your name?",
+          "pt": "Como você se chama?"
+        },
+        {
+          "frase": "我叫李明。",
+          "pinyin": "wǒ jiào Lǐ Míng",
+          "en": "My name is Li Ming.",
+          "pt": "Eu me chamo Li Ming."
+        },
+        {
+          "frase": "我叫安娜，你呢？",
+          "pinyin": "wǒ jiào Ān nà nǐ ne",
+          "en": "I'm Ana, and you?",
+          "pt": "Eu sou a Ana, e você?"
+        },
+        {
+          "frase": "她叫什么名字？",
+          "pinyin": "tā jiào shén me míng zi",
+          "en": "What's her name?",
+          "pt": "Como ela se chama?"
+        },
+        {
+          "frase": "认识你很高兴。",
+          "pinyin": "rèn shi nǐ hěn gāo xìng",
+          "en": "Nice to meet you.",
+          "pt": "Prazer em conhecer você."
+        }
+      ],
+      "palavras": [
+        {
+          "palavra": "姓",
+          "pinyin": "xìng",
+          "classe": "verb",
+          "en": "to be surnamed; surname",
+          "pt": "ter o sobrenome; sobrenome"
+        },
+        {
+          "palavra": "贵姓",
+          "pinyin": "guì xìng",
+          "classe": "phrase",
+          "en": "your surname (polite)",
+          "pt": "seu sobrenome (formal)"
+        },
+        {
+          "palavra": "认识你很高兴",
+          "pinyin": "rèn shi nǐ hěn gāo xìng",
+          "classe": "phrase",
+          "en": "nice to meet you",
+          "pt": "prazer em conhecer você"
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "escolha",
+          "pergunta": "How do you ask a friend's name?",
+          "opcoes": [
+            "你叫什么名字？",
+            "你是谁名字？",
+            "什么你叫名字？",
+            "你名字叫吗？"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "In 李明, which part is the surname?",
+          "opcoes": [
+            "李 Lǐ",
+            "明 Míng",
+            "both",
+            "neither"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "montar",
+          "traducao": "My name is Li Ming.",
+          "blocos": [
+            "我",
+            "叫",
+            "李明"
+          ],
+          "extras": [
+            "是",
+            "你"
+          ],
+          "pinyin": "wǒ jiào Lǐ Míng"
+        },
+        {
+          "tipo": "ouvir",
+          "audio": "你呢？",
+          "pergunta": "What did you hear?",
+          "opcoes": [
+            "And you?",
+            "Who are you?",
+            "Hello!",
+            "What's your name?"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "What does 呢 do in 我叫Lucas，你呢？",
+          "opcoes": [
+            "asks the same question back",
+            "makes the sentence negative",
+            "means \"name\"",
+            "says goodbye"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "ditado",
+          "frase": "名字",
+          "resposta": "míng zi",
+          "traducao": "name",
+          "explicacao": "The second syllable has a neutral tone: ming2 zi."
+        },
+        {
+          "tipo": "montar",
+          "traducao": "What's her name?",
+          "blocos": [
+            "她",
+            "叫",
+            "什么",
+            "名字"
+          ],
+          "extras": [
+            "吗",
+            "你"
+          ],
+          "pinyin": "tā jiào shén me míng zi"
+        },
+        {
+          "tipo": "falar",
+          "frase": "认识你很高兴。",
+          "pinyin": "rèn shi nǐ hěn gāo xìng",
+          "traducao": "Nice to meet you."
+        }
+      ]
+    },
+    {
+      "id": "zh-u02-l03",
+      "titulo": "Are you Chinese?",
+      "explicacao": [
+        {
+          "tipo": "texto",
+          "texto": "是 shì links two nouns: 我是学生 (I am a student). It is not used with adjectives: \"I am tired\" is 我很累, not 我是累."
+        },
+        {
+          "tipo": "texto",
+          "texto": "To turn a sentence into a yes-no question, add 吗 ma at the end: 你是学生吗？ (Are you a student?) Chinese has no single word for \"yes\": answer with 是 or 不是."
+        },
+        {
+          "tipo": "tabela",
+          "cabecalho": [
+            "Chinese",
+            "Pinyin",
+            "Meaning"
+          ],
+          "linhas": [
+            [
+              "中国人",
+              "Zhōng guó rén",
+              "Chinese (person)"
+            ],
+            [
+              "巴西人",
+              "Bā xī rén",
+              "Brazilian"
+            ],
+            [
+              "美国人",
+              "Měi guó rén",
+              "American"
+            ],
+            [
+              "墨西哥人",
+              "Mò xī gē rén",
+              "Mexican"
+            ],
+            [
+              "日本人",
+              "Rì běn rén",
+              "Japanese"
+            ]
+          ]
+        },
+        {
+          "tipo": "dica",
+          "texto": "Nationality = country + 人 rén (person): 巴西 Brazil → 巴西人 Brazilian."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Negate 是 with 不: 我不是老师. Remember the tone change: 不是 is said bú shì."
+        },
+        {
+          "tipo": "texto",
+          "texto": "To ask someone's nationality: 你是哪国人？ nǐ shì nǎ guó rén? (Literally: you are which-country person?)"
+        }
+      ],
+      "exemplos": [
+        {
+          "frase": "我是巴西人。",
+          "pinyin": "wǒ shì Bā xī rén",
+          "en": "I'm Brazilian.",
+          "pt": "Sou brasileiro."
+        },
+        {
+          "frase": "你是中国人吗？",
+          "pinyin": "nǐ shì Zhōng guó rén ma",
+          "en": "Are you Chinese?",
+          "pt": "Você é chinês?"
+        },
+        {
+          "frase": "不是，我是美国人。",
+          "pinyin": "bú shì wǒ shì Měi guó rén",
+          "en": "No, I'm American.",
+          "pt": "Não, sou americano."
+        },
+        {
+          "frase": "你是哪国人？",
+          "pinyin": "nǐ shì nǎ guó rén",
+          "en": "Where are you from?",
+          "pt": "De que país você é?"
+        },
+        {
+          "frase": "他是老师，我是学生。",
+          "pinyin": "tā shì lǎo shī wǒ shì xué sheng",
+          "en": "He's a teacher, I'm a student.",
+          "pt": "Ele é professor, eu sou aluno."
+        }
+      ],
+      "palavras": [
+        {
+          "palavra": "巴西",
+          "pinyin": "Bā xī",
+          "classe": "noun",
+          "en": "Brazil",
+          "pt": "Brasil"
+        },
+        {
+          "palavra": "中国人",
+          "pinyin": "Zhōng guó rén",
+          "classe": "noun",
+          "en": "Chinese (person)",
+          "pt": "chinês (pessoa)"
+        },
+        {
+          "palavra": "美国",
+          "pinyin": "Měi guó",
+          "classe": "noun",
+          "en": "United States",
+          "pt": "Estados Unidos"
+        },
+        {
+          "palavra": "墨西哥",
+          "pinyin": "Mò xī gē",
+          "classe": "noun",
+          "en": "Mexico",
+          "pt": "México"
+        },
+        {
+          "palavra": "日本",
+          "pinyin": "Rì běn",
+          "classe": "noun",
+          "en": "Japan",
+          "pt": "Japão"
+        },
+        {
+          "palavra": "哪国人",
+          "pinyin": "nǎ guó rén",
+          "classe": "phrase",
+          "en": "what nationality?",
+          "pt": "de que nacionalidade?"
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "escolha",
+          "pergunta": "Turn into a question: 你是学生",
+          "opcoes": [
+            "你是学生吗？",
+            "吗你是学生？",
+            "你吗是学生？",
+            "你是吗学生？"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "Answer 你是中国人吗？ with \"no\":",
+          "opcoes": [
+            "不是。",
+            "没是。",
+            "不吗。",
+            "没有。"
+          ],
+          "correta": 0,
+          "explicacao": "Answer by repeating the verb: 是 or 不是."
+        },
+        {
+          "tipo": "ouvir",
+          "audio": "我是巴西人。",
+          "pergunta": "What did you hear?",
+          "opcoes": [
+            "I'm Brazilian.",
+            "I'm Chinese.",
+            "I'm American.",
+            "I'm Mexican."
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "montar",
+          "traducao": "I'm not a teacher.",
+          "blocos": [
+            "我",
+            "不",
+            "是",
+            "老师"
+          ],
+          "extras": [
+            "没",
+            "吗"
+          ],
+          "pinyin": "wǒ bú shì lǎo shī"
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "How do you ask someone's nationality?",
+          "opcoes": [
+            "你是哪国人？",
+            "你是国人吗？",
+            "哪你是国人？",
+            "你国人是哪？"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "ditado",
+          "frase": "中国",
+          "resposta": "Zhōng guó",
+          "traducao": "China"
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "Which sentence is wrong?",
+          "opcoes": [
+            "我是累。",
+            "我是学生。",
+            "他是老师。",
+            "她是中国人。"
+          ],
+          "correta": 0,
+          "explicacao": "是 does not go with adjectives: say 我很累 (I am tired)."
+        },
+        {
+          "tipo": "falar",
+          "frase": "我是巴西人，你呢？",
+          "pinyin": "wǒ shì Bā xī rén nǐ ne",
+          "traducao": "I'm Brazilian, and you?"
+        }
+      ]
+    }
+  ]
+}

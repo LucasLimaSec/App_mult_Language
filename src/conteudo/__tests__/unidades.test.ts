@@ -37,7 +37,7 @@ describe('currículo e unidades escritas', () => {
   it('acha unidades e lições pelo id', () => {
     expect(unidadeDoCurriculo('zh-u17')?.titulo).toBe('Comparisons');
     expect(buscarLicao('es-u01-l02')).toMatchObject({ indice: 1, licao: { titulo: "What's your name?" } });
-    expect(buscarLicao('es-u02-l01')).toBeUndefined();
+    expect(buscarLicao('es-u30-l01')).toBeUndefined();
     expect(buscarLicao('es-u01-l09')).toBeUndefined();
   });
 

@@ -7,6 +7,7 @@ import {
   conferirMontar,
   embaralhar,
   normalizarTexto,
+  numeroParaChines,
   semAcentos,
 } from '../conferir';
 
@@ -137,5 +138,26 @@ describe('embaralhar', () => {
     expect([...resultado].sort()).toEqual(lista);
     expect(lista).toEqual([1, 2, 3, 4]);
     expect(resultado).not.toEqual(lista);
+  });
+});
+
+describe('numeroParaChines', () => {
+  it('escreve números como se fala em chinês', () => {
+    expect(numeroParaChines(0)).toBe('零');
+    expect(numeroParaChines(7)).toBe('七');
+    expect(numeroParaChines(10)).toBe('十');
+    expect(numeroParaChines(15)).toBe('十五');
+    expect(numeroParaChines(20)).toBe('二十');
+    expect(numeroParaChines(35)).toBe('三十五');
+    expect(numeroParaChines(99)).toBe('九十九');
+    expect(numeroParaChines(100)).toBe('一百');
+    expect(numeroParaChines(108)).toBe('一百零八');
+    expect(numeroParaChines(110)).toBe('一百一十');
+    expect(numeroParaChines(2026)).toBe('二千零二十六');
+  });
+
+  it('a fala em chinês aceita números em algarismos', () => {
+    expect(conferirFala('25，35，45', '二十五，三十五，四十五。', 'zh').certo).toBe(true);
+    expect(conferirFala('我今年34岁', '我今年三十四岁。', 'zh').certo).toBe(true);
   });
 });

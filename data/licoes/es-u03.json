@@ -1,0 +1,714 @@
+{
+  "id": "es-u03",
+  "idioma": "es",
+  "titulo": "My family",
+  "falsosAmigos": [
+    {
+      "palavra": "padres",
+      "significado": "parents",
+      "portugues": "Portuguese \"pais\" is \"padres\" in Spanish. Portuguese \"padres\" (priests) are usually \"sacerdotes\".",
+      "exemplo": "Mis padres viven en Curitiba.",
+      "exemploEn": "My parents live in Curitiba."
+    },
+    {
+      "palavra": "novio",
+      "significado": "boyfriend; groom",
+      "portugues": "Portuguese \"noivo\" (fiancé) is \"prometido\"; in Spanish \"novio\" is first of all a boyfriend.",
+      "exemplo": "Mi hermana tiene novio.",
+      "exemploEn": "My sister has a boyfriend."
+    },
+    {
+      "palavra": "embarazada",
+      "significado": "pregnant",
+      "portugues": "Portuguese \"embaraçada\" (embarrassed) is \"avergonzada\", or \"apenada\" in Mexico.",
+      "exemplo": "Mi prima está embarazada.",
+      "exemploEn": "My cousin is pregnant."
+    }
+  ],
+  "licoes": [
+    {
+      "id": "es-u03-l01",
+      "titulo": "This is my family",
+      "explicacao": [
+        {
+          "tipo": "texto",
+          "texto": "To introduce someone, use \"Este es...\" for a man and \"Esta es...\" for a woman: \"Esta es mi madre.\""
+        },
+        {
+          "tipo": "tabela",
+          "cabecalho": [
+            "Spanish",
+            "English",
+            "Example"
+          ],
+          "linhas": [
+            [
+              "mi, mis",
+              "my",
+              "mi padre, mis padres"
+            ],
+            [
+              "tu, tus",
+              "your (informal)",
+              "tu hermana, tus hijos"
+            ],
+            [
+              "su, sus",
+              "his, her, their, your (formal)",
+              "su hijo, sus abuelos"
+            ],
+            [
+              "nuestro, nuestra, nuestros, nuestras",
+              "our",
+              "nuestra casa, nuestros primos"
+            ]
+          ]
+        },
+        {
+          "tipo": "dica",
+          "texto": "Spanish never puts an article before these possessives: \"mi madre\", not \"la mi madre\" (Portuguese says \"a minha mãe\")."
+        },
+        {
+          "tipo": "dica",
+          "texto": "The masculine plural covers mixed groups: los padres = parents, los hermanos = brothers and sisters, los hijos = children."
+        },
+        {
+          "tipo": "tabela",
+          "cabecalho": [
+            "Spanish",
+            "English"
+          ],
+          "linhas": [
+            [
+              "padre, madre",
+              "father, mother"
+            ],
+            [
+              "papá, mamá",
+              "dad, mom"
+            ],
+            [
+              "hermano, hermana",
+              "brother, sister"
+            ],
+            [
+              "hijo, hija",
+              "son, daughter"
+            ],
+            [
+              "abuelo, abuela",
+              "grandfather, grandmother"
+            ],
+            [
+              "esposo, esposa",
+              "husband, wife"
+            ],
+            [
+              "tío, tía",
+              "uncle, aunt"
+            ],
+            [
+              "primo, prima",
+              "cousin"
+            ]
+          ]
+        }
+      ],
+      "exemplos": [
+        {
+          "frase": "Esta es mi familia.",
+          "en": "This is my family.",
+          "pt": "Esta é a minha família."
+        },
+        {
+          "frase": "Este es mi padre, y esta es mi madre.",
+          "en": "This is my father, and this is my mother.",
+          "pt": "Este é o meu pai, e esta é a minha mãe."
+        },
+        {
+          "frase": "Mis padres viven en Curitiba.",
+          "en": "My parents live in Curitiba.",
+          "pt": "Meus pais moram em Curitiba."
+        },
+        {
+          "frase": "¿Tienes hermanos?",
+          "en": "Do you have any brothers or sisters?",
+          "pt": "Você tem irmãos?"
+        },
+        {
+          "frase": "Nuestra familia es pequeña.",
+          "en": "Our family is small.",
+          "pt": "A nossa família é pequena."
+        }
+      ],
+      "palavras": [
+        {
+          "palavra": "familia",
+          "classe": "noun",
+          "en": "family",
+          "pt": "família",
+          "exemplo": "Mi familia es muy grande.",
+          "exemploEn": "My family is very big.",
+          "exemploPt": "Minha família é muito grande."
+        },
+        {
+          "palavra": "padres",
+          "classe": "noun",
+          "en": "parents",
+          "pt": "pais",
+          "exemplo": "Mis padres están jubilados.",
+          "exemploEn": "My parents are retired.",
+          "exemploPt": "Meus pais são aposentados.",
+          "nota": "False friend: \"padres\" means parents."
+        },
+        {
+          "palavra": "tío",
+          "classe": "noun",
+          "en": "uncle",
+          "pt": "tio",
+          "exemplo": "Mi tío vive en Monterrey.",
+          "exemploEn": "My uncle lives in Monterrey.",
+          "exemploPt": "Meu tio mora em Monterrey.",
+          "nota": "Aunt is \"tía\"."
+        },
+        {
+          "palavra": "este",
+          "classe": "determiner",
+          "en": "this",
+          "pt": "este",
+          "exemplo": "Este es mi hermano.",
+          "exemploEn": "This is my brother.",
+          "exemploPt": "Este é o meu irmão.",
+          "nota": "Feminine: \"esta\"."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "escolha",
+          "pergunta": "Introduce your mother: ___ es mi madre.",
+          "opcoes": [
+            "Esta",
+            "Este",
+            "Esto",
+            "Estos"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "What does \"mis padres\" mean?",
+          "opcoes": [
+            "my parents",
+            "my priests",
+            "my brothers",
+            "my uncles"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "montar",
+          "traducao": "Our family is small.",
+          "blocos": [
+            "Nuestra",
+            "familia",
+            "es",
+            "pequeña"
+          ],
+          "extras": [
+            "Nuestro",
+            "la"
+          ]
+        },
+        {
+          "tipo": "ouvir",
+          "audio": "¿Tienes hermanos?",
+          "pergunta": "What did you hear?",
+          "opcoes": [
+            "Do you have brothers or sisters?",
+            "Are you my brother?",
+            "Do you have children?",
+            "Where are your brothers?"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "Which is correct?",
+          "opcoes": [
+            "mi madre",
+            "la mi madre",
+            "mía madre",
+            "la madre mi"
+          ],
+          "correta": 0,
+          "explicacao": "No article before mi, tu, su."
+        },
+        {
+          "tipo": "ditado",
+          "frase": "Mis padres viven en Brasil.",
+          "traducao": "My parents live in Brazil."
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "\"Su hijo\" can mean...",
+          "opcoes": [
+            "his, her, their or your (formal) son",
+            "only his son",
+            "your (informal) son",
+            "our son"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "falar",
+          "frase": "Esta es mi familia.",
+          "traducao": "This is my family."
+        }
+      ]
+    },
+    {
+      "id": "es-u03-l02",
+      "titulo": "Brothers, sisters and cousins",
+      "explicacao": [
+        {
+          "tipo": "texto",
+          "texto": "Every noun is masculine or feminine. Most nouns ending in -o are masculine and most ending in -a are feminine: el hermano, la hermana."
+        },
+        {
+          "tipo": "tabela",
+          "cabecalho": [
+            "",
+            "Masculine",
+            "Feminine"
+          ],
+          "linhas": [
+            [
+              "the (singular)",
+              "el",
+              "la"
+            ],
+            [
+              "the (plural)",
+              "los",
+              "las"
+            ],
+            [
+              "a, an",
+              "un",
+              "una"
+            ],
+            [
+              "some",
+              "unos",
+              "unas"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "To make the plural, add -s after a vowel (hermano → hermanos) and -es after a consonant (mujer → mujeres, papel → papeles)."
+        },
+        {
+          "tipo": "dica",
+          "texto": "Some genders are different from Portuguese: la leche, la nariz, la sal, el árbol, el viaje, el color. Learn each noun with its article."
+        },
+        {
+          "tipo": "dica",
+          "texto": "Nouns ending in -ma that come from Greek are masculine, as in Portuguese: el problema, el idioma, el tema."
+        }
+      ],
+      "exemplos": [
+        {
+          "frase": "Tengo un hermano y dos hermanas.",
+          "en": "I have one brother and two sisters.",
+          "pt": "Tenho um irmão e duas irmãs."
+        },
+        {
+          "frase": "Mis primos viven en Guadalajara.",
+          "en": "My cousins live in Guadalajara.",
+          "pt": "Meus primos moram em Guadalajara."
+        },
+        {
+          "frase": "La leche está en la mesa.",
+          "en": "The milk is on the table.",
+          "pt": "O leite está na mesa."
+        },
+        {
+          "frase": "El viaje fue muy largo.",
+          "en": "The trip was very long.",
+          "pt": "A viagem foi muito longa."
+        },
+        {
+          "frase": "Las mujeres de mi familia son muy fuertes.",
+          "en": "The women in my family are very strong.",
+          "pt": "As mulheres da minha família são muito fortes."
+        }
+      ],
+      "palavras": [
+        {
+          "palavra": "sobrino",
+          "classe": "noun",
+          "en": "nephew",
+          "pt": "sobrinho",
+          "exemplo": "Mi sobrino tiene tres años.",
+          "exemploEn": "My nephew is three.",
+          "exemploPt": "Meu sobrinho tem três anos.",
+          "nota": "Niece: \"sobrina\"."
+        },
+        {
+          "palavra": "nieto",
+          "classe": "noun",
+          "en": "grandson",
+          "pt": "neto",
+          "exemplo": "Mi abuela tiene diez nietos.",
+          "exemploEn": "My grandmother has ten grandchildren.",
+          "exemploPt": "Minha avó tem dez netos.",
+          "nota": "Granddaughter: \"nieta\"."
+        },
+        {
+          "palavra": "suegro",
+          "classe": "noun",
+          "en": "father-in-law",
+          "pt": "sogro",
+          "exemplo": "Mis suegros viven en Puebla.",
+          "exemploEn": "My in-laws live in Puebla.",
+          "exemploPt": "Meus sogros moram em Puebla."
+        },
+        {
+          "palavra": "cuñado",
+          "classe": "noun",
+          "en": "brother-in-law",
+          "pt": "cunhado",
+          "exemplo": "Mi cuñado es ingeniero.",
+          "exemploEn": "My brother-in-law is an engineer.",
+          "exemploPt": "Meu cunhado é engenheiro."
+        },
+        {
+          "palavra": "gemelo",
+          "classe": "noun",
+          "en": "twin",
+          "pt": "gêmeo",
+          "exemplo": "Mis primas son gemelas.",
+          "exemploEn": "My cousins are twins.",
+          "exemploPt": "Minhas primas são gêmeas."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "escolha",
+          "pergunta": "Choose the article: ___ leche",
+          "opcoes": [
+            "la",
+            "el",
+            "lo",
+            "las"
+          ],
+          "correta": 0,
+          "explicacao": "\"Leche\" is feminine in Spanish, though \"leite\" is masculine in Portuguese."
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "What is the plural of \"mujer\"?",
+          "opcoes": [
+            "mujeres",
+            "mujers",
+            "mujeras",
+            "mujer"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "Choose the article: ___ viaje",
+          "opcoes": [
+            "el",
+            "la",
+            "los",
+            "una"
+          ],
+          "correta": 0,
+          "explicacao": "\"Viaje\" is masculine, though \"viagem\" is feminine in Portuguese."
+        },
+        {
+          "tipo": "montar",
+          "traducao": "I have one brother and two sisters.",
+          "blocos": [
+            "Tengo",
+            "un",
+            "hermano",
+            "y",
+            "dos",
+            "hermanas"
+          ],
+          "extras": [
+            "una",
+            "hermanos"
+          ]
+        },
+        {
+          "tipo": "ouvir",
+          "audio": "Mis primos viven en Guadalajara.",
+          "pergunta": "What did you hear?",
+          "opcoes": [
+            "My cousins live in Guadalajara.",
+            "My cousin lives in Guadalajara.",
+            "My uncles live in Guadalajara.",
+            "My parents live in Guadalajara."
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "ditado",
+          "frase": "Las mujeres de mi familia.",
+          "traducao": "The women in my family."
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "Who is your \"sobrino\"?",
+          "opcoes": [
+            "your brother's or sister's son",
+            "your grandson",
+            "your cousin",
+            "your uncle"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "falar",
+          "frase": "Tengo un hermano y dos hermanas.",
+          "traducao": "I have one brother and two sisters."
+        }
+      ]
+    },
+    {
+      "id": "es-u03-l03",
+      "titulo": "What do they look like?",
+      "explicacao": [
+        {
+          "tipo": "texto",
+          "texto": "To say what someone is like, use ser + adjective: \"Mi hermano es alto.\" Adjectives agree with the noun: alto, alta, altos, altas."
+        },
+        {
+          "tipo": "tabela",
+          "cabecalho": [
+            "Spanish",
+            "English"
+          ],
+          "linhas": [
+            [
+              "alto, alta",
+              "tall"
+            ],
+            [
+              "bajo, baja",
+              "short"
+            ],
+            [
+              "delgado, delgada",
+              "thin, slim"
+            ],
+            [
+              "joven",
+              "young"
+            ],
+            [
+              "mayor",
+              "older; elderly (polite)"
+            ],
+            [
+              "guapo, guapa",
+              "good-looking"
+            ],
+            [
+              "moreno, morena",
+              "dark-haired, dark-skinned"
+            ],
+            [
+              "rubio, rubia",
+              "blond"
+            ],
+            [
+              "simpático, simpática",
+              "nice, friendly"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "For hair and eyes, use tener with the article: \"Tiene el pelo negro y los ojos verdes.\""
+        },
+        {
+          "tipo": "dica",
+          "texto": "\"Rubio\" means blond. A redhead (ruivo in Portuguese) is \"pelirrojo\"."
+        },
+        {
+          "tipo": "dica",
+          "texto": "Adjectives ending in -e or in a consonant are the same for men and women: joven, amable, feliz."
+        },
+        {
+          "tipo": "dica",
+          "texto": "In Mexico, brown eyes and brown hair are usually \"cafés\": tiene los ojos cafés."
+        }
+      ],
+      "exemplos": [
+        {
+          "frase": "Mi hermana es alta y delgada.",
+          "en": "My sister is tall and slim.",
+          "pt": "Minha irmã é alta e magra."
+        },
+        {
+          "frase": "Mi papá tiene el pelo gris y los ojos cafés.",
+          "en": "My dad has gray hair and brown eyes.",
+          "pt": "Meu pai tem cabelo grisalho e olhos castanhos."
+        },
+        {
+          "frase": "Mis primos son muy simpáticos.",
+          "en": "My cousins are very nice.",
+          "pt": "Meus primos são muito simpáticos."
+        },
+        {
+          "frase": "Ella es morena y tiene el pelo largo.",
+          "en": "She is dark-haired and has long hair.",
+          "pt": "Ela é morena e tem cabelo comprido."
+        },
+        {
+          "frase": "Mi abuelo es mayor, pero muy fuerte.",
+          "en": "My grandfather is elderly, but very strong.",
+          "pt": "Meu avô é idoso, mas muito forte."
+        }
+      ],
+      "palavras": [
+        {
+          "palavra": "rubio",
+          "classe": "adjective",
+          "en": "blond",
+          "pt": "loiro",
+          "exemplo": "Su hijo es rubio.",
+          "exemploEn": "Her son is blond.",
+          "exemploPt": "O filho dela é loiro.",
+          "nota": "False friend: a redhead (ruivo) is \"pelirrojo\"."
+        },
+        {
+          "palavra": "pelirrojo",
+          "classe": "adjective",
+          "en": "red-haired",
+          "pt": "ruivo",
+          "exemplo": "Mi prima es pelirroja.",
+          "exemploEn": "My cousin is a redhead.",
+          "exemploPt": "Minha prima é ruiva."
+        },
+        {
+          "palavra": "café",
+          "classe": "adjective",
+          "en": "brown (Mexico)",
+          "pt": "marrom, castanho",
+          "exemplo": "Tiene los ojos cafés.",
+          "exemploEn": "He has brown eyes.",
+          "exemploPt": "Ele tem olhos castanhos.",
+          "nota": "As a color it does not change: ojos cafés, camisa café."
+        },
+        {
+          "palavra": "lentes",
+          "classe": "noun",
+          "en": "glasses",
+          "pt": "óculos",
+          "exemplo": "Mi mamá usa lentes.",
+          "exemploEn": "My mom wears glasses.",
+          "exemploPt": "Minha mãe usa óculos."
+        },
+        {
+          "palavra": "bigote",
+          "classe": "noun",
+          "en": "mustache",
+          "pt": "bigode",
+          "exemplo": "Mi abuelo tiene bigote.",
+          "exemploEn": "My grandfather has a mustache.",
+          "exemploPt": "Meu avô tem bigode."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "escolha",
+          "pergunta": "Ana is tall: Ana es ___.",
+          "opcoes": [
+            "alta",
+            "alto",
+            "altas",
+            "altos"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "\"Ruivo\" in Spanish is...",
+          "opcoes": [
+            "pelirrojo",
+            "rubio",
+            "rojo",
+            "moreno"
+          ],
+          "correta": 0,
+          "explicacao": "\"Rubio\" means blond."
+        },
+        {
+          "tipo": "montar",
+          "traducao": "She has black hair.",
+          "blocos": [
+            "Tiene",
+            "el",
+            "pelo",
+            "negro"
+          ],
+          "extras": [
+            "Es",
+            "negra"
+          ]
+        },
+        {
+          "tipo": "ouvir",
+          "audio": "Mis primos son muy simpáticos.",
+          "pergunta": "What did you hear?",
+          "opcoes": [
+            "My cousins are very nice.",
+            "My cousin is very nice.",
+            "My cousins are very tall.",
+            "My uncles are very nice."
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "Which adjective is the same for men and women?",
+          "opcoes": [
+            "joven",
+            "alto",
+            "guapo",
+            "rubio"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "ditado",
+          "frase": "Mi hermana es alta.",
+          "traducao": "My sister is tall."
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "Complete: Mi papá ___ los ojos verdes.",
+          "opcoes": [
+            "tiene",
+            "es",
+            "está",
+            "hay"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "falar",
+          "frase": "Mi hermana es alta y tiene el pelo largo.",
+          "traducao": "My sister is tall and has long hair."
+        }
+      ]
+    }
+  ]
+}

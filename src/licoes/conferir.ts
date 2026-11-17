@@ -112,6 +112,36 @@ export type ResultadoFala = {
 /** Nota mínima para a fala contar como acerto. */
 export const NOTA_MINIMA_FALA = 0.8;
 
+const ALGARISMOS = ['零', '一', '二', '三', '四', '五', '六', '七', '八', '九'];
+
+/** 35 → 三十五, 108 → 一百零八, 2026 → 二千零二十六 (de 0 a 9999). */
+export function numeroParaChines(n: number): string {
+  if (!Number.isInteger(n) || n < 0 || n > 9999) return String(n);
+  if (n < 10) return ALGARISMOS[n];
+  if (n < 20) return `十${n % 10 ? ALGARISMOS[n % 10] : ''}`;
+  const casas: [number, string][] = [
+    [1000, '千'],
+    [100, '百'],
+    [10, '十'],
+  ];
+  let resto = n;
+  let texto = '';
+  let zeroPendente = false;
+  for (const [valor, nome] of casas) {
+    const digito = Math.floor(resto / valor);
+    resto %= valor;
+    if (digito > 0) {
+      if (zeroPendente) texto += '零';
+      texto += ALGARISMOS[digito] + nome;
+      zeroPendente = false;
+    } else if (texto) {
+      zeroPendente = true;
+    }
+  }
+  if (resto > 0) texto += (zeroPendente ? '零' : '') + ALGARISMOS[resto];
+  return texto;
+}
+
 function silabas(texto: string): string[] {
   return gerarPinyin(texto, { type: 'array', toneType: 'num', nonZh: 'removed' }).filter((s) => /[a-zü]/.test(s));
 }
@@ -131,7 +161,8 @@ export function conferirFala(
   if (idioma === 'zh') {
     const caracteres = caracteresHan(frase);
     const esperado = silabas(frase);
-    const obtido = silabas(reconhecido);
+    // O reconhecimento costuma escrever números com algarismos ("35").
+    const obtido = silabas(reconhecido.replace(/\d+/g, (m) => numeroParaChines(Number(m))));
     const acertos = alinhar(esperado, obtido);
     const partes = caracteres.map((texto, i) => ({ texto, ok: acertos[i] ?? false }));
     const nota = esperado.length ? acertos.filter(Boolean).length / esperado.length : 0;

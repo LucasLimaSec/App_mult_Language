@@ -1,7 +1,11 @@
 import curriculoEs from '../../data/curriculo-es.json';
 import curriculoZh from '../../data/curriculo-zh.json';
 import esU01 from '../../data/licoes/es-u01.json';
+import esU02 from '../../data/licoes/es-u02.json';
+import esU03 from '../../data/licoes/es-u03.json';
 import zhU01 from '../../data/licoes/zh-u01.json';
+import zhU02 from '../../data/licoes/zh-u02.json';
+import zhU03 from '../../data/licoes/zh-u03.json';
 import type { Lesson } from '../db/schema';
 import type { Idioma } from '../voz/idiomas';
 import type { Licao, Unidade } from './licoes';
@@ -38,7 +42,7 @@ const CURRICULOS: Partial<Record<Idioma, Curriculo>> = {
  * Metro só empacota arquivos importados de forma estática.
  */
 const UNIDADES: Record<string, Unidade> = Object.fromEntries(
-  ([esU01, zhU01] as Unidade[]).map((unidade) => [unidade.id, unidade]),
+  ([esU01, esU02, esU03, zhU01, zhU02, zhU03] as Unidade[]).map((unidade) => [unidade.id, unidade]),
 );
 
 export function lerCurriculo(idioma: Idioma): Curriculo | undefined {

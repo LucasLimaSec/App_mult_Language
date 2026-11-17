@@ -1,0 +1,819 @@
+{
+  "id": "es-u02",
+  "idioma": "es",
+  "titulo": "Numbers and personal details",
+  "falsosAmigos": [
+    {
+      "palavra": "rato",
+      "significado": "a while, a short time",
+      "portugues": "Portuguese \"rato\" (mouse, rat) is \"ratón\" or \"rata\" in Spanish.",
+      "exemplo": "Espérame un rato, ahorita vengo.",
+      "exemploEn": "Wait for me a while, I'll be right back."
+    },
+    {
+      "palavra": "doce",
+      "significado": "twelve",
+      "portugues": "Portuguese \"doce\" (sweet) is \"dulce\" in Spanish.",
+      "exemplo": "Mi hijo tiene doce años.",
+      "exemploEn": "My son is twelve years old."
+    },
+    {
+      "palavra": "cuello",
+      "significado": "neck",
+      "portugues": "It sounds a bit like Portuguese \"coelho\" (rabbit), which is \"conejo\" in Spanish.",
+      "exemplo": "Me duele el cuello.",
+      "exemploEn": "My neck hurts."
+    }
+  ],
+  "licoes": [
+    {
+      "id": "es-u02-l01",
+      "titulo": "Numbers 0 to 20",
+      "explicacao": [
+        {
+          "tipo": "texto",
+          "texto": "Numbers from 0 to 15 have their own names. From 16 to 19 they join diez + y + the unit into one word: dieciséis (10 + 6)."
+        },
+        {
+          "tipo": "tabela",
+          "cabecalho": [
+            "Number",
+            "Spanish"
+          ],
+          "linhas": [
+            [
+              "0",
+              "cero"
+            ],
+            [
+              "1",
+              "uno"
+            ],
+            [
+              "2",
+              "dos"
+            ],
+            [
+              "3",
+              "tres"
+            ],
+            [
+              "4",
+              "cuatro"
+            ],
+            [
+              "5",
+              "cinco"
+            ],
+            [
+              "6",
+              "seis"
+            ],
+            [
+              "7",
+              "siete"
+            ],
+            [
+              "8",
+              "ocho"
+            ],
+            [
+              "9",
+              "nueve"
+            ],
+            [
+              "10",
+              "diez"
+            ],
+            [
+              "11",
+              "once"
+            ],
+            [
+              "12",
+              "doce"
+            ],
+            [
+              "13",
+              "trece"
+            ],
+            [
+              "14",
+              "catorce"
+            ],
+            [
+              "15",
+              "quince"
+            ],
+            [
+              "16",
+              "dieciséis"
+            ],
+            [
+              "17",
+              "diecisiete"
+            ],
+            [
+              "18",
+              "dieciocho"
+            ],
+            [
+              "19",
+              "diecinueve"
+            ],
+            [
+              "20",
+              "veinte"
+            ]
+          ]
+        },
+        {
+          "tipo": "dica",
+          "texto": "Careful: \"doce\" is 12 (sweet is \"dulce\"), and 11 is \"once\", spelled with c."
+        },
+        {
+          "tipo": "texto",
+          "texto": "\"Uno\" becomes \"un\" before a masculine noun and \"una\" before a feminine noun: un libro, una casa."
+        },
+        {
+          "tipo": "texto",
+          "texto": "\"Hay\" means there is or there are, for one thing or many: Hay un problema. Hay tres personas."
+        }
+      ],
+      "exemplos": [
+        {
+          "frase": "Hay doce estudiantes en la clase.",
+          "en": "There are twelve students in the class.",
+          "pt": "Há doze alunos na turma."
+        },
+        {
+          "frase": "Tengo dos hermanos y una hermana.",
+          "en": "I have two brothers and one sister.",
+          "pt": "Tenho dois irmãos e uma irmã."
+        },
+        {
+          "frase": "¿Cuántos son? Son quince.",
+          "en": "How many are there? Fifteen.",
+          "pt": "Quantos são? São quinze."
+        },
+        {
+          "frase": "Mi número favorito es el siete.",
+          "en": "My favorite number is seven.",
+          "pt": "Meu número favorito é o sete."
+        },
+        {
+          "frase": "Hay un problema con mi tarjeta.",
+          "en": "There's a problem with my card.",
+          "pt": "Há um problema com o meu cartão."
+        }
+      ],
+      "palavras": [
+        {
+          "palavra": "cero",
+          "classe": "numeral",
+          "en": "zero",
+          "pt": "zero",
+          "exemplo": "Hace cero grados.",
+          "exemploEn": "It's zero degrees.",
+          "exemploPt": "Está fazendo zero grau."
+        },
+        {
+          "palavra": "trece",
+          "classe": "numeral",
+          "en": "thirteen",
+          "pt": "treze",
+          "exemplo": "Vivo en el número trece.",
+          "exemploEn": "I live at number thirteen.",
+          "exemploPt": "Moro no número treze."
+        },
+        {
+          "palavra": "catorce",
+          "classe": "numeral",
+          "en": "fourteen",
+          "pt": "catorze",
+          "exemplo": "Mi sobrina tiene catorce años.",
+          "exemploEn": "My niece is fourteen.",
+          "exemploPt": "Minha sobrinha tem catorze anos."
+        },
+        {
+          "palavra": "quince",
+          "classe": "numeral",
+          "en": "fifteen",
+          "pt": "quinze",
+          "exemplo": "Llego en quince minutos.",
+          "exemploEn": "I'll be there in fifteen minutes.",
+          "exemploPt": "Chego em quinze minutos."
+        },
+        {
+          "palavra": "dieciséis",
+          "classe": "numeral",
+          "en": "sixteen",
+          "pt": "dezesseis",
+          "exemplo": "Hay dieciséis personas.",
+          "exemploEn": "There are sixteen people.",
+          "exemploPt": "Há dezesseis pessoas."
+        },
+        {
+          "palavra": "hay",
+          "classe": "verb",
+          "en": "there is, there are",
+          "pt": "há, tem",
+          "exemplo": "Hay mucha gente aquí.",
+          "exemploEn": "There are a lot of people here.",
+          "exemploPt": "Tem muita gente aqui."
+        },
+        {
+          "palavra": "¿cuántos?",
+          "classe": "pronoun",
+          "en": "how many?",
+          "pt": "quantos?",
+          "exemplo": "¿Cuántos hermanos tienes?",
+          "exemploEn": "How many siblings do you have?",
+          "exemploPt": "Quantos irmãos você tem?"
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "ouvir",
+          "audio": "quince",
+          "pergunta": "What did you hear?",
+          "opcoes": [
+            "15",
+            "50",
+            "5",
+            "14"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "How do you write 16?",
+          "opcoes": [
+            "dieciséis",
+            "diez y seis",
+            "deciséis",
+            "dieziséis"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "What does \"doce\" mean?",
+          "opcoes": [
+            "twelve",
+            "sweet",
+            "two",
+            "ten"
+          ],
+          "correta": 0,
+          "explicacao": "Sweet is \"dulce\"."
+        },
+        {
+          "tipo": "montar",
+          "traducao": "There are three people.",
+          "blocos": [
+            "Hay",
+            "tres",
+            "personas"
+          ],
+          "extras": [
+            "Es",
+            "tienen"
+          ]
+        },
+        {
+          "tipo": "ditado",
+          "frase": "catorce",
+          "aceitas": [
+            "14"
+          ],
+          "traducao": "fourteen"
+        },
+        {
+          "tipo": "ouvir",
+          "audio": "Tengo dos hermanos.",
+          "pergunta": "What did you hear?",
+          "opcoes": [
+            "I have two brothers.",
+            "I have twelve brothers.",
+            "I have ten brothers.",
+            "I have two sisters."
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "Complete: Necesito ___ casa.",
+          "opcoes": [
+            "una",
+            "un",
+            "uno",
+            "unos"
+          ],
+          "correta": 0,
+          "explicacao": "\"Casa\" is feminine, so \"una\"."
+        },
+        {
+          "tipo": "falar",
+          "frase": "Hay doce estudiantes en la clase.",
+          "traducao": "There are twelve students in the class.",
+          "aceitas": [
+            "Hay 12 estudiantes en la clase"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "es-u02-l02",
+      "titulo": "How old are you?",
+      "explicacao": [
+        {
+          "tipo": "texto",
+          "texto": "Spanish uses tener (to have) for age, just like Portuguese: \"Tengo treinta años.\" To ask: \"¿Cuántos años tienes?\", or formally \"¿Cuántos años tiene?\""
+        },
+        {
+          "tipo": "tabela",
+          "cabecalho": [
+            "Person",
+            "tener"
+          ],
+          "linhas": [
+            [
+              "yo",
+              "tengo"
+            ],
+            [
+              "tú",
+              "tienes"
+            ],
+            [
+              "usted, él, ella",
+              "tiene"
+            ],
+            [
+              "nosotros",
+              "tenemos"
+            ],
+            [
+              "ustedes, ellos, ellas",
+              "tienen"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "From 21 to 29 the numbers are one word: veintiuno, veintidós, veintitrés... From 31 on they use \"y\": treinta y uno, cuarenta y dos."
+        },
+        {
+          "tipo": "tabela",
+          "cabecalho": [
+            "Number",
+            "Spanish"
+          ],
+          "linhas": [
+            [
+              "20",
+              "veinte"
+            ],
+            [
+              "30",
+              "treinta"
+            ],
+            [
+              "40",
+              "cuarenta"
+            ],
+            [
+              "50",
+              "cincuenta"
+            ],
+            [
+              "60",
+              "sesenta"
+            ],
+            [
+              "70",
+              "setenta"
+            ],
+            [
+              "80",
+              "ochenta"
+            ],
+            [
+              "90",
+              "noventa"
+            ],
+            [
+              "100",
+              "cien"
+            ]
+          ]
+        },
+        {
+          "tipo": "dica",
+          "texto": "Keep the ñ: \"años\" means years. Without it, \"anos\" is a very different (and rude) word."
+        },
+        {
+          "tipo": "dica",
+          "texto": "Spanish also uses tener where Portuguese says \"estar com\": tengo hambre (estou com fome), tengo frío, tengo sueño."
+        }
+      ],
+      "exemplos": [
+        {
+          "frase": "¿Cuántos años tienes?",
+          "en": "How old are you?",
+          "pt": "Quantos anos você tem?"
+        },
+        {
+          "frase": "Tengo treinta y cuatro años.",
+          "en": "I'm thirty-four years old.",
+          "pt": "Tenho trinta e quatro anos."
+        },
+        {
+          "frase": "Mi abuela tiene ochenta y dos años.",
+          "en": "My grandmother is eighty-two.",
+          "pt": "Minha avó tem oitenta e dois anos."
+        },
+        {
+          "frase": "Mañana cumplo cuarenta años.",
+          "en": "Tomorrow I'm turning forty.",
+          "pt": "Amanhã faço quarenta anos."
+        },
+        {
+          "frase": "Tengo hambre, ¿comemos?",
+          "en": "I'm hungry, shall we eat?",
+          "pt": "Estou com fome, vamos comer?"
+        }
+      ],
+      "palavras": [
+        {
+          "palavra": "treinta",
+          "classe": "numeral",
+          "en": "thirty",
+          "pt": "trinta",
+          "exemplo": "Tengo treinta años.",
+          "exemploEn": "I'm thirty.",
+          "exemploPt": "Tenho trinta anos."
+        },
+        {
+          "palavra": "cuarenta",
+          "classe": "numeral",
+          "en": "forty",
+          "pt": "quarenta",
+          "exemplo": "Cuesta cuarenta pesos.",
+          "exemploEn": "It costs forty pesos.",
+          "exemploPt": "Custa quarenta pesos."
+        },
+        {
+          "palavra": "cincuenta",
+          "classe": "numeral",
+          "en": "fifty",
+          "pt": "cinquenta",
+          "exemplo": "Mi papá tiene cincuenta años.",
+          "exemploEn": "My dad is fifty.",
+          "exemploPt": "Meu pai tem cinquenta anos."
+        },
+        {
+          "palavra": "sesenta",
+          "classe": "numeral",
+          "en": "sixty",
+          "pt": "sessenta",
+          "exemplo": "Una hora tiene sesenta minutos.",
+          "exemploEn": "An hour has sixty minutes.",
+          "exemploPt": "Uma hora tem sessenta minutos."
+        },
+        {
+          "palavra": "¿cuántos años tienes?",
+          "classe": "phrase",
+          "en": "how old are you?",
+          "pt": "quantos anos você tem?",
+          "exemplo": "Perdón, ¿cuántos años tienes?",
+          "exemploEn": "Sorry, how old are you?",
+          "exemploPt": "Desculpe, quantos anos você tem?"
+        },
+        {
+          "palavra": "cumplir",
+          "classe": "verb",
+          "en": "to turn (an age); to fulfill",
+          "pt": "fazer (aniversário); cumprir",
+          "exemplo": "Mi hija cumple diez años el sábado.",
+          "exemploEn": "My daughter turns ten on Saturday.",
+          "exemploPt": "Minha filha faz dez anos no sábado."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "escolha",
+          "pergunta": "How do you say \"I'm 30 years old\"?",
+          "opcoes": [
+            "Tengo treinta años.",
+            "Soy treinta años.",
+            "Estoy treinta años.",
+            "Tengo treinta anos."
+          ],
+          "correta": 0,
+          "explicacao": "Age uses tener, and \"años\" needs the ñ."
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "Which form of tener goes with \"ella\"?",
+          "opcoes": [
+            "tiene",
+            "tengo",
+            "tienes",
+            "tienen"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "ouvir",
+          "audio": "cuarenta y cinco",
+          "pergunta": "What did you hear?",
+          "opcoes": [
+            "45",
+            "54",
+            "405",
+            "15"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "montar",
+          "traducao": "How old are you?",
+          "blocos": [
+            "Cuántos",
+            "años",
+            "tienes"
+          ],
+          "extras": [
+            "eres",
+            "anos"
+          ]
+        },
+        {
+          "tipo": "ditado",
+          "frase": "Tengo veinticinco años.",
+          "aceitas": [
+            "Tengo 25 años."
+          ],
+          "traducao": "I'm twenty-five years old."
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "How do you write 32?",
+          "opcoes": [
+            "treinta y dos",
+            "treintidós",
+            "treinta dos",
+            "tres y dos"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "\"Estou com fome\" in Spanish is...",
+          "opcoes": [
+            "Tengo hambre.",
+            "Estoy con hambre.",
+            "Soy hambre.",
+            "Tengo fome."
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "falar",
+          "frase": "Tengo treinta y cuatro años.",
+          "traducao": "I'm thirty-four years old.",
+          "aceitas": [
+            "Tengo 34 años"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "es-u02-l03",
+      "titulo": "Phone numbers and spelling",
+      "explicacao": [
+        {
+          "tipo": "texto",
+          "texto": "To ask for a phone number: \"¿Cuál es tu número de teléfono?\" In Mexico people also say \"tu celular\". Numbers are usually read in pairs: 55 12 34 56 78 is \"cincuenta y cinco, doce, treinta y cuatro...\""
+        },
+        {
+          "tipo": "texto",
+          "texto": "To ask for an email: \"¿Cuál es tu correo?\" The symbol @ is \"arroba\" and the dot is \"punto\"."
+        },
+        {
+          "tipo": "tabela",
+          "cabecalho": [
+            "Letter",
+            "Name",
+            "How it sounds"
+          ],
+          "linhas": [
+            [
+              "h",
+              "hache",
+              "always silent: hola sounds like \"ola\""
+            ],
+            [
+              "j",
+              "jota",
+              "a strong sound from the throat, like the rr in \"carro\""
+            ],
+            [
+              "ll",
+              "doble ele",
+              "in Mexico, like the y in English \"yes\""
+            ],
+            [
+              "ñ",
+              "eñe",
+              "like the Portuguese \"nh\": año"
+            ],
+            [
+              "v",
+              "ve chica",
+              "exactly the same sound as b"
+            ],
+            [
+              "z",
+              "zeta",
+              "in Latin America, like an s"
+            ],
+            [
+              "y",
+              "ye",
+              "like ll; alone it means \"and\" and sounds like \"i\""
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "To ask how something is spelled, say \"¿Cómo se escribe?\" Then spell it letter by letter: Lucas = ele, u, ce, a, ese."
+        },
+        {
+          "tipo": "dica",
+          "texto": "Spanish uses \"cuál\", not \"qué\", to ask for a piece of information: ¿Cuál es tu nombre? ¿Cuál es tu correo?"
+        }
+      ],
+      "exemplos": [
+        {
+          "frase": "¿Cuál es tu número de teléfono?",
+          "en": "What's your phone number?",
+          "pt": "Qual é o seu número de telefone?"
+        },
+        {
+          "frase": "Es el cincuenta y cinco, doce, treinta y cuatro.",
+          "en": "It's fifty-five, twelve, thirty-four.",
+          "pt": "É cinquenta e cinco, doze, trinta e quatro."
+        },
+        {
+          "frase": "¿Cómo se escribe tu apellido?",
+          "en": "How do you spell your last name?",
+          "pt": "Como se escreve o seu sobrenome?"
+        },
+        {
+          "frase": "Mi correo es lucas arroba ejemplo punto com.",
+          "en": "My email is lucas at ejemplo dot com.",
+          "pt": "Meu e-mail é lucas arroba ejemplo ponto com."
+        },
+        {
+          "frase": "La hache no se pronuncia.",
+          "en": "The h is not pronounced.",
+          "pt": "O h não se pronuncia."
+        }
+      ],
+      "palavras": [
+        {
+          "palavra": "teléfono",
+          "classe": "noun",
+          "en": "telephone, phone",
+          "pt": "telefone",
+          "exemplo": "¿Me das tu teléfono?",
+          "exemploEn": "Can you give me your phone number?",
+          "exemploPt": "Você me passa seu telefone?"
+        },
+        {
+          "palavra": "punto",
+          "classe": "noun",
+          "en": "dot, point; period",
+          "pt": "ponto",
+          "exemplo": "Mi correo termina en punto com.",
+          "exemploEn": "My email ends in dot com.",
+          "exemploPt": "Meu e-mail termina em ponto com."
+        },
+        {
+          "palavra": "¿cómo se escribe?",
+          "classe": "phrase",
+          "en": "how do you spell it?",
+          "pt": "como se escreve?",
+          "exemplo": "Perdón, ¿cómo se escribe su nombre?",
+          "exemploEn": "Sorry, how do you spell your name?",
+          "exemploPt": "Desculpe, como se escreve o seu nome?"
+        },
+        {
+          "palavra": "deletrear",
+          "classe": "verb",
+          "en": "to spell (out)",
+          "pt": "soletrar",
+          "exemplo": "¿Puede deletrear su apellido?",
+          "exemploEn": "Can you spell your last name?",
+          "exemploPt": "Pode soletrar o seu sobrenome?"
+        },
+        {
+          "palavra": "¿cuál?",
+          "classe": "pronoun",
+          "en": "which?, what?",
+          "pt": "qual?",
+          "exemplo": "¿Cuál es tu correo?",
+          "exemploEn": "What's your email?",
+          "exemploPt": "Qual é o seu e-mail?"
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "escolha",
+          "pergunta": "How do you ask a friend's phone number?",
+          "opcoes": [
+            "¿Cuál es tu número de teléfono?",
+            "¿Qué es tu número de teléfono?",
+            "¿Cuántos teléfonos tienes?",
+            "¿Dónde está tu teléfono?"
+          ],
+          "correta": 0,
+          "explicacao": "To ask for a piece of information, Spanish uses \"cuál\"."
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "How is the h in \"hola\" pronounced?",
+          "opcoes": [
+            "It is silent",
+            "Like the English h",
+            "Like a rough r",
+            "Like a j"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "ouvir",
+          "audio": "jota",
+          "pergunta": "Which letter did you hear?",
+          "opcoes": [
+            "j",
+            "h",
+            "g",
+            "y"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "What is the dot in an email address called?",
+          "opcoes": [
+            "punto",
+            "arroba",
+            "guion",
+            "coma"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "ditado",
+          "frase": "¿Cómo se escribe?",
+          "traducao": "How do you spell it?"
+        },
+        {
+          "tipo": "montar",
+          "traducao": "What's your email?",
+          "blocos": [
+            "Cuál",
+            "es",
+            "tu",
+            "correo"
+          ],
+          "extras": [
+            "Qué",
+            "tú"
+          ]
+        },
+        {
+          "tipo": "ouvir",
+          "audio": "eñe",
+          "pergunta": "Which letter did you hear?",
+          "opcoes": [
+            "ñ",
+            "n",
+            "ll",
+            "y"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "falar",
+          "frase": "¿Cuál es tu número de teléfono?",
+          "traducao": "What's your phone number?"
+        }
+      ]
+    }
+  ]
+}

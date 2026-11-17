@@ -1,0 +1,578 @@
+{
+  "id": "zh-u03",
+  "idioma": "zh",
+  "titulo": "Numbers and age",
+  "licoes": [
+    {
+      "id": "zh-u03-l01",
+      "titulo": "Counting to 100",
+      "explicacao": [
+        {
+          "tipo": "texto",
+          "texto": "Chinese numbers are very regular: learn 1 to 10 and you can build every number up to 99."
+        },
+        {
+          "tipo": "tabela",
+          "cabecalho": [
+            "Number",
+            "Chinese",
+            "Pinyin"
+          ],
+          "linhas": [
+            [
+              "0",
+              "零",
+              "líng"
+            ],
+            [
+              "1",
+              "一",
+              "yī"
+            ],
+            [
+              "2",
+              "二",
+              "èr"
+            ],
+            [
+              "3",
+              "三",
+              "sān"
+            ],
+            [
+              "4",
+              "四",
+              "sì"
+            ],
+            [
+              "5",
+              "五",
+              "wǔ"
+            ],
+            [
+              "6",
+              "六",
+              "liù"
+            ],
+            [
+              "7",
+              "七",
+              "qī"
+            ],
+            [
+              "8",
+              "八",
+              "bā"
+            ],
+            [
+              "9",
+              "九",
+              "jiǔ"
+            ],
+            [
+              "10",
+              "十",
+              "shí"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "11 to 19 are 十 + the unit: 十一 shí yī (11), 十五 shí wǔ (15). The tens are unit + 十: 二十 èr shí (20), 三十 sān shí (30). Then add the unit: 二十五 èr shí wǔ (25), 九十九 jiǔ shí jiǔ (99). 100 is 一百 yì bǎi."
+        },
+        {
+          "tipo": "dica",
+          "texto": "In China, the numbers 1 to 10 have hand signs. Six is the thumb and the little finger, just like the Brazilian \"hang loose\"."
+        },
+        {
+          "tipo": "dica",
+          "texto": "四 sì sounds like 死 sǐ (death), so many buildings in China skip the 4th floor."
+        }
+      ],
+      "exemplos": [
+        {
+          "frase": "十一",
+          "pinyin": "shí yī",
+          "en": "eleven",
+          "pt": "onze"
+        },
+        {
+          "frase": "二十",
+          "pinyin": "èr shí",
+          "en": "twenty",
+          "pt": "vinte"
+        },
+        {
+          "frase": "三十五",
+          "pinyin": "sān shí wǔ",
+          "en": "thirty-five",
+          "pt": "trinta e cinco"
+        },
+        {
+          "frase": "九十九",
+          "pinyin": "jiǔ shí jiǔ",
+          "en": "ninety-nine",
+          "pt": "noventa e nove"
+        },
+        {
+          "frase": "一百",
+          "pinyin": "yì bǎi",
+          "en": "one hundred",
+          "pt": "cem"
+        }
+      ],
+      "palavras": [
+        {
+          "palavra": "一百",
+          "pinyin": "yì bǎi",
+          "classe": "numeral",
+          "en": "one hundred",
+          "pt": "cem"
+        },
+        {
+          "palavra": "号码",
+          "pinyin": "hào mǎ",
+          "classe": "noun",
+          "en": "number (phone, room)",
+          "pt": "número (de telefone, quarto)"
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "escolha",
+          "pergunta": "How do you say 15?",
+          "opcoes": [
+            "十五",
+            "五十",
+            "五十一",
+            "十五十"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "What number is 四十二?",
+          "opcoes": [
+            "42",
+            "24",
+            "402",
+            "4"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "ouvir",
+          "audio": "九十九",
+          "pergunta": "What did you hear?",
+          "opcoes": [
+            "99",
+            "19",
+            "90",
+            "9"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "ouvir",
+          "audio": "三十五",
+          "pergunta": "What did you hear?",
+          "opcoes": [
+            "35",
+            "53",
+            "30",
+            "15"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "montar",
+          "traducao": "twenty-seven",
+          "blocos": [
+            "二",
+            "十",
+            "七"
+          ],
+          "extras": [
+            "两",
+            "百"
+          ],
+          "pinyin": "èr shí qī"
+        },
+        {
+          "tipo": "ditado",
+          "frase": "六",
+          "resposta": "liù",
+          "traducao": "six"
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "Which number sounds like the word for \"death\"?",
+          "opcoes": [
+            "四 sì",
+            "七 qī",
+            "八 bā",
+            "九 jiǔ"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "falar",
+          "frase": "二十五，三十五，四十五。",
+          "pinyin": "èr shí wǔ sān shí wǔ sì shí wǔ",
+          "traducao": "25, 35, 45."
+        }
+      ]
+    },
+    {
+      "id": "zh-u03-l02",
+      "titulo": "How old are you?",
+      "explicacao": [
+        {
+          "tipo": "texto",
+          "texto": "To ask a child's age: 你几岁？nǐ jǐ suì? To ask an adult: 你多大？nǐ duō dà? To ask an older person politely: 您多大年纪？nín duō dà nián jì?"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Answer with the number + 岁 suì, without any verb: 我三十岁 (I'm 30). Adding 了 at the end gives the idea of \"already\": 我三十岁了."
+        },
+        {
+          "tipo": "tabela",
+          "cabecalho": [
+            "Word",
+            "When to use it",
+            "Example"
+          ],
+          "linhas": [
+            [
+              "几 jǐ",
+              "small numbers, usually under 10; needs a measure word",
+              "你有几个哥哥？"
+            ],
+            [
+              "多少 duō shao",
+              "any number; the measure word is optional",
+              "你们班有多少学生？"
+            ]
+          ]
+        },
+        {
+          "tipo": "dica",
+          "texto": "二 èr is for counting and inside numbers (十二, 二十). Before a measure word, \"two\" is 两 liǎng: 两个人 (two people), 两岁 (two years old)."
+        }
+      ],
+      "exemplos": [
+        {
+          "frase": "你几岁？",
+          "pinyin": "nǐ jǐ suì",
+          "en": "How old are you? (to a child)",
+          "pt": "Quantos anos você tem? (para criança)"
+        },
+        {
+          "frase": "我八岁。",
+          "pinyin": "wǒ bā suì",
+          "en": "I'm eight.",
+          "pt": "Tenho oito anos."
+        },
+        {
+          "frase": "你多大？",
+          "pinyin": "nǐ duō dà",
+          "en": "How old are you?",
+          "pt": "Quantos anos você tem?"
+        },
+        {
+          "frase": "我三十四岁。",
+          "pinyin": "wǒ sān shí sì suì",
+          "en": "I'm thirty-four.",
+          "pt": "Tenho trinta e quatro anos."
+        },
+        {
+          "frase": "我妈妈六十岁了。",
+          "pinyin": "wǒ mā ma liù shí suì le",
+          "en": "My mom is sixty now.",
+          "pt": "Minha mãe já tem sessenta anos."
+        }
+      ],
+      "palavras": [
+        {
+          "palavra": "多大",
+          "pinyin": "duō dà",
+          "classe": "phrase",
+          "en": "how old (for adults)",
+          "pt": "quantos anos (para adultos)"
+        },
+        {
+          "palavra": "年纪",
+          "pinyin": "nián jì",
+          "classe": "noun",
+          "en": "age (polite)",
+          "pt": "idade (formal)"
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "escolha",
+          "pergunta": "How do you ask a six-year-old's age?",
+          "opcoes": [
+            "你几岁？",
+            "您多大年纪？",
+            "你几个？",
+            "你是几？"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "\"I'm 30\" in Chinese:",
+          "opcoes": [
+            "我三十岁。",
+            "我是三十。",
+            "我有三十岁。",
+            "我三十个岁。"
+          ],
+          "correta": 0,
+          "explicacao": "Age needs no verb: number + 岁."
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "\"Two years old\":",
+          "opcoes": [
+            "两岁",
+            "二岁",
+            "二个岁",
+            "两个岁"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "ouvir",
+          "audio": "我妈妈六十岁了。",
+          "pergunta": "What did you hear?",
+          "opcoes": [
+            "My mom is sixty now.",
+            "My mom is sixteen.",
+            "My mom is six.",
+            "My grandma is sixty."
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "montar",
+          "traducao": "How old are you? (to an adult)",
+          "blocos": [
+            "你",
+            "多",
+            "大"
+          ],
+          "extras": [
+            "几",
+            "岁"
+          ],
+          "pinyin": "nǐ duō dà"
+        },
+        {
+          "tipo": "ditado",
+          "frase": "岁",
+          "resposta": "suì",
+          "traducao": "years old"
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "Which question word is for small numbers, usually under 10?",
+          "opcoes": [
+            "几 jǐ",
+            "多少 duō shao",
+            "什么 shén me",
+            "哪 nǎ"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "falar",
+          "frase": "我今年三十四岁。",
+          "pinyin": "wǒ jīn nián sān shí sì suì",
+          "traducao": "I'm thirty-four this year."
+        }
+      ]
+    },
+    {
+      "id": "zh-u03-l03",
+      "titulo": "How many people?",
+      "explicacao": [
+        {
+          "tipo": "texto",
+          "texto": "In Chinese, a number cannot go straight before a noun. A measure word goes in between: 三个人 (three people), never 三人."
+        },
+        {
+          "tipo": "texto",
+          "texto": "个 gè is the most common measure word. When you don't know the right one, 个 is usually understood."
+        },
+        {
+          "tipo": "tabela",
+          "cabecalho": [
+            "Measure word",
+            "Used for",
+            "Example"
+          ],
+          "linhas": [
+            [
+              "个 gè",
+              "people and many objects",
+              "一个朋友 (a friend)"
+            ],
+            [
+              "口 kǒu",
+              "members of a family",
+              "我家有四口人"
+            ],
+            [
+              "本 běn",
+              "books and notebooks",
+              "两本书 (two books)"
+            ],
+            [
+              "杯 bēi",
+              "cups and glasses",
+              "一杯茶 (a cup of tea)"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "To ask how many: 几 + measure word + noun. 你家有几口人？ (How many people are in your family?)"
+        },
+        {
+          "tipo": "dica",
+          "texto": "Remember the tone change: before 个 (4th tone), 一 is said yí: 一个 yí gè."
+        }
+      ],
+      "exemplos": [
+        {
+          "frase": "你家有几口人？",
+          "pinyin": "nǐ jiā yǒu jǐ kǒu rén",
+          "en": "How many people are in your family?",
+          "pt": "Quantas pessoas tem na sua família?"
+        },
+        {
+          "frase": "我家有四口人。",
+          "pinyin": "wǒ jiā yǒu sì kǒu rén",
+          "en": "There are four people in my family.",
+          "pt": "Minha família tem quatro pessoas."
+        },
+        {
+          "frase": "我有两个哥哥。",
+          "pinyin": "wǒ yǒu liǎng gè gē ge",
+          "en": "I have two older brothers.",
+          "pt": "Tenho dois irmãos mais velhos."
+        },
+        {
+          "frase": "一杯茶，谢谢。",
+          "pinyin": "yì bēi chá xiè xie",
+          "en": "A cup of tea, please.",
+          "pt": "Um chá, por favor."
+        },
+        {
+          "frase": "我们班有二十个学生。",
+          "pinyin": "wǒ men bān yǒu èr shí gè xué sheng",
+          "en": "There are twenty students in our class.",
+          "pt": "Nossa turma tem vinte alunos."
+        }
+      ],
+      "palavras": [
+        {
+          "palavra": "几口人",
+          "pinyin": "jǐ kǒu rén",
+          "classe": "phrase",
+          "en": "how many people (in a family)?",
+          "pt": "quantas pessoas (na família)?"
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "escolha",
+          "pergunta": "\"Three friends\":",
+          "opcoes": [
+            "三个朋友",
+            "三朋友",
+            "个三朋友",
+            "三朋友个"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "Complete: 我家有四__人。",
+          "opcoes": [
+            "口",
+            "本",
+            "杯",
+            "岁"
+          ],
+          "correta": 0,
+          "explicacao": "口 is the measure word for family members."
+        },
+        {
+          "tipo": "ouvir",
+          "audio": "我家有四口人。",
+          "pergunta": "What did you hear?",
+          "opcoes": [
+            "There are four people in my family.",
+            "There are ten people in my family.",
+            "I have four brothers.",
+            "There are four rooms in my house."
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "montar",
+          "traducao": "I have two older brothers.",
+          "blocos": [
+            "我",
+            "有",
+            "两",
+            "个",
+            "哥哥"
+          ],
+          "extras": [
+            "二",
+            "是"
+          ],
+          "pinyin": "wǒ yǒu liǎng gè gē ge"
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "\"A cup of tea\":",
+          "opcoes": [
+            "一杯茶",
+            "一茶",
+            "杯一茶",
+            "茶一杯一"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "ditado",
+          "frase": "几口人",
+          "resposta": "jǐ kǒu rén",
+          "traducao": "how many people (in a family)"
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "\"Two books\":",
+          "opcoes": [
+            "两本书",
+            "二本书",
+            "两书",
+            "二书"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "falar",
+          "frase": "我家有四口人。",
+          "pinyin": "wǒ jiā yǒu sì kǒu rén",
+          "traducao": "There are four people in my family."
+        }
+      ]
+    }
+  ]
+}
