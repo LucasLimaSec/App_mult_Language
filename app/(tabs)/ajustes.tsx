@@ -2,7 +2,7 @@ import { Ionicons } from '@expo/vector-icons';
 import Constants from 'expo-constants';
 import { useRouter, type Href } from 'expo-router';
 import { useEffect, useState } from 'react';
-import { Pressable, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 
 import { BotaoIcone } from '@/components/Botao';
 import { Cartao } from '@/components/Cartao';
@@ -12,6 +12,7 @@ import { INFO_DICIONARIO } from '@/chines/dicionario';
 import { gravarNovosPorDia, lerNovosPorDia, NOVOS_POR_DIA_MAXIMO } from '@/db/cartoes';
 import { coresDoDestaque, useTema } from '@/ui/tema';
 import type { Idioma } from '@/voz/idiomas';
+import { Pressionavel } from '@/ui/Pressionavel';
 
 const IDIOMAS_COM_CARTOES: Idioma[] = ['es', 'zh'];
 const NOMES: Record<Idioma, string> = { en: 'Inglês', es: 'Espanhol', zh: 'Chinês' };
@@ -73,11 +74,11 @@ export default function Ajustes() {
 
       <Cartao titulo="Testes do aparelho" subtitulo="Faça os três em modo avião.">
         {TESTES.map((teste) => (
-          <Pressable
+          <Pressionavel
             key={teste.titulo}
             accessibilityRole="button"
             onPress={() => router.push(teste.rota)}
-            style={({ pressed }) => ({
+            style={(pressed) => ({
               flexDirection: 'row',
               alignItems: 'center',
               gap: 12,
@@ -97,7 +98,7 @@ export default function Ajustes() {
               <Apoio>{teste.descricao}</Apoio>
             </View>
             <Ionicons name="chevron-forward" size={22} color={tema.texto2} />
-          </Pressable>
+          </Pressionavel>
         ))}
       </Cartao>
 

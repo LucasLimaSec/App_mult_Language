@@ -1,7 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { Stack, useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
 import { useCallback, useState } from 'react';
-import { Pressable, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 
 import { BotaoIcone } from '@/components/Botao';
 import { Cartao } from '@/components/Cartao';
@@ -10,13 +10,15 @@ import { Apoio, Paragrafo } from '@/components/Texto';
 import { localizarUnidade, unidadeDoCurriculo, unidadeEscrita } from '@/conteudo/unidades';
 import { lerProgresso } from '@/db/licoes';
 import type { Lesson } from '@/db/schema';
-import { coresDoDestaque, useTema } from '@/ui/tema';
+import { coresDoDestaque, useModo, useTema } from '@/ui/tema';
 import { falar } from '@/voz/fala';
 import type { Idioma } from '@/voz/idiomas';
+import { Pressionavel } from '@/ui/Pressionavel';
 
 export default function TelaUnidade() {
   const router = useRouter();
   const tema = useTema();
+  const modo = useModo();
   const { id } = useLocalSearchParams<{ id: string }>();
   const unidadeC = id ? unidadeDoCurriculo(id) : undefined;
   const escrita = id ? unidadeEscrita(id) : undefined;
@@ -60,12 +62,12 @@ export default function TelaUnidade() {
           const linha = progresso[l.id];
           const concluida = linha?.status === 'concluida';
           return (
-            <Pressable
+            <Pressionavel
               key={l.id}
               accessibilityRole="button"
               disabled={!disponivel}
               onPress={() => router.push({ pathname: '/licao/[id]', params: { id: l.id } })}
-              style={({ pressed }) => ({
+              style={(pressed) => ({
                 flexDirection: 'row',
                 alignItems: 'center',
                 gap: 12,
@@ -81,13 +83,13 @@ export default function TelaUnidade() {
               <View
                 style={{
                   backgroundColor: concluida ? destaque.cor : destaque.clara,
-                  borderBottomColor: concluida ? destaque.sombra : tema.borda,
+                  borderBottomColor: destaque.sombra,
                 }}
                 className="h-11 w-11 items-center justify-center rounded-full border-b-4">
                 {concluida ? (
                   <Ionicons name="checkmark" size={24} color="#FFFFFF" />
                 ) : (
-                  <Text style={{ color: destaque.sombra }} className="font-titulo text-lg">
+                  <Text style={{ color: modo === 'escuro' ? destaque.cor : destaque.sombra }} className="font-titulo text-lg">
                     {i + 1}
                   </Text>
                 )}
@@ -106,7 +108,7 @@ export default function TelaUnidade() {
                 </Apoio>
               </View>
               {disponivel ? <Ionicons name="chevron-forward" size={22} color={tema.texto2} /> : null}
-            </Pressable>
+            </Pressionavel>
           );
         })}
       </Cartao>

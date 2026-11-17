@@ -10,6 +10,7 @@ import { lerProgresso } from '@/db/licoes';
 import type { Lesson } from '@/db/schema';
 import { coresDoDestaque, useTema } from '@/ui/tema';
 import { CODIGOS_IDIOMA, IDIOMAS, type Idioma } from '@/voz/idiomas';
+import { Pressionavel } from '@/ui/Pressionavel';
 
 /** Deslocamento horizontal de cada lição no caminho em zigue-zague. */
 const ZIGUEZAGUE = [-40, 10, 45, 10, -40, -55];
@@ -32,17 +33,17 @@ function NoDaTrilha({ estado, idioma, titulo, deslocamento, aoTocar }: { estado:
       ) : null}
       {/* A próxima lição ganha um anel em volta. */}
       <View style={estado === 'proxima' ? { padding: 8, borderRadius: 999, backgroundColor: destaque.clara } : undefined}>
-      <Pressable
+      <Pressionavel
         accessibilityRole="button"
         accessibilityLabel={`${titulo}${estado === 'feita' ? ', concluída' : estado === 'proxima' ? ', próxima lição' : ''}`}
         onPress={aoTocar}
-        style={({ pressed }) => ({
+        style={(pressed) => ({
           width: tamanho,
           height: tamanho,
           borderRadius: tamanho,
           backgroundColor: cheio ? destaque.cor : destaque.clara,
           borderBottomWidth: pressed ? 0 : 6,
-          borderBottomColor: cheio ? destaque.sombra : tema.borda,
+          borderBottomColor: destaque.sombra,
           marginTop: pressed ? 6 : 0,
           alignItems: 'center',
           justifyContent: 'center',
@@ -52,7 +53,7 @@ function NoDaTrilha({ estado, idioma, titulo, deslocamento, aoTocar }: { estado:
           size={estado === 'proxima' ? 40 : 32}
           color={cheio ? '#FFFFFF' : destaque.cor}
         />
-      </Pressable>
+      </Pressionavel>
       </View>
     </View>
   );

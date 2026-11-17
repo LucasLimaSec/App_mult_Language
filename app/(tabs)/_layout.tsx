@@ -37,6 +37,8 @@ export default function LayoutAbas() {
         headerShown: false,
         tabBarActiveTintColor: tema.marca,
         tabBarInactiveTintColor: tema.texto2,
+        // A pílula da aba ativa é mais larga que a caixa padrão do ícone (cerca de 31 px).
+        tabBarIconStyle: { width: 64, height: 34 },
         tabBarLabelStyle: { fontFamily: FONTES.forte, fontSize: 12, marginTop: 4 },
         tabBarStyle: {
           backgroundColor: tema.superficie,

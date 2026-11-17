@@ -1,7 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { ActivityIndicator, Pressable, Text, View } from 'react-native';
+import { ActivityIndicator, Text, View } from 'react-native';
 
 import { Botao } from '@/components/Botao';
 import { Cartao } from '@/components/Cartao';
@@ -16,6 +16,7 @@ import { voltaNaMesmaSessao } from '@/srs/fila';
 import { pararFala } from '@/voz/fala';
 import { useTema } from '@/ui/tema';
 import { CODIGOS_IDIOMA, type Idioma } from '@/voz/idiomas';
+import { Pressionavel } from '@/ui/Pressionavel';
 
 /** Errei, Difícil, Bom e Fácil: vermelho, âmbar, verde e azul. */
 const COR_DA_RESPOSTA: Record<Resposta, 'erro' | 'ambar' | 'certo' | 'en'> = {
@@ -170,11 +171,11 @@ export default function Revisar() {
           <View className="flex-row flex-wrap gap-3">
             {RESPOSTAS.map(({ nota, rotulo }) => (
               <View key={nota} style={{ width: '47.5%' }}>
-                <Pressable
+                <Pressionavel
                   accessibilityRole="button"
                   accessibilityLabel={`${rotulo}, volta em ${formatarIntervalo(previsao[nota])}`}
                   onPress={() => responder(nota)}
-                  style={({ pressed }) => ({
+                  style={(pressed) => ({
                     minHeight: 64,
                     borderRadius: 16,
                     backgroundColor: tema[COR_DA_RESPOSTA[nota]],
@@ -186,7 +187,7 @@ export default function Revisar() {
                   })}>
                   <Text className="font-titulo text-lg text-white">{rotulo}</Text>
                   <Text className="font-forte text-sm text-white">{formatarIntervalo(previsao[nota])}</Text>
-                </Pressable>
+                </Pressionavel>
               </View>
             ))}
           </View>

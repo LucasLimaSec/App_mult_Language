@@ -1,8 +1,9 @@
 import { Ionicons } from '@expo/vector-icons';
 import type { ComponentProps } from 'react';
-import { Pressable, Text, View, type ViewStyle } from 'react-native';
+import { Text, View, type ViewStyle } from 'react-native';
 
 import { coresDoDestaque, FONTES, useTema, type CorDeDestaque } from '@/ui/tema';
+import { Pressionavel } from '@/ui/Pressionavel';
 
 export type NomeIcone = ComponentProps<typeof Ionicons>['name'];
 
@@ -52,13 +53,13 @@ export function Botao({ titulo, onPress, variante = 'primario', cor, icone, desa
   }
 
   return (
-    <Pressable
+    <Pressionavel
       accessibilityRole="button"
       accessibilityLabel={titulo}
       accessibilityState={{ disabled: desabilitado }}
       disabled={desabilitado}
       onPress={onPress}
-      style={({ pressed }) => {
+      style={(pressed) => {
         const afundado = pressed && !desabilitado;
         return [
           {
@@ -83,7 +84,7 @@ export function Botao({ titulo, onPress, variante = 'primario', cor, icone, desa
           {titulo}
         </Text>
       </View>
-    </Pressable>
+    </Pressionavel>
   );
 }
 
@@ -108,12 +109,12 @@ export function BotaoIcone({
   const fundo = variante === 'claro' ? destaque.clara : destaque.cor;
   const sombra = variante === 'claro' ? tema.borda : destaque.sombra;
   return (
-    <Pressable
+    <Pressionavel
       accessibilityRole="button"
       accessibilityLabel={descricao}
       hitSlop={6}
       onPress={onPress}
-      style={({ pressed }) => ({
+      style={(pressed) => ({
         width: tamanho,
         height: tamanho,
         borderRadius: tamanho * 0.3,
@@ -125,6 +126,6 @@ export function BotaoIcone({
         justifyContent: 'center',
       })}>
       <Ionicons name={icone} size={tamanho * 0.5} color={variante === 'claro' ? destaque.sombra : tema.sobreCor} />
-    </Pressable>
+    </Pressionavel>
   );
 }

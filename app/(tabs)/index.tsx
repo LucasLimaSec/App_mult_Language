@@ -1,7 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { useFocusEffect, useRouter, type Href } from 'expo-router';
 import { useCallback, useState } from 'react';
-import { Pressable, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 
 import { BarraProgresso } from '@/components/BarraProgresso';
 import { Botao } from '@/components/Botao';
@@ -11,8 +11,9 @@ import { resumoDoIdioma } from '@/db/cartoes';
 import { lerProgresso } from '@/db/licoes';
 import { resumoDoDia, type ResumoDoDia } from '@/db/progresso';
 import type { Licao } from '@/conteudo/licoes';
-import { coresDoDestaque, useTema, type CorDeDestaque } from '@/ui/tema';
+import { coresDoDestaque, useModo, useTema, type CorDeDestaque } from '@/ui/tema';
 import type { Idioma } from '@/voz/idiomas';
+import { Pressionavel } from '@/ui/Pressionavel';
 
 type InfoLingua = { idioma: Idioma; licoesFeitas: number; proxima?: Licao; cartoesHoje: number };
 
@@ -38,11 +39,13 @@ async function carregar(): Promise<Dados> {
 
 function Pilula({ icone, texto, cor }: { icone: 'flame' | 'time'; texto: string; cor: CorDeDestaque }) {
   const tema = useTema();
+  const modo = useModo();
   const destaque = coresDoDestaque(tema, cor);
   return (
     <View style={{ backgroundColor: destaque.clara }} className="flex-row items-center gap-1 rounded-full px-3 py-1.5">
       <Ionicons name={icone} size={18} color={destaque.cor} />
-      <Text style={{ color: destaque.sombra }} className="font-titulo text-base">
+      {/* No escuro o tom mais escuro some no fundo; usa a cor viva. */}
+      <Text style={{ color: modo === 'escuro' ? destaque.cor : destaque.sombra }} className="font-titulo text-base">
         {texto}
       </Text>
     </View>
@@ -72,12 +75,12 @@ function CartaoLingua({ idioma, detalhe, fracao, aoTocar }: { idioma: Idioma; de
   const tema = useTema();
   const destaque = coresDoDestaque(tema, idioma);
   return (
-    <Pressable
+    <Pressionavel
       accessibilityRole="button"
       accessibilityLabel={`${NOMES[idioma]}: ${detalhe}`}
       disabled={!aoTocar}
       onPress={aoTocar}
-      style={({ pressed }) => ({
+      style={(pressed) => ({
         flexDirection: 'row',
         alignItems: 'center',
         gap: 16,
@@ -103,7 +106,7 @@ function CartaoLingua({ idioma, detalhe, fracao, aoTocar }: { idioma: Idioma; de
         </View>
         <BarraProgresso fracao={fracao} cor={idioma} altura={10} />
       </View>
-    </Pressable>
+    </Pressionavel>
   );
 }
 

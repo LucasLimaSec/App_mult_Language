@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Pressable, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 
 import { caracteresHan } from '@/chines/pinyin';
 import { BotaoIcone } from '@/components/Botao';
@@ -9,6 +9,7 @@ import type { Exercicio } from '@/conteudo/licoes';
 import { FONTES, useTema } from '@/ui/tema';
 import { falar } from '@/voz/fala';
 import type { Idioma } from '@/voz/idiomas';
+import { Pressionavel } from '@/ui/Pressionavel';
 
 import { Feedback } from './Feedback';
 import type { ResultadoExercicio } from './tipos';
@@ -30,11 +31,11 @@ export function BotaoOuvirGrande({ texto, idioma }: { texto: string; idioma: Idi
   return (
     <View className="flex-row items-center gap-3.5">
       <BotaoIcone icone="volume-high" descricao="Ouvir de novo" cor="en" tamanho={96} onPress={() => void falar(texto, idioma)} />
-      <Pressable
+      <Pressionavel
         accessibilityRole="button"
         accessibilityLabel="Ouvir devagar"
         onPress={() => void falar(texto, idioma, { velocidade: 0.6 })}
-        style={({ pressed }) => ({
+        style={(pressed) => ({
           width: 64,
           height: 64,
           borderRadius: 18,
@@ -46,7 +47,7 @@ export function BotaoOuvirGrande({ texto, idioma }: { texto: string; idioma: Idi
           justifyContent: 'center',
         })}>
         <Text style={{ fontFamily: FONTES.titulo, fontSize: 17, color: tema.en }}>0,6×</Text>
-      </Pressable>
+      </Pressionavel>
     </View>
   );
 }
@@ -69,11 +70,11 @@ export function Opcao({
         ? { fundo: tema.erroClara, borda: tema.erro }
         : { fundo: tema.superficie, borda: tema.borda };
   return (
-    <Pressable
+    <Pressionavel
       accessibilityRole="button"
       disabled={!onPress}
       onPress={onPress}
-      style={({ pressed }) => ({
+      style={(pressed) => ({
         minHeight: 58,
         justifyContent: 'center',
         borderRadius: 16,
@@ -86,7 +87,7 @@ export function Opcao({
         paddingVertical: 12,
       })}>
       {children}
-    </Pressable>
+    </Pressionavel>
   );
 }
 

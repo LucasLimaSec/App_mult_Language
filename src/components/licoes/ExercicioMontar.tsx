@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { Pressable, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 
 import { Botao } from '@/components/Botao';
 import { PinyinColorido } from '@/components/cartoes/PalavraChinesa';
@@ -8,6 +8,7 @@ import type { Exercicio } from '@/conteudo/licoes';
 import { conferirMontar, embaralhar } from '@/licoes/conferir';
 import { useTema } from '@/ui/tema';
 import type { Idioma } from '@/voz/idiomas';
+import { Pressionavel } from '@/ui/Pressionavel';
 
 import { Feedback } from './Feedback';
 import type { ResultadoExercicio } from './tipos';
@@ -23,12 +24,12 @@ type Bloco = { id: number; texto: string };
 function Peca({ texto, onPress, escolhida }: { texto: string; onPress?: () => void; escolhida?: boolean }) {
   const tema = useTema();
   return (
-    <Pressable
+    <Pressionavel
       accessibilityRole="button"
       accessibilityLabel={texto}
       disabled={!onPress}
       onPress={onPress}
-      style={({ pressed }) => ({
+      style={(pressed) => ({
         borderRadius: 14,
         borderWidth: 2,
         borderColor: escolhida ? tema.marca : tema.borda,
@@ -41,7 +42,7 @@ function Peca({ texto, onPress, escolhida }: { texto: string; onPress?: () => vo
       <Text style={{ color: tema.texto }} className="font-forte text-lg">
         {texto}
       </Text>
-    </Pressable>
+    </Pressionavel>
   );
 }
 
