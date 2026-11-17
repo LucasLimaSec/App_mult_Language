@@ -1,0 +1,1043 @@
+{
+  "id": "curriculo-es",
+  "idioma": "es",
+  "titulo": "Spanish A1 to B1 (Latin American Spanish, Mexico)",
+  "meta": "B1",
+  "status": "proposta",
+  "niveis": [
+    {
+      "id": "A1",
+      "unidades": [
+        {
+          "id": "es-u01",
+          "titulo": "Hello!",
+          "objetivo": "Greet people, introduce yourself and say where you are from.",
+          "gramatica": [
+            "Subject pronouns (yo, tú, usted, él, ella...)",
+            "ser in the present: soy, eres, es",
+            "tú vs. usted"
+          ],
+          "vocabulario": [
+            "greetings and goodbyes",
+            "countries and nationalities"
+          ],
+          "falsosAmigos": [
+            "apellido",
+            "largo",
+            "no"
+          ],
+          "licoes": [
+            {
+              "id": "es-u01-l01",
+              "titulo": "Greetings and goodbyes"
+            },
+            {
+              "id": "es-u01-l02",
+              "titulo": "What's your name?"
+            },
+            {
+              "id": "es-u01-l03",
+              "titulo": "Where are you from?"
+            }
+          ]
+        },
+        {
+          "id": "es-u02",
+          "titulo": "Numbers and personal details",
+          "objetivo": "Give your age, phone number and email, and spell your name.",
+          "gramatica": [
+            "Numbers 0-100",
+            "tener in the present (tengo 30 años)",
+            "hay (there is, there are)"
+          ],
+          "vocabulario": [
+            "numbers",
+            "the alphabet",
+            "personal details"
+          ],
+          "falsosAmigos": [
+            "rato",
+            "doce",
+            "cuello"
+          ],
+          "licoes": [
+            {
+              "id": "es-u02-l01",
+              "titulo": "Numbers 0 to 20"
+            },
+            {
+              "id": "es-u02-l02",
+              "titulo": "How old are you?"
+            },
+            {
+              "id": "es-u02-l03",
+              "titulo": "Phone numbers and spelling"
+            }
+          ]
+        },
+        {
+          "id": "es-u03",
+          "titulo": "My family",
+          "objetivo": "Describe your family and the people around you.",
+          "gramatica": [
+            "Gender and number of nouns",
+            "Definite and indefinite articles",
+            "Possessives: mi, tu, su, nuestro"
+          ],
+          "vocabulario": [
+            "family members",
+            "physical description"
+          ],
+          "falsosAmigos": [
+            "padres",
+            "novio",
+            "embarazada"
+          ],
+          "licoes": [
+            {
+              "id": "es-u03-l01",
+              "titulo": "This is my family"
+            },
+            {
+              "id": "es-u03-l02",
+              "titulo": "Brothers, sisters and cousins"
+            },
+            {
+              "id": "es-u03-l03",
+              "titulo": "What do they look like?"
+            }
+          ]
+        },
+        {
+          "id": "es-u04",
+          "titulo": "My home",
+          "objetivo": "Describe your house and say where things are.",
+          "gramatica": [
+            "estar for location",
+            "hay vs. está",
+            "Prepositions of place (en, sobre, debajo de, al lado de)"
+          ],
+          "vocabulario": [
+            "rooms",
+            "furniture",
+            "household objects"
+          ],
+          "falsosAmigos": [
+            "escritorio",
+            "balcón",
+            "carpeta"
+          ],
+          "licoes": [
+            {
+              "id": "es-u04-l01",
+              "titulo": "Rooms of the house"
+            },
+            {
+              "id": "es-u04-l02",
+              "titulo": "Where are my keys?"
+            },
+            {
+              "id": "es-u04-l03",
+              "titulo": "My neighborhood"
+            }
+          ]
+        },
+        {
+          "id": "es-u05",
+          "titulo": "A day in my life",
+          "objetivo": "Talk about your routine and tell the time.",
+          "gramatica": [
+            "Regular -ar, -er and -ir verbs in the present",
+            "Telling the time (es la una, son las dos)",
+            "Days of the week"
+          ],
+          "vocabulario": [
+            "daily activities",
+            "times of day"
+          ],
+          "falsosAmigos": [
+            "pronto",
+            "fecha",
+            "luego"
+          ],
+          "licoes": [
+            {
+              "id": "es-u05-l01",
+              "titulo": "What time is it?"
+            },
+            {
+              "id": "es-u05-l02",
+              "titulo": "-ar verbs: trabajar, estudiar, hablar"
+            },
+            {
+              "id": "es-u05-l03",
+              "titulo": "-er and -ir verbs: comer, vivir, escribir"
+            },
+            {
+              "id": "es-u05-l04",
+              "titulo": "My week"
+            }
+          ]
+        },
+        {
+          "id": "es-u06",
+          "titulo": "Food and drinks",
+          "objetivo": "Order in a restaurant and talk about what you like to eat.",
+          "gramatica": [
+            "gustar with nouns (me gusta, me gustan)",
+            "querer and quisiera for ordering",
+            "Measure words: un vaso de, una taza de"
+          ],
+          "vocabulario": [
+            "Mexican food",
+            "drinks",
+            "at the table"
+          ],
+          "falsosAmigos": [
+            "taza",
+            "vaso",
+            "postre",
+            "propina"
+          ],
+          "licoes": [
+            {
+              "id": "es-u06-l01",
+              "titulo": "At the taquería"
+            },
+            {
+              "id": "es-u06-l02",
+              "titulo": "I like it, I don't like it"
+            },
+            {
+              "id": "es-u06-l03",
+              "titulo": "The check, please"
+            }
+          ]
+        },
+        {
+          "id": "es-u07",
+          "titulo": "Around town",
+          "objetivo": "Ask for and give directions.",
+          "gramatica": [
+            "Stem-changing verbs (e→ie, o→ue): quiero, puedo",
+            "tener que + infinitive",
+            "Contractions al and del"
+          ],
+          "vocabulario": [
+            "places in the city",
+            "directions"
+          ],
+          "falsosAmigos": [
+            "tienda",
+            "cerca",
+            "sitio"
+          ],
+          "licoes": [
+            {
+              "id": "es-u07-l01",
+              "titulo": "Places in the city"
+            },
+            {
+              "id": "es-u07-l02",
+              "titulo": "How do I get to...?"
+            },
+            {
+              "id": "es-u07-l03",
+              "titulo": "Turn left at the corner"
+            }
+          ]
+        },
+        {
+          "id": "es-u08",
+          "titulo": "Shopping",
+          "objetivo": "Buy clothes and groceries, ask prices and sizes.",
+          "gramatica": [
+            "Demonstratives: este, ese, aquel",
+            "Numbers 100-1000",
+            "Agreement of adjectives (colors)"
+          ],
+          "vocabulario": [
+            "clothes",
+            "colors",
+            "money and prices"
+          ],
+          "falsosAmigos": [
+            "rojo",
+            "cola",
+            "ancho"
+          ],
+          "licoes": [
+            {
+              "id": "es-u08-l01",
+              "titulo": "How much is it?"
+            },
+            {
+              "id": "es-u08-l02",
+              "titulo": "This one or that one?"
+            },
+            {
+              "id": "es-u08-l03",
+              "titulo": "At the market"
+            }
+          ]
+        },
+        {
+          "id": "es-u09",
+          "titulo": "Free time",
+          "objetivo": "Talk about hobbies, sports and how often you do things.",
+          "gramatica": [
+            "gustar and encantar with verbs",
+            "Frequency adverbs (siempre, a veces, nunca)",
+            "jugar vs. tocar"
+          ],
+          "vocabulario": [
+            "hobbies",
+            "sports",
+            "music"
+          ],
+          "falsosAmigos": [
+            "brincar",
+            "polvo",
+            "exquisito"
+          ],
+          "licoes": [
+            {
+              "id": "es-u09-l01",
+              "titulo": "What do you do for fun?"
+            },
+            {
+              "id": "es-u09-l02",
+              "titulo": "Sports and games"
+            },
+            {
+              "id": "es-u09-l03",
+              "titulo": "How often?"
+            }
+          ]
+        },
+        {
+          "id": "es-u10",
+          "titulo": "Plans and the weather",
+          "objetivo": "Talk about future plans and the weather.",
+          "gramatica": [
+            "ir a + infinitive",
+            "Weather expressions with hacer and estar",
+            "Months and seasons"
+          ],
+          "vocabulario": [
+            "weather",
+            "months and seasons",
+            "weekend plans"
+          ],
+          "falsosAmigos": [
+            "todavía",
+            "apenas",
+            "salsa"
+          ],
+          "licoes": [
+            {
+              "id": "es-u10-l01",
+              "titulo": "What are you going to do?"
+            },
+            {
+              "id": "es-u10-l02",
+              "titulo": "What's the weather like?"
+            },
+            {
+              "id": "es-u10-l03",
+              "titulo": "Seasons and holidays"
+            },
+            {
+              "id": "es-u10-l04",
+              "titulo": "A1 review"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A2",
+      "unidades": [
+        {
+          "id": "es-u11",
+          "titulo": "Daily routine",
+          "objetivo": "Describe your morning and evening routine in detail.",
+          "gramatica": [
+            "Reflexive verbs (levantarse, ducharse, acostarse)",
+            "Reflexive pronoun placement",
+            "Sequencing words (primero, luego, después)"
+          ],
+          "vocabulario": [
+            "personal care",
+            "routine"
+          ],
+          "falsosAmigos": [
+            "acordarse",
+            "escoba",
+            "rato"
+          ],
+          "licoes": [
+            {
+              "id": "es-u11-l01",
+              "titulo": "I get up at six"
+            },
+            {
+              "id": "es-u11-l02",
+              "titulo": "Getting ready"
+            },
+            {
+              "id": "es-u11-l03",
+              "titulo": "Before going to bed"
+            }
+          ]
+        },
+        {
+          "id": "es-u12",
+          "titulo": "What I did yesterday",
+          "objetivo": "Tell what you did yesterday or last weekend.",
+          "gramatica": [
+            "Preterite of regular verbs",
+            "Time expressions (ayer, anoche, el sábado pasado)",
+            "Spelling changes in the yo form (llegué, busqué)"
+          ],
+          "vocabulario": [
+            "weekend activities",
+            "errands"
+          ],
+          "falsosAmigos": [
+            "contestar",
+            "exprimir",
+            "sacar"
+          ],
+          "licoes": [
+            {
+              "id": "es-u12-l01",
+              "titulo": "Yesterday I worked a lot"
+            },
+            {
+              "id": "es-u12-l02",
+              "titulo": "Last weekend"
+            },
+            {
+              "id": "es-u12-l03",
+              "titulo": "Did you call him?"
+            }
+          ]
+        },
+        {
+          "id": "es-u13",
+          "titulo": "A trip I took",
+          "objetivo": "Talk about a past trip with common irregular verbs.",
+          "gramatica": [
+            "Preterite of ir, ser, hacer, tener, estar",
+            "Preterite of poder, poner, decir, traer",
+            "hace + time (hace dos años)"
+          ],
+          "vocabulario": [
+            "travel",
+            "transportation"
+          ],
+          "falsosAmigos": [
+            "boleto",
+            "oso",
+            "camión"
+          ],
+          "licoes": [
+            {
+              "id": "es-u13-l01",
+              "titulo": "I went to Oaxaca"
+            },
+            {
+              "id": "es-u13-l02",
+              "titulo": "What did you do there?"
+            },
+            {
+              "id": "es-u13-l03",
+              "titulo": "How was the trip?"
+            }
+          ]
+        },
+        {
+          "id": "es-u14",
+          "titulo": "When I was a child",
+          "objetivo": "Describe your childhood and how things used to be.",
+          "gramatica": [
+            "Imperfect tense (regular and ir, ser, ver)",
+            "Habitual past (siempre íbamos, solíamos)",
+            "Describing people and places in the past"
+          ],
+          "vocabulario": [
+            "childhood",
+            "school",
+            "toys and games"
+          ],
+          "falsosAmigos": [
+            "zurdo",
+            "crianza",
+            "jugar"
+          ],
+          "licoes": [
+            {
+              "id": "es-u14-l01",
+              "titulo": "When I was little"
+            },
+            {
+              "id": "es-u14-l02",
+              "titulo": "My school"
+            },
+            {
+              "id": "es-u14-l03",
+              "titulo": "We used to..."
+            }
+          ]
+        },
+        {
+          "id": "es-u15",
+          "titulo": "Telling stories",
+          "objetivo": "Tell a story combining background and events.",
+          "gramatica": [
+            "Preterite vs. imperfect",
+            "mientras + imperfect, cuando + preterite",
+            "Storytelling connectors (de repente, al final)"
+          ],
+          "vocabulario": [
+            "anecdotes",
+            "feelings"
+          ],
+          "falsosAmigos": [
+            "suceder",
+            "rato",
+            "acordar"
+          ],
+          "licoes": [
+            {
+              "id": "es-u15-l01",
+              "titulo": "What happened?"
+            },
+            {
+              "id": "es-u15-l02",
+              "titulo": "I was walking when..."
+            },
+            {
+              "id": "es-u15-l03",
+              "titulo": "Tell me a story"
+            }
+          ]
+        },
+        {
+          "id": "es-u16",
+          "titulo": "Health and the body",
+          "objetivo": "Explain symptoms and understand advice from a doctor.",
+          "gramatica": [
+            "doler (me duele, me duelen)",
+            "deber and tener que for advice",
+            "estar + adjective for states (estoy enfermo)"
+          ],
+          "vocabulario": [
+            "parts of the body",
+            "symptoms",
+            "at the pharmacy"
+          ],
+          "falsosAmigos": [
+            "constipado",
+            "débil",
+            "embarazada"
+          ],
+          "licoes": [
+            {
+              "id": "es-u16-l01",
+              "titulo": "My head hurts"
+            },
+            {
+              "id": "es-u16-l02",
+              "titulo": "At the doctor's"
+            },
+            {
+              "id": "es-u16-l03",
+              "titulo": "At the pharmacy"
+            }
+          ]
+        },
+        {
+          "id": "es-u17",
+          "titulo": "Comparisons",
+          "objetivo": "Compare people, places and things.",
+          "gramatica": [
+            "más/menos ... que",
+            "tan ... como, tanto ... como",
+            "Superlatives and irregular forms (mejor, peor, mayor, menor)"
+          ],
+          "vocabulario": [
+            "adjectives for people and places"
+          ],
+          "falsosAmigos": [
+            "raro",
+            "gracioso",
+            "rubio"
+          ],
+          "licoes": [
+            {
+              "id": "es-u17-l01",
+              "titulo": "Bigger or smaller?"
+            },
+            {
+              "id": "es-u17-l02",
+              "titulo": "As good as"
+            },
+            {
+              "id": "es-u17-l03",
+              "titulo": "The best taco in town"
+            }
+          ]
+        },
+        {
+          "id": "es-u18",
+          "titulo": "Pronouns in action",
+          "objetivo": "Avoid repetition using object pronouns.",
+          "gramatica": [
+            "Direct object pronouns (lo, la, los, las)",
+            "Indirect object pronouns (le, les)",
+            "Double pronouns (se lo, se la)"
+          ],
+          "vocabulario": [
+            "giving and lending",
+            "favors"
+          ],
+          "falsosAmigos": [
+            "pegar",
+            "tirar",
+            "quitar"
+          ],
+          "licoes": [
+            {
+              "id": "es-u18-l01",
+              "titulo": "I bought it"
+            },
+            {
+              "id": "es-u18-l02",
+              "titulo": "I gave it to her"
+            },
+            {
+              "id": "es-u18-l03",
+              "titulo": "Can you lend it to me?"
+            }
+          ]
+        },
+        {
+          "id": "es-u19",
+          "titulo": "At the hotel and the airport",
+          "objetivo": "Book a room, check in and deal with travel problems.",
+          "gramatica": [
+            "por vs. para",
+            "Polite requests (¿me podría...?)",
+            "Numbers above 1000 and dates"
+          ],
+          "vocabulario": [
+            "hotel",
+            "airport",
+            "reservations"
+          ],
+          "falsosAmigos": [
+            "presunto",
+            "salado",
+            "tienda"
+          ],
+          "licoes": [
+            {
+              "id": "es-u19-l01",
+              "titulo": "Making a reservation"
+            },
+            {
+              "id": "es-u19-l02",
+              "titulo": "Checking in"
+            },
+            {
+              "id": "es-u19-l03",
+              "titulo": "My suitcase didn't arrive"
+            },
+            {
+              "id": "es-u19-l04",
+              "titulo": "A2 review"
+            }
+          ]
+        },
+        {
+          "id": "es-u20",
+          "titulo": "Experiences",
+          "objetivo": "Talk about life experiences and recent events.",
+          "gramatica": [
+            "Present perfect (he hecho, has visto)",
+            "Irregular participles (hecho, dicho, visto, puesto)",
+            "Present perfect vs. preterite in Mexico"
+          ],
+          "vocabulario": [
+            "experiences",
+            "achievements"
+          ],
+          "falsosAmigos": [
+            "aceite",
+            "latir",
+            "firma"
+          ],
+          "licoes": [
+            {
+              "id": "es-u20-l01",
+              "titulo": "Have you ever...?"
+            },
+            {
+              "id": "es-u20-l02",
+              "titulo": "What have you done today?"
+            },
+            {
+              "id": "es-u20-l03",
+              "titulo": "Mexico prefers the preterite"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B1",
+      "unidades": [
+        {
+          "id": "es-u21",
+          "titulo": "Instructions and recipes",
+          "objetivo": "Give and understand instructions.",
+          "gramatica": [
+            "Affirmative and negative tú commands",
+            "usted and ustedes commands",
+            "Pronouns with commands (dámelo, no me lo des)"
+          ],
+          "vocabulario": [
+            "cooking",
+            "recipes",
+            "instructions"
+          ],
+          "falsosAmigos": [
+            "salsa",
+            "taza",
+            "pastel"
+          ],
+          "licoes": [
+            {
+              "id": "es-u21-l01",
+              "titulo": "Mix the ingredients"
+            },
+            {
+              "id": "es-u21-l02",
+              "titulo": "Don't touch it!"
+            },
+            {
+              "id": "es-u21-l03",
+              "titulo": "Follow these steps"
+            }
+          ]
+        },
+        {
+          "id": "es-u22",
+          "titulo": "The future",
+          "objetivo": "Make predictions and talk about plans and probabilities.",
+          "gramatica": [
+            "Simple future (hablaré, tendré)",
+            "Future of probability (¿dónde estará?)",
+            "Time clauses with the future"
+          ],
+          "vocabulario": [
+            "predictions",
+            "technology",
+            "the environment"
+          ],
+          "falsosAmigos": [
+            "asistir",
+            "goma",
+            "berro"
+          ],
+          "licoes": [
+            {
+              "id": "es-u22-l01",
+              "titulo": "In ten years"
+            },
+            {
+              "id": "es-u22-l02",
+              "titulo": "Where could he be?"
+            },
+            {
+              "id": "es-u22-l03",
+              "titulo": "The world of tomorrow"
+            }
+          ]
+        },
+        {
+          "id": "es-u23",
+          "titulo": "Polite and hypothetical",
+          "objetivo": "Make polite requests and talk about hypothetical situations.",
+          "gramatica": [
+            "Conditional (me gustaría, podría)",
+            "Giving advice (yo que tú...)",
+            "Conditional of probability in the past"
+          ],
+          "vocabulario": [
+            "requests",
+            "advice"
+          ],
+          "falsosAmigos": [
+            "molestar",
+            "enojado",
+            "aborrecer"
+          ],
+          "licoes": [
+            {
+              "id": "es-u23-l01",
+              "titulo": "Could you help me?"
+            },
+            {
+              "id": "es-u23-l02",
+              "titulo": "If I were you"
+            },
+            {
+              "id": "es-u23-l03",
+              "titulo": "What would you do?"
+            }
+          ]
+        },
+        {
+          "id": "es-u24",
+          "titulo": "Wishes and requests",
+          "objetivo": "Express wishes and ask others to do things.",
+          "gramatica": [
+            "Present subjunctive: forms",
+            "querer que, pedir que, ojalá",
+            "Subjunctive vs. infinitive"
+          ],
+          "vocabulario": [
+            "wishes",
+            "celebrations"
+          ],
+          "falsosAmigos": [
+            "aburrido",
+            "borracho",
+            "cena"
+          ],
+          "licoes": [
+            {
+              "id": "es-u24-l01",
+              "titulo": "I hope you're well"
+            },
+            {
+              "id": "es-u24-l02",
+              "titulo": "I want you to come"
+            },
+            {
+              "id": "es-u24-l03",
+              "titulo": "Ojalá"
+            }
+          ]
+        },
+        {
+          "id": "es-u25",
+          "titulo": "Feelings and doubts",
+          "objetivo": "Express emotions, doubts and opinions with the subjunctive.",
+          "gramatica": [
+            "Subjunctive after emotions (me alegra que)",
+            "Subjunctive after doubt (no creo que, dudo que)",
+            "creo que + indicative vs. no creo que + subjunctive"
+          ],
+          "vocabulario": [
+            "emotions",
+            "opinions"
+          ],
+          "falsosAmigos": [
+            "exquisito",
+            "raro",
+            "esposas"
+          ],
+          "licoes": [
+            {
+              "id": "es-u25-l01",
+              "titulo": "I'm glad you came"
+            },
+            {
+              "id": "es-u25-l02",
+              "titulo": "I don't think so"
+            },
+            {
+              "id": "es-u25-l03",
+              "titulo": "It's possible that..."
+            }
+          ]
+        },
+        {
+          "id": "es-u26",
+          "titulo": "When, so that, before",
+          "objetivo": "Talk about future actions linked in time and purpose.",
+          "gramatica": [
+            "cuando + subjunctive for the future",
+            "para que, antes de que, hasta que",
+            "aunque + indicative vs. subjunctive"
+          ],
+          "vocabulario": [
+            "life plans",
+            "moving house"
+          ],
+          "falsosAmigos": [
+            "mudanza",
+            "polvo",
+            "cachorro"
+          ],
+          "licoes": [
+            {
+              "id": "es-u26-l01",
+              "titulo": "When I finish"
+            },
+            {
+              "id": "es-u26-l02",
+              "titulo": "So that you understand"
+            },
+            {
+              "id": "es-u26-l03",
+              "titulo": "Before it's too late"
+            }
+          ]
+        },
+        {
+          "id": "es-u27",
+          "titulo": "The world of work",
+          "objetivo": "Handle a job interview and talk about your career.",
+          "gramatica": [
+            "Formal register and usted",
+            "Past perfect (había trabajado)",
+            "Phrases for describing skills and experience"
+          ],
+          "vocabulario": [
+            "jobs",
+            "job interviews",
+            "the office"
+          ],
+          "falsosAmigos": [
+            "oficina",
+            "escritorio",
+            "jornal"
+          ],
+          "licoes": [
+            {
+              "id": "es-u27-l01",
+              "titulo": "My career"
+            },
+            {
+              "id": "es-u27-l02",
+              "titulo": "The job interview"
+            },
+            {
+              "id": "es-u27-l03",
+              "titulo": "Writing a formal email"
+            },
+            {
+              "id": "es-u27-l04",
+              "titulo": "At the office"
+            }
+          ]
+        },
+        {
+          "id": "es-u28",
+          "titulo": "Opinions and debate",
+          "objetivo": "Give opinions, agree, disagree and argue a point.",
+          "gramatica": [
+            "Opinion phrases (en mi opinión, desde mi punto de vista)",
+            "Connectors (sin embargo, por lo tanto, además)",
+            "Impersonal expressions + subjunctive (es importante que)"
+          ],
+          "vocabulario": [
+            "society",
+            "current topics"
+          ],
+          "falsosAmigos": [
+            "todavía",
+            "competencia",
+            "pretender"
+          ],
+          "licoes": [
+            {
+              "id": "es-u28-l01",
+              "titulo": "In my opinion"
+            },
+            {
+              "id": "es-u28-l02",
+              "titulo": "I agree, I disagree"
+            },
+            {
+              "id": "es-u28-l03",
+              "titulo": "It's important that..."
+            }
+          ]
+        },
+        {
+          "id": "es-u29",
+          "titulo": "If I had...",
+          "objetivo": "Imagine situations and talk about what you would do.",
+          "gramatica": [
+            "Imperfect subjunctive (tuviera, fuera)",
+            "si + imperfect subjunctive + conditional",
+            "como si + imperfect subjunctive"
+          ],
+          "vocabulario": [
+            "dreams",
+            "hypothetical situations"
+          ],
+          "falsosAmigos": [
+            "ligar",
+            "prender",
+            "rubio"
+          ],
+          "licoes": [
+            {
+              "id": "es-u29-l01",
+              "titulo": "If I won the lottery"
+            },
+            {
+              "id": "es-u29-l02",
+              "titulo": "If I lived in Mexico"
+            },
+            {
+              "id": "es-u29-l03",
+              "titulo": "As if nothing had happened"
+            }
+          ]
+        },
+        {
+          "id": "es-u30",
+          "titulo": "News and reported speech",
+          "objetivo": "Report what others said and follow the news.",
+          "gramatica": [
+            "Reported speech (dijo que, me preguntó si)",
+            "Passive and impersonal se",
+            "Review of past tenses"
+          ],
+          "vocabulario": [
+            "news",
+            "media",
+            "social networks"
+          ],
+          "falsosAmigos": [
+            "periódico",
+            "asignatura",
+            "competencia"
+          ],
+          "licoes": [
+            {
+              "id": "es-u30-l01",
+              "titulo": "He said that..."
+            },
+            {
+              "id": "es-u30-l02",
+              "titulo": "In the news"
+            },
+            {
+              "id": "es-u30-l03",
+              "titulo": "B1 review"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

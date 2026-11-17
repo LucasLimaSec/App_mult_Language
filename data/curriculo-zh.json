@@ -1,0 +1,1098 @@
+{
+  "id": "curriculo-zh",
+  "idioma": "zh",
+  "titulo": "Chinese HSK 1 to HSK 2 (HSK 3.0 standard)",
+  "meta": "HSK 2 (HSK 3.0)",
+  "status": "proposta",
+  "niveis": [
+    {
+      "id": "HSK1",
+      "unidades": [
+        {
+          "id": "zh-u01",
+          "titulo": "Pinyin and tones",
+          "objetivo": "Read pinyin aloud and hear the four tones.",
+          "gramatica": [
+            "The four tones and the neutral tone",
+            "Initials and finals",
+            "Tone changes: 你好, 一 and 不"
+          ],
+          "vocabulario": [
+            "pinyin"
+          ],
+          "caracteres": [
+            "一",
+            "二",
+            "三",
+            "八",
+            "不"
+          ],
+          "licoes": [
+            {
+              "id": "zh-u01-l01",
+              "titulo": "The four tones"
+            },
+            {
+              "id": "zh-u01-l02",
+              "titulo": "Initials and finals"
+            },
+            {
+              "id": "zh-u01-l03",
+              "titulo": "Tone changes"
+            }
+          ]
+        },
+        {
+          "id": "zh-u02",
+          "titulo": "Hello, my name is...",
+          "objetivo": "Greet people and say your name and nationality.",
+          "gramatica": [
+            "是 sentences (我是学生)",
+            "Yes-no questions with 吗",
+            "Follow-up questions with 呢"
+          ],
+          "vocabulario": [
+            "greetings",
+            "names",
+            "nationalities"
+          ],
+          "caracteres": [
+            "你",
+            "好",
+            "我",
+            "是",
+            "叫",
+            "国"
+          ],
+          "licoes": [
+            {
+              "id": "zh-u02-l01",
+              "titulo": "Hello and goodbye"
+            },
+            {
+              "id": "zh-u02-l02",
+              "titulo": "What's your name?"
+            },
+            {
+              "id": "zh-u02-l03",
+              "titulo": "Are you Chinese?"
+            }
+          ]
+        },
+        {
+          "id": "zh-u03",
+          "titulo": "Numbers and age",
+          "objetivo": "Count, say your age and ask how many.",
+          "gramatica": [
+            "Numbers 1-100",
+            "几 vs. 多少",
+            "Measure word 个; 两 vs. 二"
+          ],
+          "vocabulario": [
+            "numbers",
+            "age"
+          ],
+          "caracteres": [
+            "几",
+            "多",
+            "少",
+            "个",
+            "两",
+            "岁"
+          ],
+          "licoes": [
+            {
+              "id": "zh-u03-l01",
+              "titulo": "Counting to 100"
+            },
+            {
+              "id": "zh-u03-l02",
+              "titulo": "How old are you?"
+            },
+            {
+              "id": "zh-u03-l03",
+              "titulo": "How many people?"
+            }
+          ]
+        },
+        {
+          "id": "zh-u04",
+          "titulo": "My family",
+          "objetivo": "Talk about your family members.",
+          "gramatica": [
+            "有 and 没有",
+            "Possession with 的",
+            "Adverbs 也 and 都"
+          ],
+          "vocabulario": [
+            "family"
+          ],
+          "caracteres": [
+            "家",
+            "爸",
+            "妈",
+            "有",
+            "没",
+            "的"
+          ],
+          "licoes": [
+            {
+              "id": "zh-u04-l01",
+              "titulo": "My family"
+            },
+            {
+              "id": "zh-u04-l02",
+              "titulo": "Do you have brothers and sisters?"
+            },
+            {
+              "id": "zh-u04-l03",
+              "titulo": "We are all students"
+            }
+          ]
+        },
+        {
+          "id": "zh-u05",
+          "titulo": "Dates and time",
+          "objetivo": "Say the date, the day of the week and the time.",
+          "gramatica": [
+            "Dates: 年, 月, 日/号",
+            "星期 + number",
+            "Time: 点, 分, 半; time words before the verb"
+          ],
+          "vocabulario": [
+            "calendar",
+            "clock time"
+          ],
+          "caracteres": [
+            "年",
+            "月",
+            "日",
+            "天",
+            "点",
+            "时"
+          ],
+          "licoes": [
+            {
+              "id": "zh-u05-l01",
+              "titulo": "What's the date today?"
+            },
+            {
+              "id": "zh-u05-l02",
+              "titulo": "What time is it?"
+            },
+            {
+              "id": "zh-u05-l03",
+              "titulo": "When is your birthday?"
+            }
+          ]
+        },
+        {
+          "id": "zh-u06",
+          "titulo": "Food and drink",
+          "objetivo": "Order food and drinks and say what you want.",
+          "gramatica": [
+            "想 and 要",
+            "Measure words 杯, 碗, 块",
+            "Suggestions with 吧"
+          ],
+          "vocabulario": [
+            "food",
+            "drinks",
+            "restaurant"
+          ],
+          "caracteres": [
+            "吃",
+            "喝",
+            "茶",
+            "水",
+            "饭",
+            "菜"
+          ],
+          "licoes": [
+            {
+              "id": "zh-u06-l01",
+              "titulo": "I want a cup of tea"
+            },
+            {
+              "id": "zh-u06-l02",
+              "titulo": "What would you like to eat?"
+            },
+            {
+              "id": "zh-u06-l03",
+              "titulo": "Let's eat together"
+            }
+          ]
+        },
+        {
+          "id": "zh-u07",
+          "titulo": "Shopping",
+          "objetivo": "Ask prices and buy things.",
+          "gramatica": [
+            "多少钱?",
+            "Money: 块, 毛, 元",
+            "Adjective predicates with 很; 太...了"
+          ],
+          "vocabulario": [
+            "shopping",
+            "money"
+          ],
+          "caracteres": [
+            "买",
+            "钱",
+            "块",
+            "贵",
+            "太",
+            "很"
+          ],
+          "licoes": [
+            {
+              "id": "zh-u07-l01",
+              "titulo": "How much is it?"
+            },
+            {
+              "id": "zh-u07-l02",
+              "titulo": "Too expensive!"
+            },
+            {
+              "id": "zh-u07-l03",
+              "titulo": "At the shop"
+            }
+          ]
+        },
+        {
+          "id": "zh-u08",
+          "titulo": "Where is it?",
+          "objetivo": "Say where people and places are.",
+          "gramatica": [
+            "在 for location",
+            "哪儿 and 那儿",
+            "Location words: 上边, 里边, 旁边"
+          ],
+          "vocabulario": [
+            "places",
+            "locations"
+          ],
+          "caracteres": [
+            "在",
+            "哪",
+            "里",
+            "上",
+            "下",
+            "边"
+          ],
+          "licoes": [
+            {
+              "id": "zh-u08-l01",
+              "titulo": "Where are you?"
+            },
+            {
+              "id": "zh-u08-l02",
+              "titulo": "The book is on the table"
+            },
+            {
+              "id": "zh-u08-l03",
+              "titulo": "Next to the school"
+            }
+          ]
+        },
+        {
+          "id": "zh-u09",
+          "titulo": "Getting around",
+          "objetivo": "Talk about how you go places.",
+          "gramatica": [
+            "坐, 开车, 打车",
+            "怎么 for asking how",
+            "从...到..."
+          ],
+          "vocabulario": [
+            "transport"
+          ],
+          "caracteres": [
+            "车",
+            "坐",
+            "开",
+            "去",
+            "来",
+            "路"
+          ],
+          "licoes": [
+            {
+              "id": "zh-u09-l01",
+              "titulo": "How do you get to work?"
+            },
+            {
+              "id": "zh-u09-l02",
+              "titulo": "Taking a taxi"
+            },
+            {
+              "id": "zh-u09-l03",
+              "titulo": "From home to school"
+            }
+          ]
+        },
+        {
+          "id": "zh-u10",
+          "titulo": "My day",
+          "objetivo": "Describe your daily routine.",
+          "gramatica": [
+            "Time words in sentence order",
+            "了 for completed actions",
+            "先...再..."
+          ],
+          "vocabulario": [
+            "daily routine"
+          ],
+          "caracteres": [
+            "起",
+            "床",
+            "睡",
+            "早",
+            "晚",
+            "午"
+          ],
+          "licoes": [
+            {
+              "id": "zh-u10-l01",
+              "titulo": "I get up at seven"
+            },
+            {
+              "id": "zh-u10-l02",
+              "titulo": "What did you do today?"
+            },
+            {
+              "id": "zh-u10-l03",
+              "titulo": "First this, then that"
+            }
+          ]
+        },
+        {
+          "id": "zh-u11",
+          "titulo": "At school",
+          "objetivo": "Talk about studying and what you can do.",
+          "gramatica": [
+            "会, 能 and 可以 (ability and permission)",
+            "Verb-object words (上课, 写字)",
+            "一下 to soften requests"
+          ],
+          "vocabulario": [
+            "school",
+            "studying"
+          ],
+          "caracteres": [
+            "学",
+            "写",
+            "字",
+            "读",
+            "书",
+            "课"
+          ],
+          "licoes": [
+            {
+              "id": "zh-u11-l01",
+              "titulo": "I can speak a little Chinese"
+            },
+            {
+              "id": "zh-u11-l02",
+              "titulo": "In class"
+            },
+            {
+              "id": "zh-u11-l03",
+              "titulo": "Can you help me for a moment?"
+            }
+          ]
+        },
+        {
+          "id": "zh-u12",
+          "titulo": "Weather",
+          "objetivo": "Talk about the weather and changes.",
+          "gramatica": [
+            "了 for a change of state (下雨了)",
+            "不 vs. 没 for negation",
+            "Comparing days with 今天, 明天, 昨天"
+          ],
+          "vocabulario": [
+            "weather"
+          ],
+          "caracteres": [
+            "天",
+            "气",
+            "冷",
+            "热",
+            "雨",
+            "风"
+          ],
+          "licoes": [
+            {
+              "id": "zh-u12-l01",
+              "titulo": "What's the weather like?"
+            },
+            {
+              "id": "zh-u12-l02",
+              "titulo": "It's raining"
+            },
+            {
+              "id": "zh-u12-l03",
+              "titulo": "It was cold yesterday"
+            }
+          ]
+        },
+        {
+          "id": "zh-u13",
+          "titulo": "Hobbies and invitations",
+          "objetivo": "Talk about likes and invite someone.",
+          "gramatica": [
+            "喜欢 + verb",
+            "一起 and 吧 for invitations",
+            "Affirmative-negative questions (是不是, 去不去)"
+          ],
+          "vocabulario": [
+            "hobbies",
+            "invitations"
+          ],
+          "caracteres": [
+            "喜",
+            "欢",
+            "玩",
+            "唱",
+            "歌",
+            "看"
+          ],
+          "licoes": [
+            {
+              "id": "zh-u13-l01",
+              "titulo": "What do you like to do?"
+            },
+            {
+              "id": "zh-u13-l02",
+              "titulo": "Shall we go together?"
+            },
+            {
+              "id": "zh-u13-l03",
+              "titulo": "Do you want to come or not?"
+            }
+          ]
+        },
+        {
+          "id": "zh-u14",
+          "titulo": "Health and phone calls",
+          "objetivo": "See a doctor, make a call and review level 1.",
+          "gramatica": [
+            "在 / 正在 for actions in progress",
+            "打电话 and phone phrases",
+            "Review of HSK 1 grammar"
+          ],
+          "vocabulario": [
+            "health",
+            "phone calls"
+          ],
+          "caracteres": [
+            "病",
+            "医",
+            "电",
+            "话",
+            "手",
+            "机"
+          ],
+          "licoes": [
+            {
+              "id": "zh-u14-l01",
+              "titulo": "I'm sick"
+            },
+            {
+              "id": "zh-u14-l02",
+              "titulo": "Making a phone call"
+            },
+            {
+              "id": "zh-u14-l03",
+              "titulo": "What are you doing right now?"
+            },
+            {
+              "id": "zh-u14-l04",
+              "titulo": "HSK 1 review"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HSK2",
+      "unidades": [
+        {
+          "id": "zh-u15",
+          "titulo": "Making plans",
+          "objetivo": "Talk about what will happen soon and what you plan to do.",
+          "gramatica": [
+            "要...了 and 快...了",
+            "打算 and 准备",
+            "Time clauses with 的时候"
+          ],
+          "vocabulario": [
+            "plans",
+            "schedules"
+          ],
+          "caracteres": [
+            "要",
+            "快",
+            "打",
+            "算",
+            "准",
+            "备"
+          ],
+          "licoes": [
+            {
+              "id": "zh-u15-l01",
+              "titulo": "The train is about to leave"
+            },
+            {
+              "id": "zh-u15-l02",
+              "titulo": "What are your plans?"
+            },
+            {
+              "id": "zh-u15-l03",
+              "titulo": "When I was in Beijing"
+            }
+          ]
+        },
+        {
+          "id": "zh-u16",
+          "titulo": "Have you ever...?",
+          "objetivo": "Talk about past experiences.",
+          "gramatica": [
+            "过 for experience",
+            "没...过",
+            "Verb + 过 + number of times (去过两次)"
+          ],
+          "vocabulario": [
+            "travel",
+            "experiences"
+          ],
+          "caracteres": [
+            "过",
+            "次",
+            "游",
+            "旅",
+            "第",
+            "经"
+          ],
+          "licoes": [
+            {
+              "id": "zh-u16-l01",
+              "titulo": "Have you ever been to China?"
+            },
+            {
+              "id": "zh-u16-l02",
+              "titulo": "I've never eaten that"
+            },
+            {
+              "id": "zh-u16-l03",
+              "titulo": "I've been there twice"
+            }
+          ]
+        },
+        {
+          "id": "zh-u17",
+          "titulo": "Comparisons",
+          "objetivo": "Compare people and things.",
+          "gramatica": [
+            "比 comparisons (他比我高)",
+            "没有...那么",
+            "跟...一样"
+          ],
+          "vocabulario": [
+            "describing people",
+            "adjectives"
+          ],
+          "caracteres": [
+            "比",
+            "更",
+            "最",
+            "样",
+            "高",
+            "长"
+          ],
+          "licoes": [
+            {
+              "id": "zh-u17-l01",
+              "titulo": "Taller than me"
+            },
+            {
+              "id": "zh-u17-l02",
+              "titulo": "Not as expensive"
+            },
+            {
+              "id": "zh-u17-l03",
+              "titulo": "The same as yours"
+            }
+          ]
+        },
+        {
+          "id": "zh-u18",
+          "titulo": "How well?",
+          "objetivo": "Describe how actions are done.",
+          "gramatica": [
+            "Degree complement with 得 (说得很好)",
+            "Verb repeated with 得 (说汉语说得好)",
+            "Questions with 得怎么样"
+          ],
+          "vocabulario": [
+            "skills",
+            "sports"
+          ],
+          "caracteres": [
+            "得",
+            "跑",
+            "快",
+            "慢",
+            "好",
+            "唱"
+          ],
+          "licoes": [
+            {
+              "id": "zh-u18-l01",
+              "titulo": "You speak very well"
+            },
+            {
+              "id": "zh-u18-l02",
+              "titulo": "He runs fast"
+            },
+            {
+              "id": "zh-u18-l03",
+              "titulo": "How did you do?"
+            }
+          ]
+        },
+        {
+          "id": "zh-u19",
+          "titulo": "Did you finish?",
+          "objetivo": "Say whether actions are completed or achieved.",
+          "gramatica": [
+            "Result complements: 完, 好, 到, 见, 懂",
+            "Negation with 没 + verb + complement",
+            "听懂 vs. 听见"
+          ],
+          "vocabulario": [
+            "tasks",
+            "understanding"
+          ],
+          "caracteres": [
+            "完",
+            "懂",
+            "到",
+            "错",
+            "对",
+            "清"
+          ],
+          "licoes": [
+            {
+              "id": "zh-u19-l01",
+              "titulo": "I finished my homework"
+            },
+            {
+              "id": "zh-u19-l02",
+              "titulo": "Did you understand?"
+            },
+            {
+              "id": "zh-u19-l03",
+              "titulo": "I found it"
+            }
+          ]
+        },
+        {
+          "id": "zh-u20",
+          "titulo": "Coming and going",
+          "objetivo": "Describe movement and direction.",
+          "gramatica": [
+            "Directional complements 来 and 去",
+            "上来, 下去, 进来, 出去",
+            "Object position with directional complements"
+          ],
+          "vocabulario": [
+            "movement",
+            "buildings"
+          ],
+          "caracteres": [
+            "进",
+            "出",
+            "回",
+            "上",
+            "楼",
+            "门"
+          ],
+          "licoes": [
+            {
+              "id": "zh-u20-l01",
+              "titulo": "Come in!"
+            },
+            {
+              "id": "zh-u20-l02",
+              "titulo": "He went upstairs"
+            },
+            {
+              "id": "zh-u20-l03",
+              "titulo": "Bring it back"
+            }
+          ]
+        },
+        {
+          "id": "zh-u21",
+          "titulo": "Because and although",
+          "objetivo": "Explain reasons and contrasts.",
+          "gramatica": [
+            "因为...所以...",
+            "虽然...但是...",
+            "为什么 questions"
+          ],
+          "vocabulario": [
+            "reasons",
+            "excuses"
+          ],
+          "caracteres": [
+            "因",
+            "为",
+            "所",
+            "以",
+            "虽",
+            "但"
+          ],
+          "licoes": [
+            {
+              "id": "zh-u21-l01",
+              "titulo": "Why didn't you come?"
+            },
+            {
+              "id": "zh-u21-l02",
+              "titulo": "Because I was busy"
+            },
+            {
+              "id": "zh-u21-l03",
+              "titulo": "Although it's expensive..."
+            }
+          ]
+        },
+        {
+          "id": "zh-u22",
+          "titulo": "If...",
+          "objetivo": "Talk about conditions.",
+          "gramatica": [
+            "如果...就...",
+            "如果...的话",
+            "就 in consequences"
+          ],
+          "vocabulario": [
+            "conditions",
+            "decisions"
+          ],
+          "caracteres": [
+            "如",
+            "果",
+            "就",
+            "话",
+            "可",
+            "以"
+          ],
+          "licoes": [
+            {
+              "id": "zh-u22-l01",
+              "titulo": "If it rains tomorrow"
+            },
+            {
+              "id": "zh-u22-l02",
+              "titulo": "If I have time"
+            },
+            {
+              "id": "zh-u22-l03",
+              "titulo": "Then let's go"
+            }
+          ]
+        },
+        {
+          "id": "zh-u23",
+          "titulo": "Already, still, again",
+          "objetivo": "Talk about time with the right adverbs.",
+          "gramatica": [
+            "已经...了",
+            "还 vs. 再 vs. 又",
+            "才 vs. 就 (late and early)"
+          ],
+          "vocabulario": [
+            "time",
+            "routines"
+          ],
+          "caracteres": [
+            "已",
+            "经",
+            "还",
+            "再",
+            "又",
+            "才"
+          ],
+          "licoes": [
+            {
+              "id": "zh-u23-l01",
+              "titulo": "I've already eaten"
+            },
+            {
+              "id": "zh-u23-l02",
+              "titulo": "Again?"
+            },
+            {
+              "id": "zh-u23-l03",
+              "titulo": "He only came at ten"
+            }
+          ]
+        },
+        {
+          "id": "zh-u24",
+          "titulo": "States and scenes",
+          "objetivo": "Describe ongoing states and what is happening.",
+          "gramatica": [
+            "着 for continuing states (门开着)",
+            "正在...呢",
+            "一边...一边..."
+          ],
+          "vocabulario": [
+            "describing scenes",
+            "clothes"
+          ],
+          "caracteres": [
+            "着",
+            "穿",
+            "站",
+            "坐",
+            "门",
+            "开"
+          ],
+          "licoes": [
+            {
+              "id": "zh-u24-l01",
+              "titulo": "The door is open"
+            },
+            {
+              "id": "zh-u24-l02",
+              "titulo": "She is wearing a red dress"
+            },
+            {
+              "id": "zh-u24-l03",
+              "titulo": "Eating while watching TV"
+            }
+          ]
+        },
+        {
+          "id": "zh-u25",
+          "titulo": "Asking others to do things",
+          "objetivo": "Make requests and say who makes whom do something.",
+          "gramatica": [
+            "让 and 叫 (causative)",
+            "给 as a preposition (给我打电话)",
+            "请 + someone + verb"
+          ],
+          "vocabulario": [
+            "requests",
+            "favors"
+          ],
+          "caracteres": [
+            "让",
+            "给",
+            "请",
+            "帮",
+            "送",
+            "借"
+          ],
+          "licoes": [
+            {
+              "id": "zh-u25-l01",
+              "titulo": "My boss asked me to..."
+            },
+            {
+              "id": "zh-u25-l02",
+              "titulo": "Call me"
+            },
+            {
+              "id": "zh-u25-l03",
+              "titulo": "Please help me"
+            }
+          ]
+        },
+        {
+          "id": "zh-u26",
+          "titulo": "Travel",
+          "objetivo": "Plan a trip, book a hotel and ask for help.",
+          "gramatica": [
+            "先...然后...",
+            "是...的 to stress time, place or manner",
+            "Approximate numbers with 多 (两个多小时)"
+          ],
+          "vocabulario": [
+            "travel",
+            "hotel"
+          ],
+          "caracteres": [
+            "旅",
+            "游",
+            "票",
+            "站",
+            "机",
+            "场"
+          ],
+          "licoes": [
+            {
+              "id": "zh-u26-l01",
+              "titulo": "How did you come?"
+            },
+            {
+              "id": "zh-u26-l02",
+              "titulo": "First the museum, then lunch"
+            },
+            {
+              "id": "zh-u26-l03",
+              "titulo": "About two hours"
+            }
+          ]
+        },
+        {
+          "id": "zh-u27",
+          "titulo": "At work",
+          "objetivo": "Talk about your job and how things are changing.",
+          "gramatica": [
+            "越来越...",
+            "Degree adverbs: 更, 最, 非常",
+            "对 as a preposition (对身体好)"
+          ],
+          "vocabulario": [
+            "work",
+            "office"
+          ],
+          "caracteres": [
+            "工",
+            "作",
+            "公",
+            "司",
+            "忙",
+            "越"
+          ],
+          "licoes": [
+            {
+              "id": "zh-u27-l01",
+              "titulo": "My job"
+            },
+            {
+              "id": "zh-u27-l02",
+              "titulo": "Busier and busier"
+            },
+            {
+              "id": "zh-u27-l03",
+              "titulo": "I'm interested in..."
+            }
+          ]
+        },
+        {
+          "id": "zh-u28",
+          "titulo": "Body and health",
+          "objetivo": "Describe how you feel and follow advice.",
+          "gramatica": [
+            "有一点儿 vs. 一点儿",
+            "应该 and 得 (děi) for advice",
+            "疼 and body parts"
+          ],
+          "vocabulario": [
+            "body",
+            "health"
+          ],
+          "caracteres": [
+            "身",
+            "体",
+            "疼",
+            "药",
+            "休",
+            "息"
+          ],
+          "licoes": [
+            {
+              "id": "zh-u28-l01",
+              "titulo": "I feel a bit unwell"
+            },
+            {
+              "id": "zh-u28-l02",
+              "titulo": "You should rest"
+            },
+            {
+              "id": "zh-u28-l03",
+              "titulo": "At the hospital"
+            }
+          ]
+        },
+        {
+          "id": "zh-u29",
+          "titulo": "Feelings and opinions",
+          "objetivo": "Express feelings, hopes and opinions.",
+          "gramatica": [
+            "觉得 and 认为",
+            "可能 and 一定",
+            "Exclamations with 真 and 太...了"
+          ],
+          "vocabulario": [
+            "feelings",
+            "opinions"
+          ],
+          "caracteres": [
+            "觉",
+            "认",
+            "为",
+            "可",
+            "能",
+            "定"
+          ],
+          "licoes": [
+            {
+              "id": "zh-u29-l01",
+              "titulo": "I think so"
+            },
+            {
+              "id": "zh-u29-l02",
+              "titulo": "Maybe he won't come"
+            },
+            {
+              "id": "zh-u29-l03",
+              "titulo": "It must be him"
+            }
+          ]
+        },
+        {
+          "id": "zh-u30",
+          "titulo": "Real conversations",
+          "objetivo": "Use everything from level 2 in everyday conversations.",
+          "gramatica": [
+            "Review of complements",
+            "Review of 了, 过 and 着",
+            "Review of conjunctions"
+          ],
+          "vocabulario": [
+            "everyday life"
+          ],
+          "caracteres": [
+            "说",
+            "话",
+            "问",
+            "题",
+            "意",
+            "思"
+          ],
+          "licoes": [
+            {
+              "id": "zh-u30-l01",
+              "titulo": "Meeting a new friend"
+            },
+            {
+              "id": "zh-u30-l02",
+              "titulo": "Solving a problem"
+            },
+            {
+              "id": "zh-u30-l03",
+              "titulo": "HSK 2 review"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
