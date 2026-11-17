@@ -125,14 +125,16 @@ Leia CLAUDE.md e PLANO.md. Implemente a Fase 1. Escreva você mesmo os decks ini
 
 Objetivo: uma trilha que ensina gramática e frases em ordem.
 
-- [ ] Currículo em JSON: espanhol A1 → B1 e chinês HSK 1 → HSK 2, em unidades por tema
-- [ ] Claude Code escreve cada lição em /data: explicação em inglês, exemplos e 6 a 8 exercícios
-- [ ] Tipos de exercício: múltipla escolha, montar a frase, ditado, falar a frase (conferida pelo reconhecimento no aparelho)
-- [ ] No espanhol, um quadro de falsos amigos do português em cada unidade
-- [ ] Palavras da lição entram automaticamente nos flashcards
-- [ ] Botão "marcar dúvida" para conferir depois com um nativo (por exemplo no HelloTalk)
+- [x] Currículo em JSON: espanhol A1 → B1 e chinês HSK 1 → HSK 2, em unidades por tema
+- [x] Claude Code escreve cada lição em /data: explicação em inglês, exemplos e 6 a 8 exercícios
+- [x] Tipos de exercício: múltipla escolha, montar a frase, ditado, falar a frase (conferida pelo reconhecimento no aparelho)
+- [x] No espanhol, um quadro de falsos amigos do português em cada unidade
+- [x] Palavras da lição entram automaticamente nos flashcards
+- [x] Botão "marcar dúvida" para conferir depois com um nativo (por exemplo no HelloTalk)
 
 Pronto quando: as 3 primeiras unidades de cada língua estão prontas e você revisou o conteúdo.
+
+> Situação em 17/11/2026: currículo aprovado (30 unidades por língua: espanhol A1→B1, chinês HSK 3.0 níveis 1 e 2). Unidades 1 a 3 escritas e aprovadas pelo Lucas; as demais serão escritas aos poucos, em paralelo às próximas fases. Todas as unidades ficam liberadas desde o início. O exercício "falar" tem botão Pular.
 
 ```text
 Leia CLAUDE.md e PLANO.md. Implemente a Fase 2. Primeiro proponha o currículo completo em /data/curriculo-es.json e /data/curriculo-zh.json para eu aprovar; depois escreva as lições unidade por unidade.
