@@ -1,10 +1,12 @@
-import { Ionicons } from '@expo/vector-icons';
 import { useEffect, useState } from 'react';
 import { Pressable, Text, View } from 'react-native';
 
 import { caracteresHan } from '@/chines/pinyin';
+import { BotaoIcone } from '@/components/Botao';
 import { PinyinColorido } from '@/components/cartoes/PalavraChinesa';
+import { Rotulo } from '@/components/Texto';
 import type { Exercicio } from '@/conteudo/licoes';
+import { FONTES, useTema } from '@/ui/tema';
 import { falar } from '@/voz/fala';
 import type { Idioma } from '@/voz/idiomas';
 
@@ -22,29 +24,75 @@ function ehPinyin(texto: string, idioma: Idioma) {
   return idioma === 'zh' && caracteresHan(texto).length === 0 && /[āáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ]/.test(texto);
 }
 
+/** Botão grande de ouvir e o de ouvir devagar. */
 export function BotaoOuvirGrande({ texto, idioma }: { texto: string; idioma: Idioma }) {
+  const tema = useTema();
   return (
-    <View className="flex-row justify-center gap-3">
-      <Pressable
-        accessibilityRole="button"
-        accessibilityLabel="Ouvir de novo"
-        onPress={() => void falar(texto, idioma)}
-        className="h-16 w-16 items-center justify-center rounded-full bg-primaria active:opacity-80">
-        <Ionicons name="volume-high" size={30} color="white" />
-      </Pressable>
+    <View className="flex-row items-center gap-3.5">
+      <BotaoIcone icone="volume-high" descricao="Ouvir de novo" cor="en" tamanho={96} onPress={() => void falar(texto, idioma)} />
       <Pressable
         accessibilityRole="button"
         accessibilityLabel="Ouvir devagar"
         onPress={() => void falar(texto, idioma, { velocidade: 0.6 })}
-        className="h-16 w-16 items-center justify-center rounded-full bg-slate-200 active:opacity-80 dark:bg-slate-700">
-        <Text className="text-2xl">🐢</Text>
+        style={({ pressed }) => ({
+          width: 64,
+          height: 64,
+          borderRadius: 18,
+          backgroundColor: tema.enClara,
+          borderBottomWidth: pressed ? 0 : 5,
+          borderBottomColor: tema.borda,
+          marginTop: pressed ? 5 : 0,
+          alignItems: 'center',
+          justifyContent: 'center',
+        })}>
+        <Text style={{ fontFamily: FONTES.titulo, fontSize: 17, color: tema.en }}>0,6×</Text>
       </Pressable>
     </View>
   );
 }
 
+/** Opção de resposta em cartão; muda de cor depois de respondida. */
+export function Opcao({
+  estado,
+  onPress,
+  children,
+}: {
+  estado: 'normal' | 'certa' | 'errada';
+  onPress?: () => void;
+  children: React.ReactNode;
+}) {
+  const tema = useTema();
+  const cores =
+    estado === 'certa'
+      ? { fundo: tema.certoClara, borda: tema.certo }
+      : estado === 'errada'
+        ? { fundo: tema.erroClara, borda: tema.erro }
+        : { fundo: tema.superficie, borda: tema.borda };
+  return (
+    <Pressable
+      accessibilityRole="button"
+      disabled={!onPress}
+      onPress={onPress}
+      style={({ pressed }) => ({
+        minHeight: 58,
+        justifyContent: 'center',
+        borderRadius: 16,
+        borderWidth: 2,
+        borderColor: cores.borda,
+        backgroundColor: cores.fundo,
+        borderBottomWidth: pressed ? 2 : 5,
+        marginTop: pressed ? 3 : 0,
+        paddingHorizontal: 16,
+        paddingVertical: 12,
+      })}>
+      {children}
+    </Pressable>
+  );
+}
+
 /** Múltipla escolha. No tipo "ouvir", o app fala a frase e você escolhe o que ouviu. */
 export function ExercicioEscolha({ exercicio, idioma, aoTerminar }: Props) {
+  const tema = useTema();
   const [escolhida, setEscolhida] = useState<number | null>(null);
   const audio = exercicio.audio;
 
@@ -54,35 +102,30 @@ export function ExercicioEscolha({ exercicio, idioma, aoTerminar }: Props) {
 
   const respondeu = escolhida !== null;
   const acertou = escolhida === exercicio.correta;
-  const pergunta = exercicio.pergunta ?? (exercicio.tipo === 'ouvir' ? 'O que você ouviu?' : '');
 
   return (
-    <View className="gap-4">
-      {pergunta ? (
-        <Text className="text-xl font-semibold text-slate-900 dark:text-slate-50">{pergunta}</Text>
+    <View className="gap-5">
+      <Rotulo>{exercicio.tipo === 'ouvir' ? 'TOQUE NO QUE VOCÊ OUVIU' : 'ESCOLHA A RESPOSTA'}</Rotulo>
+      {exercicio.pergunta && !(exercicio.tipo === 'ouvir' && exercicio.pergunta === 'What did you hear?') ? (
+        <Text className="font-titulo text-[22px] leading-7 text-texto">{exercicio.pergunta}</Text>
       ) : null}
       {audio ? <BotaoOuvirGrande texto={audio} idioma={idioma} /> : null}
 
       <View className="gap-3">
-        {exercicio.opcoes.map((opcao, i) => {
-          let estilo = 'border-slate-300 bg-white dark:border-slate-600 dark:bg-slate-900';
-          if (respondeu && i === exercicio.correta) estilo = 'border-green-600 bg-green-50 dark:bg-green-950';
-          else if (respondeu && i === escolhida) estilo = 'border-red-600 bg-red-50 dark:bg-red-950';
-          return (
-            <Pressable
-              key={i}
-              accessibilityRole="button"
-              disabled={respondeu}
-              onPress={() => setEscolhida(i)}
-              className={`min-h-14 justify-center rounded-xl border-2 px-4 py-3 active:opacity-70 ${estilo}`}>
-              {ehPinyin(opcao, idioma) ? (
-                <PinyinColorido pinyin={opcao} tamanho={22} />
-              ) : (
-                <Text className="text-lg text-slate-900 dark:text-slate-50">{opcao}</Text>
-              )}
-            </Pressable>
-          );
-        })}
+        {exercicio.opcoes.map((opcao, i) => (
+          <Opcao
+            key={i}
+            estado={respondeu && i === exercicio.correta ? 'certa' : respondeu && i === escolhida ? 'errada' : 'normal'}
+            onPress={respondeu ? undefined : () => setEscolhida(i)}>
+            {ehPinyin(opcao, idioma) ? (
+              <PinyinColorido pinyin={opcao} tamanho={22} />
+            ) : (
+              <Text style={{ color: tema.texto }} className="font-forte text-lg">
+                {opcao}
+              </Text>
+            )}
+          </Opcao>
+        ))}
       </View>
 
       {respondeu ? (

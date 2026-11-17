@@ -7,15 +7,14 @@ type Props = {
   children?: ReactNode;
 };
 
+/** Superfície com borda e base mais grossa, no estilo dos botões. */
 export function Cartao({ titulo, subtitulo, children }: Props) {
   return (
-    <View className="gap-3 rounded-2xl bg-white p-4 dark:bg-slate-900">
+    <View className="gap-3 rounded-3xl border-2 border-b-[5px] border-borda bg-superficie p-4">
       {titulo ? (
-        <View className="gap-1">
-          <Text className="text-lg font-semibold text-slate-900 dark:text-slate-50">{titulo}</Text>
-          {subtitulo ? (
-            <Text className="text-sm text-slate-500 dark:text-slate-400">{subtitulo}</Text>
-          ) : null}
+        <View className="gap-0.5">
+          <Text className="font-titulo text-xl text-texto">{titulo}</Text>
+          {subtitulo ? <Text className="font-semi text-sm text-texto-2">{subtitulo}</Text> : null}
         </View>
       ) : null}
       {children}

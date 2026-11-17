@@ -1,6 +1,5 @@
-import { Ionicons } from '@expo/vector-icons';
-import { Pressable } from 'react-native';
-
+import { BotaoIcone } from '@/components/Botao';
+import type { CorDeDestaque } from '@/ui/tema';
 import { falar } from '@/voz/fala';
 import type { Idioma } from '@/voz/idiomas';
 
@@ -10,18 +9,19 @@ type Props = {
   /** Texto lido pelo leitor de tela, por exemplo "Ouvir a palavra". */
   descricao: string;
   tamanho?: number;
+  /** Cor do botão; por padrão, a cor da língua. */
+  cor?: CorDeDestaque;
 };
 
 /** Botão de ouvir: a voz do sistema lê o texto no idioma do cartão. */
-export function BotaoAudio({ texto, idioma, descricao, tamanho = 24 }: Props) {
+export function BotaoAudio({ texto, idioma, descricao, tamanho = 24, cor }: Props) {
   return (
-    <Pressable
-      accessibilityRole="button"
-      accessibilityLabel={descricao}
-      hitSlop={10}
+    <BotaoIcone
+      icone="volume-high"
+      descricao={descricao}
+      cor={cor ?? idioma}
+      tamanho={Math.round(tamanho * 2.3)}
       onPress={() => void falar(texto, idioma)}
-      className="h-11 w-11 items-center justify-center rounded-full bg-blue-100 active:opacity-70 dark:bg-slate-700">
-      <Ionicons name="volume-high" size={tamanho} color="#208AEF" />
-    </Pressable>
+    />
   );
 }

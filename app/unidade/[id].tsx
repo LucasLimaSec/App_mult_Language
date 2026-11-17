@@ -3,41 +3,41 @@ import { Stack, useFocusEffect, useLocalSearchParams, useRouter } from 'expo-rou
 import { useCallback, useState } from 'react';
 import { Pressable, Text, View } from 'react-native';
 
-import { BotaoAudio } from '@/components/cartoes/BotaoAudio';
+import { BotaoIcone } from '@/components/Botao';
 import { Cartao } from '@/components/Cartao';
 import { Tela } from '@/components/Tela';
 import { Apoio, Paragrafo } from '@/components/Texto';
-import { unidadeDoCurriculo, unidadeEscrita } from '@/conteudo/unidades';
+import { localizarUnidade, unidadeDoCurriculo, unidadeEscrita } from '@/conteudo/unidades';
 import { lerProgresso } from '@/db/licoes';
 import type { Lesson } from '@/db/schema';
-
-function IconeStatus({ linha }: { linha?: Lesson }) {
-  if (linha?.status === 'concluida') return <Ionicons name="checkmark-circle" size={26} color="#16a34a" />;
-  if (linha?.status === 'em_andamento') return <Ionicons name="ellipse-outline" size={26} color="#208AEF" />;
-  return <Ionicons name="ellipse-outline" size={26} color="#94a3b8" />;
-}
+import { coresDoDestaque, useTema } from '@/ui/tema';
+import { falar } from '@/voz/fala';
+import type { Idioma } from '@/voz/idiomas';
 
 export default function TelaUnidade() {
   const router = useRouter();
+  const tema = useTema();
   const { id } = useLocalSearchParams<{ id: string }>();
   const unidadeC = id ? unidadeDoCurriculo(id) : undefined;
   const escrita = id ? unidadeEscrita(id) : undefined;
+  const local = id ? localizarUnidade(id) : undefined;
+  const idioma = (id?.split('-')[0] ?? 'es') as Idioma;
+  const destaque = coresDoDestaque(tema, idioma);
   const [progresso, setProgresso] = useState<Record<string, Lesson>>({});
 
   useFocusEffect(
     useCallback(() => {
-      if (!escrita) return;
       let ativo = true;
-      lerProgresso(escrita.idioma)
+      lerProgresso(idioma)
         .then((p) => ativo && setProgresso(p))
         .catch(() => undefined);
       return () => {
         ativo = false;
       };
-    }, [escrita]),
+    }, [idioma]),
   );
 
-  if (!unidadeC) {
+  if (!unidadeC || !local) {
     return (
       <Tela>
         <Paragrafo>Unidade não encontrada.</Paragrafo>
@@ -45,46 +45,67 @@ export default function TelaUnidade() {
     );
   }
 
-  const numero = Number(unidadeC.id.split('-u')[1]);
-
   return (
     <Tela>
-      <Stack.Screen options={{ title: `Unidade ${numero}` }} />
-      <View className="gap-1">
-        <Text className="text-2xl font-bold text-slate-900 dark:text-slate-50">{unidadeC.titulo}</Text>
-        <Paragrafo>{unidadeC.objetivo}</Paragrafo>
+      <Stack.Screen options={{ title: `${local.nivel} · Unidade ${local.numero}` }} />
+
+      <View style={{ backgroundColor: destaque.cor, borderBottomColor: destaque.sombra }} className="gap-1.5 rounded-3xl border-b-[6px] p-5">
+        <Text className="font-titulo text-2xl leading-7 text-white">{unidadeC.titulo}</Text>
+        <Text className="font-corpo text-base leading-6 text-white">{unidadeC.objetivo}</Text>
       </View>
 
       <Cartao titulo="Lessons">
         {unidadeC.licoes.map((l, i) => {
-          const disponivel = escrita?.licoes.some((x) => x.id === l.id);
+          const disponivel = escrita?.licoes.some((x) => x.id === l.id) ?? false;
           const linha = progresso[l.id];
+          const concluida = linha?.status === 'concluida';
           return (
             <Pressable
               key={l.id}
               accessibilityRole="button"
               disabled={!disponivel}
               onPress={() => router.push({ pathname: '/licao/[id]', params: { id: l.id } })}
-              className={`flex-row items-center gap-3 rounded-xl bg-slate-100 p-3 active:opacity-70 dark:bg-slate-800 ${
-                disponivel ? '' : 'opacity-50'
-              }`}>
-              <IconeStatus linha={linha} />
+              style={({ pressed }) => ({
+                flexDirection: 'row',
+                alignItems: 'center',
+                gap: 12,
+                padding: 12,
+                borderRadius: 18,
+                borderWidth: 2,
+                borderColor: tema.borda,
+                backgroundColor: tema.superficie,
+                borderBottomWidth: pressed ? 2 : 5,
+                marginTop: pressed ? 3 : 0,
+                opacity: disponivel ? 1 : 0.55,
+              })}>
+              <View
+                style={{
+                  backgroundColor: concluida ? destaque.cor : destaque.clara,
+                  borderBottomColor: concluida ? destaque.sombra : tema.borda,
+                }}
+                className="h-11 w-11 items-center justify-center rounded-full border-b-4">
+                {concluida ? (
+                  <Ionicons name="checkmark" size={24} color="#FFFFFF" />
+                ) : (
+                  <Text style={{ color: destaque.sombra }} className="font-titulo text-lg">
+                    {i + 1}
+                  </Text>
+                )}
+              </View>
               <View className="flex-1">
-                <Text className="text-base font-semibold text-slate-900 dark:text-slate-50">
-                  {i + 1}. {l.titulo}
-                </Text>
+                <Text className="font-titulo text-base text-texto">{l.titulo}</Text>
                 <Apoio>
                   {!disponivel
                     ? 'Em breve'
-                    : linha?.status === 'concluida'
+                    : concluida
                       ? `Concluída · ${linha.acertos} de ${linha.totalExercicios} acertos`
                       : linha?.status === 'em_andamento'
                         ? 'Em andamento'
                         : 'Não iniciada'}
-                  {linha?.duvida ? ' · ❓ dúvida' : ''}
+                  {linha?.duvida ? ' · dúvida marcada' : ''}
                 </Apoio>
               </View>
-              {disponivel ? <Ionicons name="chevron-forward" size={20} color="#94a3b8" /> : null}
+              {disponivel ? <Ionicons name="chevron-forward" size={22} color={tema.texto2} /> : null}
             </Pressable>
           );
         })}
@@ -92,24 +113,29 @@ export default function TelaUnidade() {
 
       <Cartao titulo="Grammar">
         {unidadeC.gramatica.map((g, i) => (
-          <Text key={i} className="text-base text-slate-700 dark:text-slate-300">
-            • {g}
-          </Text>
+          <View key={i} className="flex-row gap-2.5">
+            <View style={{ backgroundColor: destaque.cor }} className="mt-2 h-2 w-2 rounded-full" />
+            <Text className="flex-1 font-corpo text-base leading-6 text-texto">{g}</Text>
+          </View>
         ))}
       </Cartao>
 
       {escrita?.falsosAmigos?.length ? (
         <Cartao titulo="False friends" subtitulo="Falsos amigos do português">
           {escrita.falsosAmigos.map((f) => (
-            <View key={f.palavra} className="gap-1 rounded-xl bg-amber-50 p-3 dark:bg-slate-800">
-              <View className="flex-row items-center gap-2">
-                <Text className="flex-1 text-lg font-bold text-slate-900 dark:text-slate-50">
-                  {f.palavra} <Text className="text-base font-normal text-slate-600 dark:text-slate-300">= {f.significado}</Text>
-                </Text>
-                <BotaoAudio texto={f.exemplo} idioma="es" descricao={`Ouvir o exemplo de ${f.palavra}`} tamanho={18} />
+            <View key={f.palavra} className="gap-1.5 rounded-2xl bg-ambar-clara p-3.5">
+              <View className="flex-row items-center gap-3">
+                <View className="flex-1">
+                  <Text className="font-titulo text-lg text-texto">{f.palavra}</Text>
+                  <Text className="font-forte text-base text-texto-2">= {f.significado}</Text>
+                </View>
+                <BotaoIcone icone="volume-high" descricao={`Ouvir o exemplo de ${f.palavra}`} cor="en" tamanho={44} onPress={() => void falar(f.exemplo, 'es')} />
               </View>
-              <Text className="text-sm text-amber-800 dark:text-amber-200">⚠️ {f.portugues}</Text>
-              <Text className="text-base italic text-slate-800 dark:text-slate-200">{f.exemplo}</Text>
+              <View className="flex-row gap-2">
+                <Ionicons name="warning" size={18} color={tema.ambar} style={{ marginTop: 2 }} />
+                <Text className="flex-1 font-corpo text-sm leading-5 text-ambar-texto">{f.portugues}</Text>
+              </View>
+              <Text className="font-forte text-base italic text-texto">{f.exemplo}</Text>
               <Apoio>{f.exemploEn}</Apoio>
             </View>
           ))}

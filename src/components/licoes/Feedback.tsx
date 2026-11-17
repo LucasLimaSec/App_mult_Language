@@ -1,14 +1,14 @@
+import { Ionicons } from '@expo/vector-icons';
 import { Text, View } from 'react-native';
 
 import { Botao } from '@/components/Botao';
+import { useTema } from '@/ui/tema';
 
 export type TipoFeedback = 'certo' | 'quase' | 'errado';
 
-const ESTILO: Record<TipoFeedback, { fundo: string; texto: string; titulo: string }> = {
-  certo: { fundo: 'bg-green-100 dark:bg-green-900', texto: 'text-green-900 dark:text-green-100', titulo: 'Certo!' },
-  quase: { fundo: 'bg-amber-100 dark:bg-amber-900', texto: 'text-amber-900 dark:text-amber-100', titulo: 'Quase!' },
-  errado: { fundo: 'bg-red-100 dark:bg-red-900', texto: 'text-red-900 dark:text-red-100', titulo: 'Não foi dessa vez' },
-};
+const TITULO: Record<TipoFeedback, string> = { certo: 'Mandou bem!', quase: 'Quase!', errado: 'Não foi dessa vez' };
+const ICONE = { certo: 'checkmark', quase: 'alert', errado: 'close' } as const;
+const COR = { certo: 'certo', quase: 'ambar', errado: 'erro' } as const;
 
 type Props = {
   tipo: TipoFeedback;
@@ -17,18 +17,26 @@ type Props = {
   aoContinuar: () => void;
 };
 
-/** Painel exibido depois de responder um exercício. */
+/** Painel colorido exibido depois de responder um exercício. */
 export function Feedback({ tipo, detalhes = [], aoContinuar }: Props) {
-  const estilo = ESTILO[tipo];
+  const tema = useTema();
+  const cor = COR[tipo];
   return (
-    <View className={`gap-3 rounded-2xl p-4 ${estilo.fundo}`}>
-      <Text className={`text-lg font-bold ${estilo.texto}`}>{estilo.titulo}</Text>
+    <View style={{ backgroundColor: tema[`${cor}Clara`] }} className="gap-3 rounded-3xl p-4">
+      <View className="flex-row items-center gap-3">
+        <View style={{ backgroundColor: tema[cor] }} className="h-11 w-11 items-center justify-center rounded-full">
+          <Ionicons name={ICONE[tipo]} size={26} color="#FFFFFF" />
+        </View>
+        <Text style={{ color: tema[`${cor}Texto`] }} className="font-titulo text-2xl">
+          {TITULO[tipo]}
+        </Text>
+      </View>
       {detalhes.filter(Boolean).map((linha, i) => (
-        <Text key={i} className={`text-base leading-6 ${estilo.texto}`}>
+        <Text key={i} style={{ color: tema[`${cor}Texto`] }} className="font-corpo text-base leading-6">
           {linha}
         </Text>
       ))}
-      <Botao titulo="Continuar" onPress={aoContinuar} />
+      <Botao titulo="Continuar" cor={cor} onPress={aoContinuar} />
     </View>
   );
 }

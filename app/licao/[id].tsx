@@ -1,3 +1,4 @@
+import { Ionicons } from '@expo/vector-icons';
 import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
 import { Text, View } from 'react-native';
@@ -14,11 +15,13 @@ import { ExercicioMontar } from '@/components/licoes/ExercicioMontar';
 import { Explicacao } from '@/components/licoes/Explicacao';
 import { LinhaExemplo } from '@/components/licoes/LinhaExemplo';
 import type { ResultadoExercicio } from '@/components/licoes/tipos';
+import { BarraDaSessao } from '@/components/sessao/BarraDaSessao';
 import { Tela } from '@/components/Tela';
 import { Apoio, Paragrafo } from '@/components/Texto';
 import type { Exercicio } from '@/conteudo/licoes';
 import { buscarLicao } from '@/conteudo/unidades';
 import { concluirLicao, iniciarLicao } from '@/db/licoes';
+import { useTema } from '@/ui/tema';
 import { pararFala } from '@/voz/fala';
 import type { Idioma } from '@/voz/idiomas';
 
@@ -39,16 +42,9 @@ function ExercicioAtual(props: { exercicio: Exercicio; idioma: Idioma; aoTermina
   }
 }
 
-function BarraDeProgresso({ feitos, total }: { feitos: number; total: number }) {
-  return (
-    <View className="h-2 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-700">
-      <View className="h-2 rounded-full bg-primaria" style={{ width: `${(feitos / Math.max(total, 1)) * 100}%` }} />
-    </View>
-  );
-}
-
 export default function TelaLicao() {
   const router = useRouter();
+  const tema = useTema();
   const { id } = useLocalSearchParams<{ id: string }>();
   const encontrada = id ? buscarLicao(id) : undefined;
 
@@ -81,7 +77,7 @@ export default function TelaLicao() {
   if (!licao || !idioma || !encontrada) {
     return (
       <Tela>
-        <Stack.Screen options={{ title: 'Lição' }} />
+        <Stack.Screen options={{ title: 'Lição', headerShown: true }} />
         <Paragrafo>Esta lição ainda não foi escrita.</Paragrafo>
       </Tela>
     );
@@ -106,19 +102,23 @@ export default function TelaLicao() {
 
   if (etapa.tipo === 'exercicio') {
     return (
-      <Tela>
-        <Stack.Screen options={{ title: titulo }} />
-        <BarraDeProgresso feitos={etapa.indice} total={total} />
-        <Apoio>
-          Exercício {etapa.indice + 1} de {total}
-        </Apoio>
+      <View className="flex-1 bg-fundo">
+        <Stack.Screen options={{ headerShown: false }} />
+        <BarraDaSessao
+          cor="marca"
+          fracao={etapa.indice / total}
+          texto={`${etapa.indice + 1}/${total}`}
+          aoFechar={() => router.back()}
+        />
+        <Tela>
         <ExercicioAtual
           key={`${etapa.indice}-${resultados.length}`}
           exercicio={licao.exercicios[etapa.indice]}
           idioma={idioma}
           aoTerminar={(r) => terminarExercicio(etapa.indice, r)}
         />
-      </Tela>
+        </Tela>
+      </View>
     );
   }
 
@@ -126,14 +126,37 @@ export default function TelaLicao() {
     const pulados = resultados.length - contados;
     return (
       <Tela>
-        <Stack.Screen options={{ title: titulo }} />
-        <Cartao titulo="Lição concluída 🎉">
-          <Text className="text-4xl font-bold text-slate-900 dark:text-slate-50">
-            {acertos} de {contados}
-          </Text>
-          <Apoio>
-            acertos{pulados > 0 ? ` · ${pulados} ${pulados === 1 ? 'exercício pulado' : 'exercícios pulados'}` : ''}
-          </Apoio>
+        <Stack.Screen options={{ title: titulo, headerShown: true }} />
+        <View className="items-center gap-3 pt-6">
+          <View
+            style={{ backgroundColor: tema.amarelo, borderBottomColor: '#CA8A04' }}
+            className="h-28 w-28 items-center justify-center rounded-full border-b-[6px]">
+            <Ionicons name="trophy" size={60} color="#1E1B2E" />
+          </View>
+          <Text className="font-titulo text-[30px] text-texto">Lição concluída!</Text>
+        </View>
+        <View className="flex-row gap-3">
+          <View className="flex-1 items-center rounded-3xl bg-certo-clara p-4">
+            <Text className="font-titulo text-[34px] text-certo-texto">
+              {acertos}/{contados}
+            </Text>
+            <Text className="font-forte text-sm text-certo-texto">acertos</Text>
+          </View>
+          <View className="flex-1 items-center rounded-3xl bg-marca-clara p-4">
+            <Text style={{ color: tema.marca }} className="font-titulo text-[34px]">
+              {palavrasNovas ?? '–'}
+            </Text>
+            <Text style={{ color: tema.marca }} className="font-forte text-sm">
+              palavras novas
+            </Text>
+          </View>
+        </View>
+        <Cartao>
+          {pulados > 0 ? (
+            <Apoio>
+              {pulados} {pulados === 1 ? 'exercício pulado, que não conta' : 'exercícios pulados, que não contam'} no placar.
+            </Apoio>
+          ) : null}
           {palavrasNovas !== null ? (
             <Paragrafo>
               {palavrasNovas > 0
@@ -141,7 +164,7 @@ export default function TelaLicao() {
                 : 'Nenhuma palavra nova: as desta lição já estavam nos seus cartões.'}
             </Paragrafo>
           ) : null}
-          {erro ? <Text className="text-base text-red-700 dark:text-red-400">{erro}</Text> : null}
+          {erro ? <Text className="font-corpo text-base text-erro">{erro}</Text> : null}
           <Botao titulo="Voltar à unidade" onPress={() => router.back()} />
           <Botao titulo="Refazer os exercícios" variante="secundario" onPress={refazer} />
         </Cartao>
@@ -152,7 +175,7 @@ export default function TelaLicao() {
 
   return (
     <Tela>
-      <Stack.Screen options={{ title: titulo }} />
+      <Stack.Screen options={{ title: titulo, headerShown: true }} />
       <Cartao>
         <Explicacao blocos={licao.explicacao} />
       </Cartao>
@@ -168,19 +191,19 @@ export default function TelaLicao() {
           {licao.palavras.map((p, i) => (
             <View key={i} className="flex-row items-center gap-3">
               <View className="flex-1">
-                <Text className="text-lg font-semibold text-slate-900 dark:text-slate-50">{p.palavra}</Text>
+                <Text className="font-titulo text-lg text-texto">{p.palavra}</Text>
                 {p.pinyin ? <PinyinColorido pinyin={p.pinyin} tamanho={15} /> : null}
-                <Text className="text-sm text-slate-600 dark:text-slate-300">
+                <Text className="font-corpo text-sm text-texto-2">
                   {p.en} · {p.pt}
                 </Text>
               </View>
-              <BotaoAudio texto={p.palavra} idioma={idioma} descricao={`Ouvir ${p.palavra}`} tamanho={20} />
+              <BotaoAudio texto={p.palavra} idioma={idioma} descricao={`Ouvir ${p.palavra}`} tamanho={18} cor="en" />
             </View>
           ))}
         </Cartao>
       ) : null}
 
-      <Botao titulo={`Começar os exercícios (${total})`} onPress={() => setEtapa({ tipo: 'exercicio', indice: 0 })} />
+      <Botao titulo={`Começar os exercícios (${total})`} icone="play" onPress={() => setEtapa({ tipo: 'exercicio', indice: 0 })} />
       <BotaoDuvida licaoId={licao.id} idioma={idioma} />
     </Tela>
   );

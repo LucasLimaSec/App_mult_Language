@@ -1,12 +1,15 @@
+import { Ionicons } from '@expo/vector-icons';
 import { useSpeechRecognitionEvent } from 'expo-speech-recognition';
 import { useEffect, useRef, useState } from 'react';
 import { Text, View } from 'react-native';
 
 import { Botao } from '@/components/Botao';
 import { PinyinColorido } from '@/components/cartoes/PalavraChinesa';
+import { Rotulo } from '@/components/Texto';
 import type { Exercicio } from '@/conteudo/licoes';
 import { conferirFala, type ResultadoFala } from '@/licoes/conferir';
-import { falar, pararFala } from '@/voz/fala';
+import { useTema } from '@/ui/tema';
+import { pararFala } from '@/voz/fala';
 import type { Idioma } from '@/voz/idiomas';
 import {
   cancelarEscuta,
@@ -28,6 +31,7 @@ type Props = {
 
 /** Falar a frase: o reconhecimento do aparelho (offline) confere palavra por palavra. Dá para pular. */
 export function ExercicioFalar({ exercicio, idioma, aoTerminar }: Props) {
+  const tema = useTema();
   const [ouvindo, setOuvindo] = useState(false);
   const [transcricao, setTranscricao] = useState('');
   const [resultado, setResultado] = useState<ResultadoFala | null>(null);
@@ -95,21 +99,19 @@ export function ExercicioFalar({ exercicio, idioma, aoTerminar }: Props) {
   const chines = idioma === 'zh';
 
   return (
-    <View className="gap-4">
-      <Text className="text-sm font-semibold uppercase tracking-widest text-slate-400">Fale a frase</Text>
-      <View className="gap-1 rounded-2xl bg-white p-4 dark:bg-slate-900">
-        <Text className={`text-slate-900 dark:text-slate-50 ${chines ? 'text-3xl' : 'text-2xl font-semibold'}`}>
-          {exercicio.frase}
-        </Text>
+    <View className="gap-5">
+      <Rotulo>FALE A FRASE</Rotulo>
+      <View className="gap-1.5 rounded-3xl border-2 border-b-[5px] border-borda bg-superficie p-4">
+        <Text className={`text-texto ${chines ? 'text-[30px]' : 'font-titulo text-2xl'}`}>{exercicio.frase}</Text>
         {exercicio.pinyin ? <PinyinColorido pinyin={exercicio.pinyin} tamanho={18} /> : null}
-        <Text className="text-base text-slate-500 dark:text-slate-400">{exercicio.traducao}</Text>
+        <Text className="font-semi text-base text-texto-2">{exercicio.traducao}</Text>
       </View>
       <BotaoOuvirGrande texto={exercicio.frase} idioma={idioma} />
 
       {ouvindo || transcricao ? (
-        <View className="min-h-14 gap-1 rounded-xl bg-slate-100 p-3 dark:bg-slate-800">
-          <Text className="text-sm text-slate-500 dark:text-slate-400">{ouvindo ? 'Ouvindo…' : 'O aparelho entendeu:'}</Text>
-          <Text className="text-lg text-slate-900 dark:text-slate-50">{transcricao || '…'}</Text>
+        <View className="min-h-14 gap-1 rounded-2xl bg-superficie-2 p-3.5">
+          <Text className="font-forte text-sm text-texto-2">{ouvindo ? 'Ouvindo…' : 'O aparelho entendeu:'}</Text>
+          <Text className="font-forte text-lg text-texto">{transcricao || '…'}</Text>
         </View>
       ) : null}
 
@@ -118,32 +120,35 @@ export function ExercicioFalar({ exercicio, idioma, aoTerminar }: Props) {
           {resultado.partes.map((parte, i) => (
             <Text
               key={i}
-              className={`rounded-lg px-2 py-1 text-lg ${
-                parte.ok ? 'bg-green-100 text-green-900 dark:bg-green-900 dark:text-green-100' : 'bg-red-100 text-red-900 dark:bg-red-900 dark:text-red-100'
-              }`}>
+              style={{
+                backgroundColor: parte.ok ? tema.certoClara : tema.erroClara,
+                color: parte.ok ? tema.certoTexto : tema.erroTexto,
+              }}
+              className="overflow-hidden rounded-xl px-2.5 py-1 font-titulo text-lg">
               {parte.texto}
             </Text>
           ))}
         </View>
       ) : null}
 
-      {aviso ? <Text className="text-base text-amber-700 dark:text-amber-300">{aviso}</Text> : null}
+      {aviso ? (
+        <View className="flex-row gap-2 rounded-2xl bg-ambar-clara p-3.5">
+          <Ionicons name="warning" size={20} color={tema.ambar} />
+          <Text className="flex-1 font-corpo text-base text-ambar-texto">{aviso}</Text>
+        </View>
+      ) : null}
 
       {resultado?.certo && !ouvindo ? (
-        <Feedback
-          tipo="certo"
-          detalhes={[`Nota: ${Math.round(resultado.nota * 100)}%`]}
-          aoContinuar={() => aoTerminar('certo')}
-        />
+        <Feedback tipo="certo" detalhes={[`Nota: ${Math.round(resultado.nota * 100)}%`]} aoContinuar={() => aoTerminar('certo')} />
       ) : (
         <View className="gap-3">
           {ouvindo ? (
-            <Botao titulo="Parar" variante="perigo" onPress={pararEscuta} />
+            <Botao titulo="Parar" icone="stop" variante="perigo" onPress={pararEscuta} />
           ) : (
-            <Botao titulo={resultado ? 'Tentar de novo' : '🎤 Falar'} onPress={comecar} />
+            <Botao titulo={resultado ? 'Tentar de novo' : 'Falar'} icone="mic" cor="en" onPress={comecar} />
           )}
           {resultado && !ouvindo ? (
-            <Text className="text-center text-base text-slate-600 dark:text-slate-300">
+            <Text className="text-center font-corpo text-base text-texto-2">
               Nota: {Math.round(resultado.nota * 100)}%. As partes em vermelho não foram reconhecidas.
             </Text>
           ) : null}

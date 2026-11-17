@@ -129,7 +129,7 @@ export default function TesteVoz() {
           </Paragrafo>
         ) : null}
         {diagnostico?.erro ? (
-          <Text className="text-sm text-red-700 dark:text-red-400">
+          <Text className="font-corpo text-sm text-erro">
             Erro ao listar os modelos: {diagnostico.erro}
           </Text>
         ) : null}
@@ -147,13 +147,13 @@ export default function TesteVoz() {
             {etiqueta ? <Etiqueta texto={etiqueta.texto} tom={etiqueta.tom} /> : null}
             <View className="gap-1">
               <Apoio>Leia em voz alta:</Apoio>
-              <Text className="text-xl text-slate-900 dark:text-slate-50">{idioma.fraseTeste}</Text>
+              <Text className="font-forte text-xl text-texto">{idioma.fraseTeste}</Text>
             </View>
-            <View className="min-h-16 gap-1 rounded-xl bg-slate-100 p-3 dark:bg-slate-800">
+            <View className="min-h-16 gap-1 rounded-2xl bg-superficie-2 p-3.5">
               <Apoio>{ativo ? 'Ouvindo…' : 'O aparelho entendeu:'}</Apoio>
-              <Text className="text-lg text-slate-900 dark:text-slate-50">{transcricao || '—'}</Text>
+              <Text className="font-forte text-lg text-texto">{transcricao || '—'}</Text>
             </View>
-            {aviso ? <Text className="text-sm text-amber-700 dark:text-amber-300">{aviso}</Text> : null}
+            {aviso ? <Text className="font-corpo text-sm text-ambar-texto">{aviso}</Text> : null}
             <View className="flex-row gap-3">
               <View className="flex-1">
                 {ativo ? (
@@ -182,7 +182,7 @@ export default function TesteVoz() {
 
       {erroGeral ? (
         <Cartao titulo="Erro">
-          <Text className="text-base text-red-700 dark:text-red-400">{erroGeral}</Text>
+          <Text className="font-corpo text-base text-erro">{erroGeral}</Text>
         </Cartao>
       ) : null}
     </Tela>

@@ -2,7 +2,9 @@ import { useState } from 'react';
 import { Text, View } from 'react-native';
 
 import { Botao } from '@/components/Botao';
+import { Rotulo } from '@/components/Texto';
 import type { Card } from '@/db/schema';
+import { coresDoDestaque, useTema } from '@/ui/tema';
 
 import { BotaoAudio } from './BotaoAudio';
 import { PalavraChinesa } from './PalavraChinesa';
@@ -15,18 +17,21 @@ type Props = {
 };
 
 function Significados({ card, destaque }: { card: Card; destaque: boolean }) {
-  const tamanho = destaque ? 'text-2xl' : 'text-xl';
+  const tema = useTema();
+  const cor = coresDoDestaque(tema, card.idioma);
   return (
     <View className="items-center gap-1">
       {card.versoEn ? (
-        <Text className={`text-center font-semibold text-slate-900 dark:text-slate-50 ${tamanho}`}>
-          {card.versoEn}
-        </Text>
+        <Text className={`text-center font-titulo text-texto ${destaque ? 'text-[28px] leading-8' : 'text-2xl'}`}>{card.versoEn}</Text>
       ) : null}
-      {card.versoPt ? (
-        <Text className={`text-center text-slate-600 dark:text-slate-300 ${tamanho}`}>{card.versoPt}</Text>
+      {card.versoPt ? <Text className="text-center font-forte text-xl text-texto-2">{card.versoPt}</Text> : null}
+      {card.classe ? (
+        <View style={{ backgroundColor: cor.clara }} className="mt-1.5 rounded-full px-3 py-0.5">
+          <Text style={{ color: cor.cor }} className="font-titulo text-sm">
+            {card.classe}
+          </Text>
+        </View>
       ) : null}
-      {card.classe ? <Text className="text-sm text-slate-400">{card.classe}</Text> : null}
     </View>
   );
 }
@@ -34,13 +39,11 @@ function Significados({ card, destaque }: { card: Card; destaque: boolean }) {
 /** A palavra no idioma estudado, com botão de áudio. */
 function Palavra({ card, mostrarPinyin }: { card: Card; mostrarPinyin: boolean }) {
   return (
-    <View className="items-center gap-3">
+    <View className="items-center gap-4">
       {card.idioma === 'zh' ? (
         <PalavraChinesa palavra={card.frente} pinyin={card.pinyin} mostrarPinyin={mostrarPinyin} />
       ) : (
-        <Text className="text-center text-4xl font-bold text-slate-900 dark:text-slate-50">
-          {card.frente}
-        </Text>
+        <Text className="text-center font-titulo text-[40px] leading-[48px] text-texto">{card.frente}</Text>
       )}
       <BotaoAudio texto={card.frente} idioma={card.idioma} descricao="Ouvir a palavra" />
     </View>
@@ -50,17 +53,13 @@ function Palavra({ card, mostrarPinyin }: { card: Card; mostrarPinyin: boolean }
 function Exemplo({ card, comTraducao }: { card: Card; comTraducao: boolean }) {
   if (!card.exemplo) return null;
   return (
-    <View className="gap-2 rounded-xl bg-slate-100 p-3 dark:bg-slate-800">
+    <View className="w-full gap-2 rounded-2xl bg-superficie-2 p-3.5">
       <View className="flex-row items-center gap-3">
-        <Text className="flex-1 text-lg text-slate-900 dark:text-slate-50">{card.exemplo}</Text>
-        <BotaoAudio texto={card.exemplo} idioma={card.idioma} descricao="Ouvir a frase" tamanho={20} />
+        <Text className="flex-1 font-forte text-lg text-texto">{card.exemplo}</Text>
+        <BotaoAudio texto={card.exemplo} idioma={card.idioma} descricao="Ouvir a frase" tamanho={18} cor="en" />
       </View>
-      {comTraducao && card.exemploEn ? (
-        <Text className="text-base text-slate-700 dark:text-slate-300">{card.exemploEn}</Text>
-      ) : null}
-      {comTraducao && card.exemploPt ? (
-        <Text className="text-base text-slate-500 dark:text-slate-400">{card.exemploPt}</Text>
-      ) : null}
+      {comTraducao && card.exemploEn ? <Text className="font-corpo text-base text-texto">{card.exemploEn}</Text> : null}
+      {comTraducao && card.exemploPt ? <Text className="font-semi text-base text-texto-2">{card.exemploPt}</Text> : null}
     </View>
   );
 }
@@ -70,15 +69,15 @@ function Detalhes({ card }: { card: Card }) {
   return (
     <>
       {card.nota ? (
-        <View className="rounded-xl bg-amber-100 p-3 dark:bg-amber-900">
-          <Text className="text-base text-amber-900 dark:text-amber-100">{card.nota}</Text>
+        <View className="w-full rounded-2xl bg-ambar-clara p-3.5">
+          <Text className="font-corpo text-base leading-6 text-ambar-texto">{card.nota}</Text>
         </View>
       ) : null}
       {card.idioma === 'zh' ? (
         tracos ? (
           <TracosHanzi palavra={card.frente} />
         ) : (
-          <Botao titulo="Ver ordem dos traços" variante="secundario" onPress={() => setTracos(true)} />
+          <Botao titulo="Ordem dos traços" icone="brush" variante="secundario" compacto onPress={() => setTracos(true)} />
         )
       ) : null}
     </>
@@ -91,20 +90,23 @@ function Detalhes({ card }: { card: Card }) {
  * - Produção: mostra o significado e pede a palavra.
  */
 export function FaceCartao({ card, revelado }: Props) {
+  const tema = useTema();
+  const cor = coresDoDestaque(tema, card.idioma);
   const producao = card.direcao === 'producao';
+  const divisor = <View className="h-0.5 w-full" style={{ backgroundColor: cor.clara }} />;
 
   return (
-    <View className="gap-5 rounded-2xl bg-white p-5 dark:bg-slate-900">
-      <Text className="text-center text-xs font-semibold uppercase tracking-widest text-slate-400">
-        {producao ? 'Como se diz?' : 'O que significa?'}
-      </Text>
+    <View
+      style={{ borderColor: cor.clara, borderBottomColor: tema.borda }}
+      className="items-center gap-5 rounded-[28px] border-2 border-b-[6px] bg-superficie px-5 py-6">
+      <Rotulo cor="text-texto-2">{producao ? 'COMO SE DIZ?' : 'O QUE SIGNIFICA?'}</Rotulo>
 
       {producao ? (
         <>
           <Significados card={card} destaque />
           {revelado ? (
             <>
-              <View className="h-px bg-slate-200 dark:bg-slate-700" />
+              {divisor}
               <Palavra card={card} mostrarPinyin />
               <Exemplo card={card} comTraducao />
               <Detalhes card={card} />
@@ -117,7 +119,7 @@ export function FaceCartao({ card, revelado }: Props) {
           <Exemplo card={card} comTraducao={revelado} />
           {revelado ? (
             <>
-              <View className="h-px bg-slate-200 dark:bg-slate-700" />
+              {divisor}
               <Significados card={card} destaque={false} />
               <Detalhes card={card} />
             </>

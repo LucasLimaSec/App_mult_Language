@@ -63,7 +63,7 @@ export default function TesteAudio() {
               )
             ) : null}
             <View className="gap-1">
-              <Text className="text-xl text-slate-900 dark:text-slate-50">{idioma.fraseTeste}</Text>
+              <Text className="font-forte text-xl text-texto">{idioma.fraseTeste}</Text>
               <Apoio>{idioma.traducaoTeste}</Apoio>
             </View>
             <View className="flex-row gap-3">
@@ -87,7 +87,7 @@ export default function TesteAudio() {
 
       {erro ? (
         <Cartao titulo="Erro">
-          <Text className="text-base text-red-700 dark:text-red-400">{erro}</Text>
+          <Text className="font-corpo text-base text-erro">{erro}</Text>
         </Cartao>
       ) : null}
     </Tela>

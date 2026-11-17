@@ -2,8 +2,10 @@ import { useEffect, useState } from 'react';
 import { Text, TextInput, View } from 'react-native';
 
 import { Botao } from '@/components/Botao';
+import { Rotulo } from '@/components/Texto';
 import type { Exercicio } from '@/conteudo/licoes';
 import { conferirDitadoEs, conferirDitadoZh, type ResultadoDitado } from '@/licoes/conferir';
+import { FONTES, useTema } from '@/ui/tema';
 import { falar } from '@/voz/fala';
 import type { Idioma } from '@/voz/idiomas';
 
@@ -19,6 +21,7 @@ type Props = {
 
 /** Ditado: o app fala e você digita. No chinês, você digita o pinyin. */
 export function ExercicioDitado({ exercicio, idioma, aoTerminar }: Props) {
+  const tema = useTema();
   const [texto, setTexto] = useState('');
   const [resultado, setResultado] = useState<ResultadoDitado | null>(null);
   const chines = idioma === 'zh';
@@ -39,9 +42,9 @@ export function ExercicioDitado({ exercicio, idioma, aoTerminar }: Props) {
   const acertou = resultado === 'certo' || resultado === 'acento';
 
   return (
-    <View className="gap-4">
-      <Text className="text-sm font-semibold uppercase tracking-widest text-slate-400">Ditado</Text>
-      <Text className="text-xl font-semibold text-slate-900 dark:text-slate-50">
+    <View className="gap-5">
+      <Rotulo>DITADO</Rotulo>
+      <Text className="font-titulo text-[22px] leading-7 text-texto">
         {chines ? 'Ouça e digite o pinyin' : 'Ouça e escreva o que ouviu'}
       </Text>
       <BotaoOuvirGrande texto={exercicio.frase} idioma={idioma} />
@@ -51,11 +54,12 @@ export function ExercicioDitado({ exercicio, idioma, aoTerminar }: Props) {
         onChangeText={setTexto}
         editable={resultado === null}
         placeholder={chines ? 'ex.: ma3 ou mǎ' : 'Escreva aqui'}
-        placeholderTextColor="#94a3b8"
+        placeholderTextColor={tema.texto2}
         autoCapitalize="none"
         autoCorrect={false}
         onSubmitEditing={() => texto.trim() && resultado === null && verificar()}
-        className="rounded-xl border-2 border-slate-300 px-4 py-3 text-lg text-slate-900 dark:border-slate-600 dark:text-slate-50"
+        style={{ fontFamily: FONTES.forte }}
+        className="rounded-2xl border-2 border-b-[5px] border-borda bg-superficie px-4 py-3.5 text-lg text-texto"
       />
 
       {resultado === null ? (

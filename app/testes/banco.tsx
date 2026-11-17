@@ -4,6 +4,7 @@ import { Text, TextInput, View } from 'react-native';
 import { Botao } from '@/components/Botao';
 import { Cartao } from '@/components/Cartao';
 import { Tela } from '@/components/Tela';
+import { useTema } from '@/ui/tema';
 import { Apoio, Paragrafo } from '@/components/Texto';
 import { db } from '@/db/client';
 import { cards, lessons, reviews, sessions, settings } from '@/db/schema';
@@ -26,6 +27,7 @@ async function contarLinhas(): Promise<Contagens> {
 }
 
 export default function TesteBanco() {
+  const tema = useTema();
   const [texto, setTexto] = useState('');
   const [salva, setSalva] = useState<NotaSalva | null>(null);
   const [contagens, setContagens] = useState<Contagens>([]);
@@ -78,8 +80,8 @@ export default function TesteBanco() {
           value={texto}
           onChangeText={setTexto}
           placeholder="Escreva qualquer coisa"
-          placeholderTextColor="#94a3b8"
-          className="rounded-xl border border-slate-300 px-3 py-3 text-base text-slate-900 dark:border-slate-600 dark:text-slate-50"
+          placeholderTextColor={tema.texto2}
+          className="rounded-2xl border-2 border-b-[5px] border-borda bg-superficie px-3.5 py-3 font-forte text-base text-texto"
         />
         <Botao titulo="Salvar" onPress={salvar} desabilitado={texto.trim().length === 0} />
       </Cartao>
@@ -87,7 +89,7 @@ export default function TesteBanco() {
       <Cartao titulo="Valor salvo no aparelho">
         {salva ? (
           <View className="gap-1">
-            <Text className="text-xl font-semibold text-slate-900 dark:text-slate-50">
+            <Text className="font-titulo text-xl text-texto">
               {salva.texto}
             </Text>
             <Apoio>Salvo em {new Date(salva.salvoEm).toLocaleString('pt-BR')}</Apoio>
@@ -101,8 +103,8 @@ export default function TesteBanco() {
       <Cartao titulo="Tabelas" subtitulo="Linhas em cada tabela do banco.">
         {contagens.map((tabela) => (
           <View key={tabela.nome} className="flex-row justify-between">
-            <Text className="text-base text-slate-700 dark:text-slate-300">{tabela.nome}</Text>
-            <Text className="text-base font-semibold text-slate-900 dark:text-slate-50">
+            <Text className="font-corpo text-base text-texto">{tabela.nome}</Text>
+            <Text className="font-titulo text-base text-texto">
               {tabela.linhas}
             </Text>
           </View>
@@ -111,7 +113,7 @@ export default function TesteBanco() {
 
       {erro ? (
         <Cartao titulo="Erro">
-          <Text className="text-base text-red-700 dark:text-red-400">{erro}</Text>
+          <Text className="font-corpo text-base text-erro">{erro}</Text>
         </Cartao>
       ) : null}
     </Tela>

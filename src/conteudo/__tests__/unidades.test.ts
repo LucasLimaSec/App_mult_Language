@@ -2,7 +2,17 @@ import { readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
 import type { Lesson } from '../../db/schema';
-import { buscarLicao, lerCurriculo, nomeDoNivel, proximaLicao, unidadeDoCurriculo, unidadeEscrita } from '../unidades';
+import {
+  buscarLicao,
+  lerCurriculo,
+  localizarUnidade,
+  nomeDoNivel,
+  proximaLicao,
+  totalDeLicoes,
+  unidadeDaLicao,
+  unidadeDoCurriculo,
+  unidadeEscrita,
+} from '../unidades';
 
 const PASTA = join(__dirname, '..', '..', '..', 'data', 'licoes');
 
@@ -57,5 +67,20 @@ describe('proximaLicao', () => {
 
   it('pula lições concluídas fora de ordem', () => {
     expect(proximaLicao('zh', { ...concluida('zh-u01-l01'), ...concluida('zh-u01-l03') })?.id).toBe('zh-u01-l02');
+  });
+});
+
+describe('localizarUnidade e totais', () => {
+  it('acha o nível e o número da unidade', () => {
+    expect(localizarUnidade('es-u12')).toEqual({ nivel: 'A2', numero: 12 });
+    expect(localizarUnidade('zh-u15')).toEqual({ nivel: 'HSK 2', numero: 15 });
+    expect(localizarUnidade('es-u99')).toBeUndefined();
+  });
+  it('conta as lições do currículo', () => {
+    expect(totalDeLicoes('es')).toBe(94);
+    expect(totalDeLicoes('zh')).toBe(91);
+  });
+  it('acha a unidade de uma lição', () => {
+    expect(unidadeDaLicao('zh-u03-l02')).toBe('zh-u03');
   });
 });

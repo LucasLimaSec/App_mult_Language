@@ -85,3 +85,23 @@ export function proximaLicao(idioma: Idioma, progresso: Record<string, Lesson>):
   }
   return undefined;
 }
+
+/** Nível e número da unidade, por exemplo { nivel: "A1", numero: 2 }. */
+export function localizarUnidade(id: string): { nivel: string; numero: number } | undefined {
+  for (const curriculo of Object.values(CURRICULOS)) {
+    for (const nivel of curriculo?.niveis ?? []) {
+      if (nivel.unidades.some((u) => u.id === id)) return { nivel: nomeDoNivel(nivel.id), numero: Number(id.split('-u')[1]) };
+    }
+  }
+  return undefined;
+}
+
+/** Total de lições previstas no currículo do idioma (escritas ou não). */
+export function totalDeLicoes(idioma: Idioma): number {
+  return (CURRICULOS[idioma]?.niveis ?? []).reduce((soma, n) => soma + n.unidades.reduce((s, u) => s + u.licoes.length, 0), 0);
+}
+
+/** Id da unidade de uma lição: "es-u02-l03" → "es-u02". */
+export function unidadeDaLicao(licaoId: string): string {
+  return licaoId.split('-l')[0];
+}

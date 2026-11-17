@@ -3,8 +3,10 @@ import { Pressable, Text, View } from 'react-native';
 
 import { Botao } from '@/components/Botao';
 import { PinyinColorido } from '@/components/cartoes/PalavraChinesa';
+import { Rotulo } from '@/components/Texto';
 import type { Exercicio } from '@/conteudo/licoes';
 import { conferirMontar, embaralhar } from '@/licoes/conferir';
+import { useTema } from '@/ui/tema';
 import type { Idioma } from '@/voz/idiomas';
 
 import { Feedback } from './Feedback';
@@ -18,16 +20,27 @@ type Props = {
 
 type Bloco = { id: number; texto: string };
 
-function Peca({ texto, onPress, destaque }: { texto: string; onPress?: () => void; destaque?: boolean }) {
+function Peca({ texto, onPress, escolhida }: { texto: string; onPress?: () => void; escolhida?: boolean }) {
+  const tema = useTema();
   return (
     <Pressable
       accessibilityRole="button"
+      accessibilityLabel={texto}
       disabled={!onPress}
       onPress={onPress}
-      className={`rounded-xl border-2 px-4 py-2 active:opacity-70 ${
-        destaque ? 'border-primaria bg-blue-50 dark:bg-slate-800' : 'border-slate-300 bg-white dark:border-slate-600 dark:bg-slate-900'
-      }`}>
-      <Text className="text-lg text-slate-900 dark:text-slate-50">{texto}</Text>
+      style={({ pressed }) => ({
+        borderRadius: 14,
+        borderWidth: 2,
+        borderColor: escolhida ? tema.marca : tema.borda,
+        backgroundColor: escolhida ? tema.marcaClara : tema.superficie,
+        borderBottomWidth: pressed ? 2 : 5,
+        marginTop: pressed ? 3 : 0,
+        paddingHorizontal: 14,
+        paddingVertical: 8,
+      })}>
+      <Text style={{ color: tema.texto }} className="font-forte text-lg">
+        {texto}
+      </Text>
     </Pressable>
   );
 }
@@ -50,16 +63,16 @@ export function ExercicioMontar({ exercicio, idioma, aoTerminar }: Props) {
   }
 
   return (
-    <View className="gap-4">
-      <Text className="text-sm font-semibold uppercase tracking-widest text-slate-400">Monte a frase</Text>
-      <Text className="text-xl font-semibold text-slate-900 dark:text-slate-50">{exercicio.traducao}</Text>
+    <View className="gap-5">
+      <Rotulo>MONTE A FRASE</Rotulo>
+      <Text className="font-titulo text-[22px] leading-7 text-texto">{exercicio.traducao}</Text>
 
-      <View className="min-h-16 flex-row flex-wrap gap-2 rounded-xl border-b-2 border-slate-300 pb-3 dark:border-slate-600">
+      <View className="min-h-[70px] flex-row flex-wrap gap-2 border-b-[3px] border-borda pb-3">
         {escolhidos.map((id) => (
           <Peca
             key={id}
             texto={textoDe(id)}
-            destaque
+            escolhida
             onPress={resultado === null ? () => setEscolhidos((atual) => atual.filter((x) => x !== id)) : undefined}
           />
         ))}

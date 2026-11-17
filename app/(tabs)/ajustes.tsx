@@ -1,59 +1,32 @@
 import { Ionicons } from '@expo/vector-icons';
 import Constants from 'expo-constants';
-import { Link, type Href } from 'expo-router';
+import { useRouter, type Href } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { Pressable, Text, View } from 'react-native';
 
-import { INFO_DICIONARIO } from '@/chines/dicionario';
+import { BotaoIcone } from '@/components/Botao';
 import { Cartao } from '@/components/Cartao';
 import { Tela } from '@/components/Tela';
-import { Apoio } from '@/components/Texto';
+import { Apoio, Titulo } from '@/components/Texto';
+import { INFO_DICIONARIO } from '@/chines/dicionario';
 import { gravarNovosPorDia, lerNovosPorDia, NOVOS_POR_DIA_MAXIMO } from '@/db/cartoes';
-import { IDIOMAS, type Idioma } from '@/voz/idiomas';
+import { coresDoDestaque, useTema } from '@/ui/tema';
+import type { Idioma } from '@/voz/idiomas';
 
 const IDIOMAS_COM_CARTOES: Idioma[] = ['es', 'zh'];
+const NOMES: Record<Idioma, string> = { en: 'Inglês', es: 'Espanhol', zh: 'Chinês' };
 
-type Teste = { rota: Href; titulo: string; descricao: string };
+type Teste = { rota: Href; titulo: string; descricao: string; icone: 'server' | 'volume-high' | 'mic' };
 
 const TESTES: Teste[] = [
-  {
-    rota: '/testes/banco',
-    titulo: 'Banco de dados',
-    descricao: 'Grava e lê um dado no aparelho, para conferir em modo avião.',
-  },
-  {
-    rota: '/testes/audio',
-    titulo: 'Áudio',
-    descricao: 'A voz do sistema lê uma frase em cada língua.',
-  },
-  {
-    rota: '/testes/voz',
-    titulo: 'Reconhecimento de voz',
-    descricao: 'Verifica os modelos offline e transcreve o que você fala.',
-  },
+  { rota: '/testes/banco', titulo: 'Banco de dados', descricao: 'Grava e lê um dado no aparelho, para conferir em modo avião.', icone: 'server' },
+  { rota: '/testes/audio', titulo: 'Áudio', descricao: 'A voz do sistema lê uma frase em cada língua.', icone: 'volume-high' },
+  { rota: '/testes/voz', titulo: 'Reconhecimento de voz', descricao: 'Verifica os modelos offline e transcreve o que você fala.', icone: 'mic' },
 ];
 
-function BotaoPasso({ icone, descricao, onPress, desabilitado }: {
-  icone: 'remove' | 'add';
-  descricao: string;
-  onPress: () => void;
-  desabilitado: boolean;
-}) {
-  return (
-    <Pressable
-      accessibilityRole="button"
-      accessibilityLabel={descricao}
-      disabled={desabilitado}
-      onPress={onPress}
-      className={`h-11 w-11 items-center justify-center rounded-full bg-slate-200 active:opacity-70 dark:bg-slate-700 ${
-        desabilitado ? 'opacity-40' : ''
-      }`}>
-      <Ionicons name={icone} size={22} color="#208AEF" />
-    </Pressable>
-  );
-}
-
 export default function Ajustes() {
+  const router = useRouter();
+  const tema = useTema();
   const [novos, setNovos] = useState<Partial<Record<Idioma, number>>>({});
 
   useEffect(() => {
@@ -69,31 +42,29 @@ export default function Ajustes() {
   }
 
   return (
-    <Tela>
-      <Cartao
-        titulo="Cartões novos por dia"
-        subtitulo="Vale a partir da próxima sessão. Com 0, você só faz revisões.">
+    <Tela semCabecalho>
+      <Titulo>Ajustes</Titulo>
+
+      <Cartao titulo="Cartões novos por dia" subtitulo="Vale a partir da próxima sessão. Com 0, você só faz revisões.">
         {IDIOMAS_COM_CARTOES.map((idioma) => {
-          const valor = novos[idioma];
+          const valor = novos[idioma] ?? 0;
+          const cor = coresDoDestaque(tema, idioma);
           return (
-            <View key={idioma} className="flex-row items-center justify-between">
-              <Text className="text-base text-slate-900 dark:text-slate-50">{IDIOMAS[idioma].nome}</Text>
+            <View key={idioma} className="flex-row items-center justify-between rounded-2xl bg-superficie-2 px-3.5 py-3">
+              <Text className="font-titulo text-[17px] text-texto">{NOMES[idioma]}</Text>
               <View className="flex-row items-center gap-3">
-                <BotaoPasso
+                <BotaoIcone
                   icone="remove"
-                  descricao={`Menos cartões novos de ${IDIOMAS[idioma].nome}`}
-                  desabilitado={valor === undefined || valor <= 0}
-                  onPress={() => mudar(idioma, (valor ?? 0) - 1)}
+                  descricao={`Menos cartões novos de ${NOMES[idioma]}`}
+                  cor={idioma}
+                  variante="claro"
+                  tamanho={44}
+                  onPress={() => mudar(idioma, valor - 1)}
                 />
-                <Text className="w-8 text-center text-xl font-semibold text-slate-900 dark:text-slate-50">
-                  {valor ?? '–'}
+                <Text style={{ color: cor.cor }} className="w-9 text-center font-titulo text-2xl">
+                  {novos[idioma] ?? '–'}
                 </Text>
-                <BotaoPasso
-                  icone="add"
-                  descricao={`Mais cartões novos de ${IDIOMAS[idioma].nome}`}
-                  desabilitado={valor === undefined || valor >= NOVOS_POR_DIA_MAXIMO}
-                  onPress={() => mudar(idioma, (valor ?? 0) + 1)}
-                />
+                <BotaoIcone icone="add" descricao={`Mais cartões novos de ${NOMES[idioma]}`} cor={idioma} tamanho={44} onPress={() => mudar(idioma, valor + 1)} />
               </View>
             </View>
           );
@@ -102,29 +73,44 @@ export default function Ajustes() {
 
       <Cartao titulo="Testes do aparelho" subtitulo="Faça os três em modo avião.">
         {TESTES.map((teste) => (
-          <Link key={teste.titulo} href={teste.rota} asChild>
-            <Pressable className="flex-row items-center gap-3 rounded-xl bg-slate-100 p-3 active:opacity-70 dark:bg-slate-800">
-              <View className="flex-1 gap-1">
-                <Text className="text-base font-semibold text-slate-900 dark:text-slate-50">
-                  {teste.titulo}
-                </Text>
-                <Apoio>{teste.descricao}</Apoio>
-              </View>
-              <Ionicons name="chevron-forward" size={20} color="#94a3b8" />
-            </Pressable>
-          </Link>
+          <Pressable
+            key={teste.titulo}
+            accessibilityRole="button"
+            onPress={() => router.push(teste.rota)}
+            style={({ pressed }) => ({
+              flexDirection: 'row',
+              alignItems: 'center',
+              gap: 12,
+              padding: 12,
+              borderRadius: 18,
+              borderWidth: 2,
+              borderColor: tema.borda,
+              backgroundColor: tema.superficie,
+              borderBottomWidth: pressed ? 2 : 5,
+              marginTop: pressed ? 3 : 0,
+            })}>
+            <View className="h-11 w-11 items-center justify-center rounded-2xl bg-marca-clara">
+              <Ionicons name={teste.icone} size={22} color={tema.marca} />
+            </View>
+            <View className="flex-1 gap-0.5">
+              <Text className="font-titulo text-base text-texto">{teste.titulo}</Text>
+              <Apoio>{teste.descricao}</Apoio>
+            </View>
+            <Ionicons name="chevron-forward" size={22} color={tema.texto2} />
+          </Pressable>
         ))}
       </Cartao>
 
       <Cartao titulo="Créditos">
         <Apoio>
-          Dicionário de chinês: CC-CEDICT, publicado pela MDBG sob a licença CC BY-SA 4.0 (
-          {INFO_DICIONARIO.palavras.toLocaleString('pt-BR')} entradas).
+          Dicionário de chinês: CC-CEDICT, publicado pela MDBG sob a licença CC BY-SA 4.0 ({INFO_DICIONARIO.palavras.toLocaleString('pt-BR')}{' '}
+          entradas).
         </Apoio>
         <Apoio>
           Ordem dos traços: Make Me a Hanzi / hanzi-writer-data, sob a Arphic Public License (
           {INFO_DICIONARIO.caracteres.toLocaleString('pt-BR')} caracteres).
         </Apoio>
+        <Apoio>Fonte Nunito, sob a SIL Open Font License.</Apoio>
       </Cartao>
 
       <Apoio>Versão {Constants.expoConfig?.version ?? '?'}</Apoio>

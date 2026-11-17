@@ -9,6 +9,7 @@ import { Botao } from '@/components/Botao';
 import { Cartao } from '@/components/Cartao';
 import { PinyinColorido } from '@/components/cartoes/PalavraChinesa';
 import { Tela } from '@/components/Tela';
+import { useTema } from '@/ui/tema';
 import { Apoio } from '@/components/Texto';
 import { criarPalavraManual, palavraJaExiste, problemaDaPalavraManual } from '@/db/cartoes';
 import { IDIOMAS, type Idioma } from '@/voz/idiomas';
@@ -16,7 +17,7 @@ import { IDIOMAS, type Idioma } from '@/voz/idiomas';
 const IDIOMAS_COM_CARTOES: Idioma[] = ['es', 'zh'];
 
 const ESTILO_DO_CAMPO =
-  'rounded-xl border border-slate-300 px-3 py-3 text-base text-slate-900 dark:border-slate-600 dark:text-slate-50';
+  'rounded-2xl border-2 border-b-[5px] border-borda bg-superficie px-3.5 py-3 font-forte text-base text-texto';
 
 function Campo(props: {
   rotulo: string;
@@ -25,15 +26,16 @@ function Campo(props: {
   dica?: string;
   aoSair?: () => void;
 }) {
+  const tema = useTema();
   return (
     <View className="gap-1">
-      <Text className="text-sm font-medium text-slate-700 dark:text-slate-300">{props.rotulo}</Text>
+      <Text className="font-forte text-sm text-texto-2">{props.rotulo}</Text>
       <TextInput
         value={props.valor}
         onChangeText={props.aoMudar}
         onBlur={props.aoSair}
         placeholder={props.dica}
-        placeholderTextColor="#94a3b8"
+        placeholderTextColor={tema.texto2}
         autoCapitalize="none"
         autoCorrect={false}
         className={ESTILO_DO_CAMPO}
@@ -117,6 +119,8 @@ export default function AdicionarPalavra() {
               <Botao
                 titulo={IDIOMAS[codigo].nome}
                 variante={codigo === idioma ? 'primario' : 'secundario'}
+                cor={codigo}
+                compacto
                 onPress={() => trocarIdioma(codigo)}
               />
             </View>
@@ -145,9 +149,9 @@ export default function AdicionarPalavra() {
                   <Pressable
                     key={indice}
                     onPress={() => usarEntrada(entrada)}
-                    className="rounded-xl bg-slate-100 p-3 active:opacity-70 dark:bg-slate-800">
+                    className="rounded-2xl bg-superficie-2 p-3.5 active:opacity-70">
                     <PinyinColorido pinyin={entrada.pinyin} tamanho={16} />
-                    <Text numberOfLines={2} className="text-sm text-slate-600 dark:text-slate-300">
+                    <Text numberOfLines={2} className="font-corpo text-sm text-texto-2">
                       {entrada.definicoes}
                     </Text>
                   </Pressable>
@@ -161,7 +165,7 @@ export default function AdicionarPalavra() {
         <Campo rotulo="Tradução em português" valor={pt} aoMudar={setPt} dica="cachorro" />
         <Campo rotulo="Frase de exemplo (opcional)" valor={exemplo} aoMudar={setExemplo} />
 
-        {aviso ? <Text className="text-sm text-amber-700 dark:text-amber-300">{aviso}</Text> : null}
+        {aviso ? <Text className="font-corpo text-sm text-ambar-texto">{aviso}</Text> : null}
         <Botao titulo={salvando ? 'Salvando…' : 'Salvar'} onPress={salvar} desabilitado={salvando} />
         <Apoio>
           Preencha pelo menos uma das traduções. A palavra vira dois cartões: reconhecer e lembrar

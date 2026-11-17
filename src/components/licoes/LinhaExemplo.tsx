@@ -15,14 +15,14 @@ type Props = {
 /** Frase no idioma estudado, com áudio, pinyin colorido (chinês) e as duas traduções. */
 export function LinhaExemplo({ frase, idioma, pinyin, en, pt }: Props) {
   return (
-    <View className="flex-row items-center gap-3 rounded-xl bg-slate-100 p-3 dark:bg-slate-800">
+    <View className="flex-row items-center gap-3 rounded-2xl bg-superficie-2 p-3.5">
       <View className="flex-1 gap-1">
-        <Text className={`text-slate-900 dark:text-slate-50 ${idioma === 'zh' ? 'text-2xl' : 'text-lg'}`}>{frase}</Text>
+        <Text className={`text-texto ${idioma === 'zh' ? 'text-[26px]' : 'font-forte text-lg'}`}>{frase}</Text>
         {pinyin ? <PinyinColorido pinyin={pinyin} tamanho={16} /> : null}
-        <Text className="text-sm text-slate-700 dark:text-slate-300">{en}</Text>
-        <Text className="text-sm text-slate-500 dark:text-slate-400">{pt}</Text>
+        <Text className="font-corpo text-sm text-texto">{en}</Text>
+        <Text className="font-semi text-sm text-texto-2">{pt}</Text>
       </View>
-      <BotaoAudio texto={frase} idioma={idioma} descricao={`Ouvir: ${frase}`} tamanho={20} />
+      <BotaoAudio texto={frase} idioma={idioma} descricao={`Ouvir: ${frase}`} tamanho={20} cor="en" />
     </View>
   );
 }
