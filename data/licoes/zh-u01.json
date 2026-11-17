@@ -1,0 +1,64 @@
+{
+  "id": "zh-u01",
+  "idioma": "zh",
+  "titulo": "Pinyin and tones",
+  "licoes": [
+    {
+      "id": "zh-u01-l01",
+      "titulo": "The four tones",
+      "explicacao": [
+        { "tipo": "texto", "texto": "Mandarin is a tonal language: the same syllable said with a different pitch is a different word. Pinyin shows the tone with a mark over the vowel." },
+        {
+          "tipo": "tabela",
+          "cabecalho": ["Tone", "Mark", "How it sounds", "Example"],
+          "linhas": [
+            ["1st", "ā", "high and flat, like singing one note", "妈 mā (mom)"],
+            ["2nd", "á", "rising, like a surprised \"what?\"", "麻 má (numb)"],
+            ["3rd", "ǎ", "low, dipping down", "马 mǎ (horse)"],
+            ["4th", "à", "falling sharply, like a firm \"no!\"", "骂 mà (to scold)"],
+            ["Neutral", "a", "short and light, no mark", "吗 ma (question particle)"]
+          ]
+        },
+        { "tipo": "dica", "texto": "In this app the tones always have the same colors: 1st red, 2nd orange, 3rd green, 4th blue and neutral gray." },
+        { "tipo": "texto", "texto": "For a Portuguese speaker, the 2nd tone is the melody of \"Hein?\" when you didn't hear something, and the 4th tone is an annoyed \"Não!\". The 3rd tone is usually said low and short in the middle of a sentence." },
+        { "tipo": "dica", "texto": "When two 3rd tones meet, the first becomes a 2nd tone: 你好 is written nǐ hǎo but said ní hǎo. You will see more tone changes in lesson 3." }
+      ],
+      "exemplos": [
+        { "frase": "妈", "pinyin": "mā", "en": "mom", "pt": "mãe" },
+        { "frase": "麻", "pinyin": "má", "en": "numb; hemp", "pt": "dormente; cânhamo" },
+        { "frase": "马", "pinyin": "mǎ", "en": "horse", "pt": "cavalo" },
+        { "frase": "骂", "pinyin": "mà", "en": "to scold", "pt": "xingar, dar bronca" },
+        { "frase": "妈妈骂马吗？", "pinyin": "mā ma mà mǎ ma", "en": "Is mom scolding the horse?", "pt": "A mamãe está dando bronca no cavalo?" }
+      ],
+      "palavras": [
+        { "palavra": "马", "pinyin": "mǎ", "classe": "noun", "en": "horse", "pt": "cavalo" }
+      ],
+      "exercicios": [
+        { "tipo": "ouvir", "audio": "妈", "pergunta": "Which tone did you hear?", "opcoes": ["mā", "má", "mǎ", "mà"], "correta": 0 },
+        { "tipo": "ouvir", "audio": "马", "pergunta": "Which tone did you hear?", "opcoes": ["mā", "má", "mǎ", "mà"], "correta": 2 },
+        { "tipo": "ouvir", "audio": "骂", "pergunta": "Which tone did you hear?", "opcoes": ["mā", "má", "mǎ", "mà"], "correta": 3 },
+        {
+          "tipo": "escolha",
+          "pergunta": "Which tone falls sharply, like a firm \"no!\"?",
+          "opcoes": ["1st tone", "2nd tone", "3rd tone", "4th tone"],
+          "correta": 3
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "Which syllable has the 2nd (rising) tone?",
+          "opcoes": ["bā", "bá", "bǎ", "bà"],
+          "correta": 1
+        },
+        { "tipo": "ouvir", "audio": "八", "pergunta": "Which tone did you hear?", "opcoes": ["bā", "bá", "bǎ", "bà"], "correta": 0, "explicacao": "八 bā means eight." },
+        {
+          "tipo": "ditado",
+          "frase": "马",
+          "resposta": "mǎ",
+          "traducao": "horse",
+          "explicacao": "Type the pinyin. You can write the tone as a number after the syllable: ma3."
+        },
+        { "tipo": "falar", "frase": "妈妈骂马吗？", "pinyin": "mā ma mà mǎ ma", "traducao": "Is mom scolding the horse?" }
+      ]
+    }
+  ]
+}

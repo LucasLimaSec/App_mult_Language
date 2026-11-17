@@ -1,0 +1,138 @@
+{
+  "id": "es-u01",
+  "idioma": "es",
+  "titulo": "Hello!",
+  "falsosAmigos": [
+    {
+      "palavra": "apellido",
+      "significado": "surname, last name",
+      "portugues": "Portuguese \"apelido\" (nickname) is \"apodo\" in Spanish.",
+      "exemplo": "Mi apellido es Lima, pero mi apodo es Luquinha.",
+      "exemploEn": "My last name is Lima, but my nickname is Luquinha."
+    },
+    {
+      "palavra": "largo",
+      "significado": "long",
+      "portugues": "Portuguese \"largo\" (wide) is \"ancho\" in Spanish.",
+      "exemplo": "Fue un viaje muy largo.",
+      "exemploEn": "It was a very long trip."
+    },
+    {
+      "palavra": "no",
+      "significado": "no, not",
+      "portugues": "Portuguese \"no\" (em + o, \"in the\") is \"en el\" in Spanish.",
+      "exemplo": "No vivo en el centro.",
+      "exemploEn": "I don't live downtown."
+    }
+  ],
+  "licoes": [
+    {
+      "id": "es-u01-l01",
+      "titulo": "Greetings and goodbyes",
+      "explicacao": [
+        { "tipo": "texto", "texto": "In Spanish, the greeting changes with the time of day. \"Hola\" works at any time and with anyone." },
+        {
+          "tipo": "tabela",
+          "cabecalho": ["Spanish", "When", "English"],
+          "linhas": [
+            ["Hola", "any time", "hi, hello"],
+            ["Buenos días", "until about noon", "good morning"],
+            ["Buenas tardes", "from noon until dark", "good afternoon"],
+            ["Buenas noches", "after dark, and before bed", "good evening, good night"]
+          ]
+        },
+        { "tipo": "dica", "texto": "Portuguese says \"bom dia\" in the singular, but Spanish always uses the plural: buenos días, buenas tardes, buenas noches." },
+        { "tipo": "texto", "texto": "To ask how someone is, say \"¿Cómo estás?\" to a friend and \"¿Cómo está?\" to someone you treat formally. \"¿Qué tal?\" works in both cases." },
+        {
+          "tipo": "tabela",
+          "cabecalho": ["Answer", "English"],
+          "linhas": [
+            ["Muy bien, gracias. ¿Y tú?", "Very well, thanks. And you?"],
+            ["Bien.", "Fine."],
+            ["Más o menos.", "So-so."],
+            ["Mal.", "Not well."]
+          ]
+        },
+        {
+          "tipo": "tabela",
+          "cabecalho": ["Goodbye", "English"],
+          "linhas": [
+            ["Adiós", "goodbye"],
+            ["Hasta luego", "see you later"],
+            ["Hasta mañana", "see you tomorrow"],
+            ["Nos vemos", "see you"],
+            ["Que te vaya bien", "take care (literally: may it go well for you)"]
+          ]
+        },
+        { "tipo": "dica", "texto": "In Mexico you will often hear \"¿Qué onda?\" among friends. It is very informal, like \"E aí?\" in Portuguese." }
+      ],
+      "exemplos": [
+        { "frase": "Buenos días, ¿cómo está?", "en": "Good morning, how are you?", "pt": "Bom dia, como o senhor está?" },
+        { "frase": "Hola, ¿qué tal?", "en": "Hi, how's it going?", "pt": "Oi, tudo bem?" },
+        { "frase": "Muy bien, gracias. ¿Y tú?", "en": "Very well, thanks. And you?", "pt": "Muito bem, obrigado. E você?" },
+        { "frase": "Buenas noches, hasta mañana.", "en": "Good night, see you tomorrow.", "pt": "Boa noite, até amanhã." },
+        { "frase": "Adiós, que te vaya bien.", "en": "Goodbye, take care.", "pt": "Tchau, tudo de bom." }
+      ],
+      "palavras": [
+        { "palavra": "buenas tardes", "classe": "phrase", "en": "good afternoon", "pt": "boa tarde", "exemplo": "Buenas tardes, señora.", "exemploEn": "Good afternoon, ma'am.", "exemploPt": "Boa tarde, senhora." },
+        { "palavra": "buenas noches", "classe": "phrase", "en": "good evening, good night", "pt": "boa noite", "exemplo": "Buenas noches a todos.", "exemploEn": "Good evening, everyone.", "exemploPt": "Boa noite a todos." },
+        { "palavra": "¿qué tal?", "classe": "phrase", "en": "how's it going?", "pt": "tudo bem?, como vai?", "exemplo": "Hola, Ana, ¿qué tal?", "exemploEn": "Hi, Ana, how's it going?", "exemploPt": "Oi, Ana, tudo bem?" },
+        { "palavra": "más o menos", "classe": "phrase", "en": "so-so", "pt": "mais ou menos", "exemplo": "Hoy estoy más o menos.", "exemploEn": "I'm so-so today.", "exemploPt": "Hoje estou mais ou menos." },
+        { "palavra": "hasta mañana", "classe": "phrase", "en": "see you tomorrow", "pt": "até amanhã", "exemplo": "Me voy, hasta mañana.", "exemploEn": "I'm leaving, see you tomorrow.", "exemploPt": "Estou indo, até amanhã." },
+        { "palavra": "nos vemos", "classe": "phrase", "en": "see you", "pt": "a gente se vê", "exemplo": "Nos vemos el lunes.", "exemploEn": "See you on Monday.", "exemploPt": "A gente se vê na segunda." }
+      ],
+      "exercicios": [
+        {
+          "tipo": "escolha",
+          "pergunta": "It's 3 p.m. How do you greet a new colleague?",
+          "opcoes": ["Buenos días", "Buenas tardes", "Buenas noches", "Buena tarde"],
+          "correta": 1,
+          "explicacao": "From noon until dark you say \"buenas tardes\", always in the plural."
+        },
+        {
+          "tipo": "ouvir",
+          "audio": "Hasta mañana.",
+          "pergunta": "What did you hear?",
+          "opcoes": ["See you tomorrow.", "See you later.", "Good morning.", "Goodbye."],
+          "correta": 0
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "Which answer fits \"¿Cómo estás?\"",
+          "opcoes": ["Me llamo Ana.", "Bien, gracias. ¿Y tú?", "Hasta luego.", "Buenas noches."],
+          "correta": 1
+        },
+        {
+          "tipo": "montar",
+          "traducao": "Fine, thanks. And you?",
+          "blocos": ["Bien", "gracias", "y", "tú"],
+          "extras": ["tu", "bueno"],
+          "explicacao": "\"Tú\" with an accent means you; \"tu\" without it means your."
+        },
+        {
+          "tipo": "ditado",
+          "frase": "Muy bien, gracias.",
+          "traducao": "Very well, thank you."
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "You are leaving work and will see your colleagues tomorrow. What do you say?",
+          "opcoes": ["Hasta mañana.", "Buenos días.", "¿Qué tal?", "Más o menos."],
+          "correta": 0
+        },
+        {
+          "tipo": "falar",
+          "frase": "Buenas tardes, ¿cómo está?",
+          "traducao": "Good afternoon, how are you?",
+          "aceitas": ["Buenas tardes, cómo estás"]
+        },
+        {
+          "tipo": "montar",
+          "traducao": "Good night, see you tomorrow.",
+          "blocos": ["Buenas", "noches", "hasta", "mañana"],
+          "extras": ["buenos", "luego"]
+        }
+      ]
+    }
+  ]
+}
