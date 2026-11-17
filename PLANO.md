@@ -105,15 +105,17 @@ Leia CLAUDE.md e PLANO.md. Implemente a Fase 0. Antes de codar, me mostre a estr
 
 Objetivo: revisar vocabulário todo dia, offline.
 
-- [ ] Integrar ts-fsrs com 4 botões: Errei, Difícil, Bom, Fácil
-- [ ] Deck inicial de espanhol: palavras mais frequentes com frase de exemplo e tradução, escrito em /data
-- [ ] Deck inicial de chinês: lista HSK 1 com caractere, pinyin e significado
-- [ ] Pinyin colorido por tom e ordem dos traços (hanzi-writer-data desenhado com react-native-svg)
-- [ ] Botão de áudio em todo cartão com a voz do sistema (expo-speech)
-- [ ] "Adicionar palavra" manual: você digita a palavra e a tradução; no chinês, o app completa pinyin e significado pelo dicionário CC-CEDICT offline
-- [ ] Limite diário de cartões novos configurável
+- [x] Integrar ts-fsrs com 4 botões: Errei, Difícil, Bom, Fácil
+- [x] Deck inicial de espanhol: palavras mais frequentes com frase de exemplo e tradução, escrito em /data
+- [x] Deck inicial de chinês: lista HSK 1 com caractere, pinyin e significado
+- [x] Pinyin colorido por tom e ordem dos traços (hanzi-writer-data desenhado com react-native-svg)
+- [x] Botão de áudio em todo cartão com a voz do sistema (expo-speech)
+- [x] "Adicionar palavra" manual: você digita a palavra e a tradução; no chinês, o app completa pinyin e significado pelo dicionário CC-CEDICT offline
+- [x] Limite diário de cartões novos configurável
 
 Pronto quando: você revisa 20 cartões sem internet e eles voltam nos dias certos.
+
+> Situação em 17/11/2026: testado no celular pelo Lucas (revisão em espanhol e chinês, áudio, pinyin, traços, dicionário e limite diário). Decks: 500 palavras de espanhol (sem as idênticas ao português, com falsos amigos marcados) e as 506 do HSK 1 no padrão HSK 3.0, cada palavra com cartão de reconhecimento e de produção. No banco do aparelho ficaram 9 revisões, sem registro de modo avião; conferir nos próximos dias se os cartões voltam nas datas previstas.
 
 ```text
 Leia CLAUDE.md e PLANO.md. Implemente a Fase 1. Escreva você mesmo os decks iniciais como JSON em /data, sem chamar nenhuma API, e me mostre 10 cartões de cada língua antes de escrever o resto.
@@ -296,6 +298,9 @@ Estas escolhas têm um padrão definido, mas você pode trocar antes de começar
 | Variante do espanhol | América Latina (es-MX) | Espanha (es-ES) | 1, 2, 3 |
 | Escrita do chinês | Simplificado | Tradicional (Taiwan) | 1, 2 |
 | Idioma das explicações | Inglês, para praticar inglês junto (confirmado em 16/11/2026) | Portugues | 1, 2 |
+| Verso dos flashcards | Inglês e português (confirmado em 16/11/2026) | Só um dos dois | 1 |
+| Lista do HSK | HSK 3.0, nível 1 com ~500 palavras (confirmado em 16/11/2026) | HSK 2.0, com 150 | 1, 2 |
+| Direção dos flashcards | Reconhecimento e produção, 6 novos por dia por língua (confirmado em 16/11/2026) | Só reconhecimento | 1 |
 | Variante do inglês | Estados Unidos (en-US) (confirmado em 16/11/2026) | Reino Unido (en-GB) | 0, 3 |
 | Nome e identificador do app | Multi-Lingua, `com.lucaslimasec.multilingua` (confirmado em 16/11/2026) | — | 0, 5 |
 | Onde ficam os dados | Só no celular, com backup em JSON | Sincronizar com Google Drive ou Supabase | 0, 4 |
