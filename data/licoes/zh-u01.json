@@ -7,49 +7,177 @@
       "id": "zh-u01-l01",
       "titulo": "The four tones",
       "explicacao": [
-        { "tipo": "texto", "texto": "Mandarin is a tonal language: the same syllable said with a different pitch is a different word. Pinyin shows the tone with a mark over the vowel." },
+        {
+          "tipo": "texto",
+          "texto": "Mandarin is a tonal language: the same syllable said with a different pitch is a different word. Pinyin shows the tone with a mark over the vowel."
+        },
         {
           "tipo": "tabela",
-          "cabecalho": ["Tone", "Mark", "How it sounds", "Example"],
+          "cabecalho": [
+            "Tone",
+            "Mark",
+            "How it sounds",
+            "Example"
+          ],
           "linhas": [
-            ["1st", "ā", "high and flat, like singing one note", "妈 mā (mom)"],
-            ["2nd", "á", "rising, like a surprised \"what?\"", "麻 má (numb)"],
-            ["3rd", "ǎ", "low, dipping down", "马 mǎ (horse)"],
-            ["4th", "à", "falling sharply, like a firm \"no!\"", "骂 mà (to scold)"],
-            ["Neutral", "a", "short and light, no mark", "吗 ma (question particle)"]
+            [
+              "1st",
+              "ā",
+              "high and flat, like singing one note",
+              "妈 mā (mom)"
+            ],
+            [
+              "2nd",
+              "á",
+              "rising, like a surprised \"what?\"",
+              "麻 má (numb)"
+            ],
+            [
+              "3rd",
+              "ǎ",
+              "low, dipping down",
+              "马 mǎ (horse)"
+            ],
+            [
+              "4th",
+              "à",
+              "falling sharply, like a firm \"no!\"",
+              "骂 mà (to scold)"
+            ],
+            [
+              "Neutral",
+              "a",
+              "short and light, no mark",
+              "吗 ma (question particle)"
+            ]
           ]
         },
-        { "tipo": "dica", "texto": "In this app the tones always have the same colors: 1st red, 2nd orange, 3rd green, 4th blue and neutral gray." },
-        { "tipo": "texto", "texto": "For a Portuguese speaker, the 2nd tone is the melody of \"Hein?\" when you didn't hear something, and the 4th tone is an annoyed \"Não!\". The 3rd tone is usually said low and short in the middle of a sentence." },
-        { "tipo": "dica", "texto": "When two 3rd tones meet, the first becomes a 2nd tone: 你好 is written nǐ hǎo but said ní hǎo. You will see more tone changes in lesson 3." }
+        {
+          "tipo": "dica",
+          "texto": "In this app the tones always have the same colors: 1st red, 2nd orange, 3rd green, 4th blue and neutral gray."
+        },
+        {
+          "tipo": "texto",
+          "texto": "For a Portuguese speaker, the 2nd tone is the melody of \"Hein?\" when you didn't hear something, and the 4th tone is an annoyed \"Não!\". The 3rd tone is usually said low and short in the middle of a sentence."
+        },
+        {
+          "tipo": "dica",
+          "texto": "When two 3rd tones meet, the first becomes a 2nd tone: 你好 is written nǐ hǎo but said ní hǎo. You will see more tone changes in lesson 3."
+        }
       ],
       "exemplos": [
-        { "frase": "妈", "pinyin": "mā", "en": "mom", "pt": "mãe" },
-        { "frase": "麻", "pinyin": "má", "en": "numb; hemp", "pt": "dormente; cânhamo" },
-        { "frase": "马", "pinyin": "mǎ", "en": "horse", "pt": "cavalo" },
-        { "frase": "骂", "pinyin": "mà", "en": "to scold", "pt": "xingar, dar bronca" },
-        { "frase": "妈妈骂马吗？", "pinyin": "mā ma mà mǎ ma", "en": "Is mom scolding the horse?", "pt": "A mamãe está dando bronca no cavalo?" }
+        {
+          "frase": "妈",
+          "pinyin": "mā",
+          "en": "mom",
+          "pt": "mãe"
+        },
+        {
+          "frase": "麻",
+          "pinyin": "má",
+          "en": "numb; hemp",
+          "pt": "dormente; cânhamo"
+        },
+        {
+          "frase": "马",
+          "pinyin": "mǎ",
+          "en": "horse",
+          "pt": "cavalo"
+        },
+        {
+          "frase": "骂",
+          "pinyin": "mà",
+          "en": "to scold",
+          "pt": "xingar, dar bronca"
+        },
+        {
+          "frase": "妈妈骂马吗？",
+          "pinyin": "mā ma mà mǎ ma",
+          "en": "Is mom scolding the horse?",
+          "pt": "A mamãe está dando bronca no cavalo?"
+        }
       ],
       "palavras": [
-        { "palavra": "马", "pinyin": "mǎ", "classe": "noun", "en": "horse", "pt": "cavalo" }
+        {
+          "palavra": "马",
+          "pinyin": "mǎ",
+          "classe": "noun",
+          "en": "horse",
+          "pt": "cavalo"
+        }
       ],
       "exercicios": [
-        { "tipo": "ouvir", "audio": "妈", "pergunta": "Which tone did you hear?", "opcoes": ["mā", "má", "mǎ", "mà"], "correta": 0 },
-        { "tipo": "ouvir", "audio": "马", "pergunta": "Which tone did you hear?", "opcoes": ["mā", "má", "mǎ", "mà"], "correta": 2 },
-        { "tipo": "ouvir", "audio": "骂", "pergunta": "Which tone did you hear?", "opcoes": ["mā", "má", "mǎ", "mà"], "correta": 3 },
+        {
+          "tipo": "ouvir",
+          "audio": "妈",
+          "pergunta": "Which tone did you hear?",
+          "opcoes": [
+            "mā",
+            "má",
+            "mǎ",
+            "mà"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "ouvir",
+          "audio": "马",
+          "pergunta": "Which tone did you hear?",
+          "opcoes": [
+            "mā",
+            "má",
+            "mǎ",
+            "mà"
+          ],
+          "correta": 2
+        },
+        {
+          "tipo": "ouvir",
+          "audio": "骂",
+          "pergunta": "Which tone did you hear?",
+          "opcoes": [
+            "mā",
+            "má",
+            "mǎ",
+            "mà"
+          ],
+          "correta": 3
+        },
         {
           "tipo": "escolha",
           "pergunta": "Which tone falls sharply, like a firm \"no!\"?",
-          "opcoes": ["1st tone", "2nd tone", "3rd tone", "4th tone"],
+          "opcoes": [
+            "1st tone",
+            "2nd tone",
+            "3rd tone",
+            "4th tone"
+          ],
           "correta": 3
         },
         {
           "tipo": "escolha",
           "pergunta": "Which syllable has the 2nd (rising) tone?",
-          "opcoes": ["bā", "bá", "bǎ", "bà"],
+          "opcoes": [
+            "bā",
+            "bá",
+            "bǎ",
+            "bà"
+          ],
           "correta": 1
         },
-        { "tipo": "ouvir", "audio": "八", "pergunta": "Which tone did you hear?", "opcoes": ["bā", "bá", "bǎ", "bà"], "correta": 0, "explicacao": "八 bā means eight." },
+        {
+          "tipo": "ouvir",
+          "audio": "八",
+          "pergunta": "Which tone did you hear?",
+          "opcoes": [
+            "bā",
+            "bá",
+            "bǎ",
+            "bà"
+          ],
+          "correta": 0,
+          "explicacao": "八 bā means eight."
+        },
         {
           "tipo": "ditado",
           "frase": "马",
@@ -57,7 +185,440 @@
           "traducao": "horse",
           "explicacao": "Type the pinyin. You can write the tone as a number after the syllable: ma3."
         },
-        { "tipo": "falar", "frase": "妈妈骂马吗？", "pinyin": "mā ma mà mǎ ma", "traducao": "Is mom scolding the horse?" }
+        {
+          "tipo": "falar",
+          "frase": "妈妈骂马吗？",
+          "pinyin": "mā ma mà mǎ ma",
+          "traducao": "Is mom scolding the horse?"
+        }
+      ]
+    },
+    {
+      "id": "zh-u01-l02",
+      "titulo": "Initials and finals",
+      "explicacao": [
+        {
+          "tipo": "texto",
+          "texto": "A Chinese syllable has three parts: an initial (the consonant at the start), a final (the rest) and a tone. 妈 mā = m + a + 1st tone."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Most initials sound close to Portuguese. These are the ones that surprise Portuguese speakers:"
+        },
+        {
+          "tipo": "tabela",
+          "cabecalho": [
+            "Pinyin",
+            "How it sounds",
+            "Example"
+          ],
+          "linhas": [
+            [
+              "b, d, g",
+              "like a soft Portuguese p, t, k (no puff of air)",
+              "八 bā (eight)"
+            ],
+            [
+              "p, t, k",
+              "p, t, k with a strong puff of air",
+              "他 tā (he)"
+            ],
+            [
+              "h",
+              "like the rough r in \"carro\"",
+              "好 hǎo (good)"
+            ],
+            [
+              "j",
+              "like \"dj\" in Brazilian \"dia\", but softer",
+              "九 jiǔ (nine)"
+            ],
+            [
+              "q",
+              "like \"tch\" in \"tchau\", with a puff of air",
+              "七 qī (seven)"
+            ],
+            [
+              "x",
+              "like \"x\" in \"xícara\", with the lips spread",
+              "谢 xiè (thank)"
+            ],
+            [
+              "zh, ch, sh",
+              "like \"dj\", \"tch\" and \"x\" with the tongue curled back",
+              "是 shì (to be)"
+            ],
+            [
+              "z, c",
+              "like \"dz\" and \"ts\" (c has a puff of air)",
+              "菜 cài (dish)"
+            ],
+            [
+              "r",
+              "between the English r and the Portuguese j",
+              "人 rén (person)"
+            ]
+          ]
+        },
+        {
+          "tipo": "tabela",
+          "cabecalho": [
+            "Final",
+            "How it sounds",
+            "Example"
+          ],
+          "linhas": [
+            [
+              "i after z, c, s",
+              "a buzzing sound, not an i",
+              "四 sì (four)"
+            ],
+            [
+              "i after zh, ch, sh, r",
+              "a buzzing sound with the tongue curled back",
+              "是 shì (to be)"
+            ],
+            [
+              "ü",
+              "say i with rounded lips, like the French u",
+              "女 nǚ (female)"
+            ],
+            [
+              "e",
+              "a sound from the back of the throat, between \"â\" and \"ê\"",
+              "喝 hē (to drink)"
+            ],
+            [
+              "-n and -ng",
+              "-n ends at the teeth; -ng ends in the throat, as in English \"song\"",
+              "人 rén, 冷 lěng"
+            ]
+          ]
+        },
+        {
+          "tipo": "dica",
+          "texto": "After j, q, x and y, the letter u is always ü, even without the dots: 去 qù sounds like \"tchü\"."
+        }
+      ],
+      "exemplos": [
+        {
+          "frase": "八",
+          "pinyin": "bā",
+          "en": "eight",
+          "pt": "oito"
+        },
+        {
+          "frase": "他",
+          "pinyin": "tā",
+          "en": "he",
+          "pt": "ele"
+        },
+        {
+          "frase": "七",
+          "pinyin": "qī",
+          "en": "seven",
+          "pt": "sete"
+        },
+        {
+          "frase": "去",
+          "pinyin": "qù",
+          "en": "to go",
+          "pt": "ir"
+        },
+        {
+          "frase": "是",
+          "pinyin": "shì",
+          "en": "to be",
+          "pt": "ser"
+        },
+        {
+          "frase": "四",
+          "pinyin": "sì",
+          "en": "four",
+          "pt": "quatro"
+        }
+      ],
+      "palavras": [],
+      "exercicios": [
+        {
+          "tipo": "ouvir",
+          "audio": "七",
+          "pergunta": "Which syllable did you hear?",
+          "opcoes": [
+            "qī",
+            "jī",
+            "xī",
+            "chī"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "ouvir",
+          "audio": "是",
+          "pergunta": "Which syllable did you hear?",
+          "opcoes": [
+            "shì",
+            "sì",
+            "xì",
+            "rì"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "Which initial sounds closest to the \"tch\" in \"tchau\"?",
+          "opcoes": [
+            "q",
+            "x",
+            "j",
+            "z"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "ouvir",
+          "audio": "四",
+          "pergunta": "Which syllable did you hear?",
+          "opcoes": [
+            "sì",
+            "shì",
+            "xì",
+            "cì"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "How is the u in 去 qù pronounced?",
+          "opcoes": [
+            "Like ü: an i with rounded lips",
+            "Like the Portuguese u",
+            "Like an o",
+            "It is silent"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "ouvir",
+          "audio": "九",
+          "pergunta": "Which syllable did you hear?",
+          "opcoes": [
+            "jiǔ",
+            "qiǔ",
+            "xiǔ",
+            "jiù"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "ditado",
+          "frase": "人",
+          "resposta": "rén",
+          "traducao": "person",
+          "explicacao": "Type the pinyin with the tone as a number: ren2."
+        },
+        {
+          "tipo": "falar",
+          "frase": "他是谁？",
+          "pinyin": "tā shì shéi",
+          "traducao": "Who is he?"
+        }
+      ]
+    },
+    {
+      "id": "zh-u01-l03",
+      "titulo": "Tone changes",
+      "explicacao": [
+        {
+          "tipo": "texto",
+          "texto": "Some syllables change tone depending on the syllable that follows. The dictionary form stays the same, but you say it differently."
+        },
+        {
+          "tipo": "tabela",
+          "cabecalho": [
+            "Rule",
+            "Written",
+            "Said"
+          ],
+          "linhas": [
+            [
+              "3rd + 3rd: the first becomes 2nd",
+              "你好 nǐ hǎo",
+              "ní hǎo"
+            ],
+            [
+              "不 before a 4th tone becomes 2nd",
+              "不是 bù shì",
+              "bú shì"
+            ],
+            [
+              "一 before a 4th tone becomes 2nd",
+              "一个 yī gè",
+              "yí gè"
+            ],
+            [
+              "一 before a 1st, 2nd or 3rd tone becomes 4th",
+              "一起 yī qǐ",
+              "yì qǐ"
+            ],
+            [
+              "一 alone, when counting or at the end stays 1st",
+              "第一 dì yī",
+              "dì yī"
+            ]
+          ]
+        },
+        {
+          "tipo": "dica",
+          "texto": "In this app, words with 一 and 不 show the tone you actually say, as most textbooks do: 一起 yì qǐ, 不客气 bú kè qi. The 3rd tone change is not marked: 你好 stays nǐ hǎo."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The neutral tone is short and light. It shows up in the second syllable of many common words: 爸爸 bà ba, 朋友 péng you, 谢谢 xiè xie."
+        }
+      ],
+      "exemplos": [
+        {
+          "frase": "你好",
+          "pinyin": "nǐ hǎo",
+          "en": "hello",
+          "pt": "olá"
+        },
+        {
+          "frase": "不是",
+          "pinyin": "bú shì",
+          "en": "is not; no",
+          "pt": "não é; não"
+        },
+        {
+          "frase": "一起",
+          "pinyin": "yì qǐ",
+          "en": "together",
+          "pt": "juntos"
+        },
+        {
+          "frase": "一个人",
+          "pinyin": "yí gè rén",
+          "en": "one person; alone",
+          "pt": "uma pessoa; sozinho"
+        },
+        {
+          "frase": "很好",
+          "pinyin": "hěn hǎo",
+          "en": "very good",
+          "pt": "muito bom"
+        }
+      ],
+      "palavras": [
+        {
+          "palavra": "不是",
+          "pinyin": "bú shì",
+          "classe": "phrase",
+          "en": "is not; no",
+          "pt": "não é; não"
+        },
+        {
+          "palavra": "一个人",
+          "pinyin": "yí gè rén",
+          "classe": "phrase",
+          "en": "one person; alone",
+          "pt": "uma pessoa; sozinho"
+        },
+        {
+          "palavra": "很好",
+          "pinyin": "hěn hǎo",
+          "classe": "phrase",
+          "en": "very good",
+          "pt": "muito bom"
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "escolha",
+          "pergunta": "How do you actually say 你好?",
+          "opcoes": [
+            "ní hǎo",
+            "nǐ hǎo, both syllables low",
+            "nǐ hào",
+            "ní hāo"
+          ],
+          "correta": 0,
+          "explicacao": "Two 3rd tones in a row: the first becomes a 2nd tone."
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "Before a 4th tone, 不 is said as...",
+          "opcoes": [
+            "bú",
+            "bū",
+            "bǔ",
+            "it doesn't change"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "How is 一 said in 一起 (yī + qǐ)?",
+          "opcoes": [
+            "yì",
+            "yí",
+            "yī",
+            "yǐ"
+          ],
+          "correta": 0,
+          "explicacao": "Before a 1st, 2nd or 3rd tone, 一 becomes 4th tone."
+        },
+        {
+          "tipo": "ouvir",
+          "audio": "不是",
+          "pergunta": "What did you hear?",
+          "opcoes": [
+            "bú shì",
+            "bǔ shì",
+            "bū shì",
+            "bú sì"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "Which word ends in a neutral tone?",
+          "opcoes": [
+            "朋友 péng you",
+            "学习 xué xí",
+            "今天 jīn tiān",
+            "你好 nǐ hǎo"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "ouvir",
+          "audio": "一个",
+          "pergunta": "What did you hear?",
+          "opcoes": [
+            "yí gè",
+            "yì gè",
+            "yǐ gè",
+            "yí gě"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "ditado",
+          "frase": "不对",
+          "resposta": "bú duì",
+          "aceitas": [
+            "bù duì"
+          ],
+          "traducao": "wrong, incorrect",
+          "explicacao": "Write the tone you actually say: bu2 dui4. The dictionary form bu4 dui4 is also accepted."
+        },
+        {
+          "tipo": "falar",
+          "frase": "你好，我们一起去吧。",
+          "pinyin": "nǐ hǎo wǒ men yì qǐ qù ba",
+          "traducao": "Hi, let's go together."
+        }
       ]
     }
   ]

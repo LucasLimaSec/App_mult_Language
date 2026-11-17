@@ -32,8 +32,9 @@ export default function Inicio() {
 
       <Cartao titulo="Por onde começar">
         <Paragrafo>
-          Abra a aba Cartões para revisar o vocabulário de espanhol e de chinês. As lições e a
-          prática de fala chegam nas próximas fases.
+          Na aba Lições você segue a trilha de espanhol e de chinês; as palavras de cada lição
+          entram nos seus cartões. Na aba Cartões você revisa o vocabulário. A prática de fala em
+          inglês chega na próxima fase.
         </Paragrafo>
       </Cartao>
     </Tela>

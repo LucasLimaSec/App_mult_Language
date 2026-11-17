@@ -1,30 +1,13 @@
-import { readdirSync, readFileSync } from 'node:fs';
-import { join } from 'node:path';
 import type { DatabaseSync } from 'node:sqlite';
 
+import { limparBanco } from '../../testes/bancoEmMemoria';
 import { carregarFila, gravarNovosPorDia, problemaDaPalavraManual, resumoDoIdioma } from '../cartoes';
 
-// Troca o banco do aparelho por um SQLite em memória com as mesmas migrations,
-// para as consultas da fila rodarem de verdade nos testes.
-jest.mock('../client', () => {
-  const { DatabaseSync: Banco } = require('node:sqlite');
-  const { drizzle } = require('drizzle-orm/sqlite-proxy');
-  const sqlite = new Banco(':memory:');
-  const db = drizzle(async (sql: string, params: unknown[], method: string) => {
-    const comando = sqlite.prepare(sql);
-    if (method === 'run') {
-      comando.run(...params);
-      return { rows: [] };
-    }
-    const linhas = comando.all(...params).map((linha: object) => Object.values(linha));
-    return { rows: method === 'get' ? linhas[0] : linhas };
-  });
-  return { db, sqlite };
-});
+// Banco em memória com as migrations reais, para as consultas da fila rodarem de verdade.
+jest.mock('../client', () => require('../../testes/bancoEmMemoria').criarBancoEmMemoria());
 
 const { sqlite } = jest.requireMock('../client') as { sqlite: DatabaseSync };
 
-const PASTA = join(__dirname, '..', '..', '..', 'drizzle');
 const AGORA = new Date(2026, 10, 16, 15, 0, 0);
 const HOJE_CEDO = new Date(2026, 10, 16, 8, 0, 0);
 const ONTEM = new Date(2026, 10, 15, 15, 0, 0);
@@ -76,18 +59,7 @@ function registrarPrimeiraRevisao(cardId: number, quando: Date) {
     .run(cardId, seg(quando));
 }
 
-beforeAll(() => {
-  sqlite.exec('PRAGMA foreign_keys = ON;');
-  for (const arquivo of readdirSync(PASTA).filter((nome) => nome.endsWith('.sql')).sort()) {
-    for (const comando of readFileSync(join(PASTA, arquivo), 'utf8').split('--> statement-breakpoint')) {
-      sqlite.exec(comando);
-    }
-  }
-});
-
-beforeEach(() => {
-  sqlite.exec('DELETE FROM reviews; DELETE FROM cards; DELETE FROM settings;');
-});
+beforeEach(() => limparBanco(sqlite));
 
 const idsDaFila = async () => (await carregarFila('es', AGORA)).map((card) => card.id);
 

@@ -30,62 +30,200 @@
       "id": "es-u01-l01",
       "titulo": "Greetings and goodbyes",
       "explicacao": [
-        { "tipo": "texto", "texto": "In Spanish, the greeting changes with the time of day. \"Hola\" works at any time and with anyone." },
         {
-          "tipo": "tabela",
-          "cabecalho": ["Spanish", "When", "English"],
-          "linhas": [
-            ["Hola", "any time", "hi, hello"],
-            ["Buenos días", "until about noon", "good morning"],
-            ["Buenas tardes", "from noon until dark", "good afternoon"],
-            ["Buenas noches", "after dark, and before bed", "good evening, good night"]
-          ]
-        },
-        { "tipo": "dica", "texto": "Portuguese says \"bom dia\" in the singular, but Spanish always uses the plural: buenos días, buenas tardes, buenas noches." },
-        { "tipo": "texto", "texto": "To ask how someone is, say \"¿Cómo estás?\" to a friend and \"¿Cómo está?\" to someone you treat formally. \"¿Qué tal?\" works in both cases." },
-        {
-          "tipo": "tabela",
-          "cabecalho": ["Answer", "English"],
-          "linhas": [
-            ["Muy bien, gracias. ¿Y tú?", "Very well, thanks. And you?"],
-            ["Bien.", "Fine."],
-            ["Más o menos.", "So-so."],
-            ["Mal.", "Not well."]
-          ]
+          "tipo": "texto",
+          "texto": "In Spanish, the greeting changes with the time of day. \"Hola\" works at any time and with anyone."
         },
         {
           "tipo": "tabela",
-          "cabecalho": ["Goodbye", "English"],
+          "cabecalho": [
+            "Spanish",
+            "When",
+            "English"
+          ],
           "linhas": [
-            ["Adiós", "goodbye"],
-            ["Hasta luego", "see you later"],
-            ["Hasta mañana", "see you tomorrow"],
-            ["Nos vemos", "see you"],
-            ["Que te vaya bien", "take care (literally: may it go well for you)"]
+            [
+              "Hola",
+              "any time",
+              "hi, hello"
+            ],
+            [
+              "Buenos días",
+              "until about noon",
+              "good morning"
+            ],
+            [
+              "Buenas tardes",
+              "from noon until dark",
+              "good afternoon"
+            ],
+            [
+              "Buenas noches",
+              "after dark, and before bed",
+              "good evening, good night"
+            ]
           ]
         },
-        { "tipo": "dica", "texto": "In Mexico you will often hear \"¿Qué onda?\" among friends. It is very informal, like \"E aí?\" in Portuguese." }
+        {
+          "tipo": "dica",
+          "texto": "Portuguese says \"bom dia\" in the singular, but Spanish always uses the plural: buenos días, buenas tardes, buenas noches."
+        },
+        {
+          "tipo": "texto",
+          "texto": "To ask how someone is, say \"¿Cómo estás?\" to a friend and \"¿Cómo está?\" to someone you treat formally. \"¿Qué tal?\" works in both cases."
+        },
+        {
+          "tipo": "tabela",
+          "cabecalho": [
+            "Answer",
+            "English"
+          ],
+          "linhas": [
+            [
+              "Muy bien, gracias. ¿Y tú?",
+              "Very well, thanks. And you?"
+            ],
+            [
+              "Bien.",
+              "Fine."
+            ],
+            [
+              "Más o menos.",
+              "So-so."
+            ],
+            [
+              "Mal.",
+              "Not well."
+            ]
+          ]
+        },
+        {
+          "tipo": "tabela",
+          "cabecalho": [
+            "Goodbye",
+            "English"
+          ],
+          "linhas": [
+            [
+              "Adiós",
+              "goodbye"
+            ],
+            [
+              "Hasta luego",
+              "see you later"
+            ],
+            [
+              "Hasta mañana",
+              "see you tomorrow"
+            ],
+            [
+              "Nos vemos",
+              "see you"
+            ],
+            [
+              "Que te vaya bien",
+              "take care (literally: may it go well for you)"
+            ]
+          ]
+        },
+        {
+          "tipo": "dica",
+          "texto": "In Mexico you will often hear \"¿Qué onda?\" among friends. It is very informal, like \"E aí?\" in Portuguese."
+        }
       ],
       "exemplos": [
-        { "frase": "Buenos días, ¿cómo está?", "en": "Good morning, how are you?", "pt": "Bom dia, como o senhor está?" },
-        { "frase": "Hola, ¿qué tal?", "en": "Hi, how's it going?", "pt": "Oi, tudo bem?" },
-        { "frase": "Muy bien, gracias. ¿Y tú?", "en": "Very well, thanks. And you?", "pt": "Muito bem, obrigado. E você?" },
-        { "frase": "Buenas noches, hasta mañana.", "en": "Good night, see you tomorrow.", "pt": "Boa noite, até amanhã." },
-        { "frase": "Adiós, que te vaya bien.", "en": "Goodbye, take care.", "pt": "Tchau, tudo de bom." }
+        {
+          "frase": "Buenos días, ¿cómo está?",
+          "en": "Good morning, how are you?",
+          "pt": "Bom dia, como o senhor está?"
+        },
+        {
+          "frase": "Hola, ¿qué tal?",
+          "en": "Hi, how's it going?",
+          "pt": "Oi, tudo bem?"
+        },
+        {
+          "frase": "Muy bien, gracias. ¿Y tú?",
+          "en": "Very well, thanks. And you?",
+          "pt": "Muito bem, obrigado. E você?"
+        },
+        {
+          "frase": "Buenas noches, hasta mañana.",
+          "en": "Good night, see you tomorrow.",
+          "pt": "Boa noite, até amanhã."
+        },
+        {
+          "frase": "Adiós, que te vaya bien.",
+          "en": "Goodbye, take care.",
+          "pt": "Tchau, tudo de bom."
+        }
       ],
       "palavras": [
-        { "palavra": "buenas tardes", "classe": "phrase", "en": "good afternoon", "pt": "boa tarde", "exemplo": "Buenas tardes, señora.", "exemploEn": "Good afternoon, ma'am.", "exemploPt": "Boa tarde, senhora." },
-        { "palavra": "buenas noches", "classe": "phrase", "en": "good evening, good night", "pt": "boa noite", "exemplo": "Buenas noches a todos.", "exemploEn": "Good evening, everyone.", "exemploPt": "Boa noite a todos." },
-        { "palavra": "¿qué tal?", "classe": "phrase", "en": "how's it going?", "pt": "tudo bem?, como vai?", "exemplo": "Hola, Ana, ¿qué tal?", "exemploEn": "Hi, Ana, how's it going?", "exemploPt": "Oi, Ana, tudo bem?" },
-        { "palavra": "más o menos", "classe": "phrase", "en": "so-so", "pt": "mais ou menos", "exemplo": "Hoy estoy más o menos.", "exemploEn": "I'm so-so today.", "exemploPt": "Hoje estou mais ou menos." },
-        { "palavra": "hasta mañana", "classe": "phrase", "en": "see you tomorrow", "pt": "até amanhã", "exemplo": "Me voy, hasta mañana.", "exemploEn": "I'm leaving, see you tomorrow.", "exemploPt": "Estou indo, até amanhã." },
-        { "palavra": "nos vemos", "classe": "phrase", "en": "see you", "pt": "a gente se vê", "exemplo": "Nos vemos el lunes.", "exemploEn": "See you on Monday.", "exemploPt": "A gente se vê na segunda." }
+        {
+          "palavra": "buenas tardes",
+          "classe": "phrase",
+          "en": "good afternoon",
+          "pt": "boa tarde",
+          "exemplo": "Buenas tardes, señora.",
+          "exemploEn": "Good afternoon, ma'am.",
+          "exemploPt": "Boa tarde, senhora."
+        },
+        {
+          "palavra": "buenas noches",
+          "classe": "phrase",
+          "en": "good evening, good night",
+          "pt": "boa noite",
+          "exemplo": "Buenas noches a todos.",
+          "exemploEn": "Good evening, everyone.",
+          "exemploPt": "Boa noite a todos."
+        },
+        {
+          "palavra": "¿qué tal?",
+          "classe": "phrase",
+          "en": "how's it going?",
+          "pt": "tudo bem?, como vai?",
+          "exemplo": "Hola, Ana, ¿qué tal?",
+          "exemploEn": "Hi, Ana, how's it going?",
+          "exemploPt": "Oi, Ana, tudo bem?"
+        },
+        {
+          "palavra": "más o menos",
+          "classe": "phrase",
+          "en": "so-so",
+          "pt": "mais ou menos",
+          "exemplo": "Hoy estoy más o menos.",
+          "exemploEn": "I'm so-so today.",
+          "exemploPt": "Hoje estou mais ou menos."
+        },
+        {
+          "palavra": "hasta mañana",
+          "classe": "phrase",
+          "en": "see you tomorrow",
+          "pt": "até amanhã",
+          "exemplo": "Me voy, hasta mañana.",
+          "exemploEn": "I'm leaving, see you tomorrow.",
+          "exemploPt": "Estou indo, até amanhã."
+        },
+        {
+          "palavra": "nos vemos",
+          "classe": "phrase",
+          "en": "see you",
+          "pt": "a gente se vê",
+          "exemplo": "Nos vemos el lunes.",
+          "exemploEn": "See you on Monday.",
+          "exemploPt": "A gente se vê na segunda."
+        }
       ],
       "exercicios": [
         {
           "tipo": "escolha",
           "pergunta": "It's 3 p.m. How do you greet a new colleague?",
-          "opcoes": ["Buenos días", "Buenas tardes", "Buenas noches", "Buena tarde"],
+          "opcoes": [
+            "Buenos días",
+            "Buenas tardes",
+            "Buenas noches",
+            "Buena tarde"
+          ],
           "correta": 1,
           "explicacao": "From noon until dark you say \"buenas tardes\", always in the plural."
         },
@@ -93,20 +231,38 @@
           "tipo": "ouvir",
           "audio": "Hasta mañana.",
           "pergunta": "What did you hear?",
-          "opcoes": ["See you tomorrow.", "See you later.", "Good morning.", "Goodbye."],
+          "opcoes": [
+            "See you tomorrow.",
+            "See you later.",
+            "Good morning.",
+            "Goodbye."
+          ],
           "correta": 0
         },
         {
           "tipo": "escolha",
           "pergunta": "Which answer fits \"¿Cómo estás?\"",
-          "opcoes": ["Me llamo Ana.", "Bien, gracias. ¿Y tú?", "Hasta luego.", "Buenas noches."],
+          "opcoes": [
+            "Me llamo Ana.",
+            "Bien, gracias. ¿Y tú?",
+            "Hasta luego.",
+            "Buenas noches."
+          ],
           "correta": 1
         },
         {
           "tipo": "montar",
           "traducao": "Fine, thanks. And you?",
-          "blocos": ["Bien", "gracias", "y", "tú"],
-          "extras": ["tu", "bueno"],
+          "blocos": [
+            "Bien",
+            "gracias",
+            "y",
+            "tú"
+          ],
+          "extras": [
+            "tu",
+            "bueno"
+          ],
           "explicacao": "\"Tú\" with an accent means you; \"tu\" without it means your."
         },
         {
@@ -117,20 +273,491 @@
         {
           "tipo": "escolha",
           "pergunta": "You are leaving work and will see your colleagues tomorrow. What do you say?",
-          "opcoes": ["Hasta mañana.", "Buenos días.", "¿Qué tal?", "Más o menos."],
+          "opcoes": [
+            "Hasta mañana.",
+            "Buenos días.",
+            "¿Qué tal?",
+            "Más o menos."
+          ],
           "correta": 0
         },
         {
           "tipo": "falar",
           "frase": "Buenas tardes, ¿cómo está?",
           "traducao": "Good afternoon, how are you?",
-          "aceitas": ["Buenas tardes, cómo estás"]
+          "aceitas": [
+            "Buenas tardes, cómo estás"
+          ]
         },
         {
           "tipo": "montar",
           "traducao": "Good night, see you tomorrow.",
-          "blocos": ["Buenas", "noches", "hasta", "mañana"],
-          "extras": ["buenos", "luego"]
+          "blocos": [
+            "Buenas",
+            "noches",
+            "hasta",
+            "mañana"
+          ],
+          "extras": [
+            "buenos",
+            "luego"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "es-u01-l02",
+      "titulo": "What's your name?",
+      "explicacao": [
+        {
+          "tipo": "texto",
+          "texto": "To give your name, say \"Me llamo...\" (literally \"I call myself...\") or simply \"Soy...\" (I am). To ask, say \"¿Cómo te llamas?\" to a friend and \"¿Cómo se llama?\" when you speak formally."
+        },
+        {
+          "tipo": "tabela",
+          "cabecalho": [
+            "Pronoun",
+            "English",
+            "ser (to be)"
+          ],
+          "linhas": [
+            [
+              "yo",
+              "I",
+              "soy"
+            ],
+            [
+              "tú",
+              "you (informal)",
+              "eres"
+            ],
+            [
+              "usted",
+              "you (formal)",
+              "es"
+            ],
+            [
+              "él",
+              "he",
+              "es"
+            ],
+            [
+              "ella",
+              "she",
+              "es"
+            ]
+          ]
+        },
+        {
+          "tipo": "dica",
+          "texto": "\"Usted\" means you, but it takes the same verb form as él and ella: \"Usted es muy amable\" (You are very kind)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In Mexico people use \"tú\" with friends, family, children and colleagues of their age, and \"usted\" with older people, customers, officials and strangers in formal situations. When in doubt, start with usted."
+        },
+        {
+          "tipo": "texto",
+          "texto": "When you meet someone, say \"Mucho gusto\" (nice to meet you). A man can also say \"Encantado\" and a woman \"Encantada\". The usual answer is \"Igualmente\" (likewise)."
+        },
+        {
+          "tipo": "dica",
+          "texto": "Spanish usually drops the subject pronoun, because the verb already shows who it is: \"Soy Lucas\" sounds more natural than \"Yo soy Lucas\"."
+        }
+      ],
+      "exemplos": [
+        {
+          "frase": "¿Cómo te llamas?",
+          "en": "What's your name?",
+          "pt": "Como você se chama?"
+        },
+        {
+          "frase": "Me llamo Lucas. ¿Y tú?",
+          "en": "My name is Lucas. And you?",
+          "pt": "Eu me chamo Lucas. E você?"
+        },
+        {
+          "frase": "¿Cómo se llama usted?",
+          "en": "What is your name? (formal)",
+          "pt": "Como o senhor se chama?"
+        },
+        {
+          "frase": "Ella es Ana, mi compañera de trabajo.",
+          "en": "This is Ana, my coworker.",
+          "pt": "Esta é a Ana, minha colega de trabalho."
+        },
+        {
+          "frase": "Mucho gusto. Igualmente.",
+          "en": "Nice to meet you. Likewise.",
+          "pt": "Muito prazer. Igualmente."
+        }
+      ],
+      "palavras": [
+        {
+          "palavra": "¿cómo te llamas?",
+          "classe": "phrase",
+          "en": "what's your name?",
+          "pt": "como você se chama?",
+          "exemplo": "Hola, ¿cómo te llamas?",
+          "exemploEn": "Hi, what's your name?",
+          "exemploPt": "Oi, como você se chama?"
+        },
+        {
+          "palavra": "encantado",
+          "classe": "adjective",
+          "en": "delighted; nice to meet you",
+          "pt": "encantado; muito prazer",
+          "exemplo": "Encantado de conocerte.",
+          "exemploEn": "Nice to meet you.",
+          "exemploPt": "Prazer em conhecer você.",
+          "nota": "A woman says \"encantada\"."
+        },
+        {
+          "palavra": "igualmente",
+          "classe": "adverb",
+          "en": "likewise, same to you",
+          "pt": "igualmente",
+          "exemplo": "Mucho gusto. Igualmente.",
+          "exemploEn": "Nice to meet you. Likewise.",
+          "exemploPt": "Muito prazer. Igualmente."
+        },
+        {
+          "palavra": "compañero",
+          "classe": "noun",
+          "en": "classmate, colleague, companion",
+          "pt": "colega, companheiro",
+          "exemplo": "Es mi compañero de clase.",
+          "exemploEn": "He's my classmate.",
+          "exemploPt": "Ele é meu colega de classe."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "escolha",
+          "pergunta": "How do you ask a friend's name?",
+          "opcoes": [
+            "¿Cómo te llamas?",
+            "¿Cómo se llama?",
+            "¿Cómo estás?",
+            "¿Qué tal?"
+          ],
+          "correta": 0,
+          "explicacao": "\"¿Cómo se llama?\" is the formal version, for usted."
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "Which form of ser goes with \"usted\"?",
+          "opcoes": [
+            "soy",
+            "eres",
+            "es",
+            "está"
+          ],
+          "correta": 2,
+          "explicacao": "Usted takes the same verb form as él and ella: usted es."
+        },
+        {
+          "tipo": "montar",
+          "traducao": "My name is Lucas.",
+          "blocos": [
+            "Me",
+            "llamo",
+            "Lucas"
+          ],
+          "extras": [
+            "te",
+            "llama"
+          ]
+        },
+        {
+          "tipo": "ouvir",
+          "audio": "Mucho gusto.",
+          "pergunta": "What did you hear?",
+          "opcoes": [
+            "Nice to meet you.",
+            "Thank you very much.",
+            "See you later.",
+            "Very well."
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "Someone says \"Mucho gusto\". What do you answer?",
+          "opcoes": [
+            "Igualmente.",
+            "De nada.",
+            "Hasta luego.",
+            "Más o menos."
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "ditado",
+          "frase": "Él es Carlos.",
+          "traducao": "He is Carlos.",
+          "explicacao": "\"Él\" with an accent means he; \"el\" without it means the."
+        },
+        {
+          "tipo": "montar",
+          "traducao": "What is your name? (formal)",
+          "blocos": [
+            "Cómo",
+            "se",
+            "llama",
+            "usted"
+          ],
+          "extras": [
+            "te",
+            "llamas"
+          ]
+        },
+        {
+          "tipo": "falar",
+          "frase": "Me llamo Lucas, mucho gusto.",
+          "traducao": "My name is Lucas, nice to meet you."
+        }
+      ]
+    },
+    {
+      "id": "es-u01-l03",
+      "titulo": "Where are you from?",
+      "explicacao": [
+        {
+          "tipo": "texto",
+          "texto": "To say where you are from, use ser + de + place: \"Soy de Brasil.\" To ask, say \"¿De dónde eres?\" to a friend or \"¿De dónde es usted?\" formally."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Nationalities are adjectives, so they agree with the person: a man is \"brasileño\" and a woman is \"brasileña\". They are written in lowercase."
+        },
+        {
+          "tipo": "tabela",
+          "cabecalho": [
+            "Country",
+            "Man",
+            "Woman"
+          ],
+          "linhas": [
+            [
+              "México",
+              "mexicano",
+              "mexicana"
+            ],
+            [
+              "Brasil",
+              "brasileño",
+              "brasileña"
+            ],
+            [
+              "España",
+              "español",
+              "española"
+            ],
+            [
+              "Argentina",
+              "argentino",
+              "argentina"
+            ],
+            [
+              "China",
+              "chino",
+              "china"
+            ],
+            [
+              "Estados Unidos",
+              "estadounidense",
+              "estadounidense"
+            ],
+            [
+              "Canadá",
+              "canadiense",
+              "canadiense"
+            ]
+          ]
+        },
+        {
+          "tipo": "dica",
+          "texto": "Nationalities ending in -e do not change for men and women: estadounidense, canadiense."
+        },
+        {
+          "tipo": "texto",
+          "texto": "To say where you live, use vivir with en: \"Vivo en São Paulo.\" Remember: de for where you come from, en for where you are."
+        },
+        {
+          "tipo": "dica",
+          "texto": "\"Brasileño\" is the most common form. In Argentina and Uruguay you will also hear \"brasilero\"."
+        }
+      ],
+      "exemplos": [
+        {
+          "frase": "¿De dónde eres? Soy de Brasil.",
+          "en": "Where are you from? I'm from Brazil.",
+          "pt": "De onde você é? Sou do Brasil."
+        },
+        {
+          "frase": "Soy brasileño, pero vivo en México.",
+          "en": "I'm Brazilian, but I live in Mexico.",
+          "pt": "Sou brasileiro, mas moro no México."
+        },
+        {
+          "frase": "Ella es mexicana, de Guadalajara.",
+          "en": "She's Mexican, from Guadalajara.",
+          "pt": "Ela é mexicana, de Guadalajara."
+        },
+        {
+          "frase": "¿De dónde es usted?",
+          "en": "Where are you from? (formal)",
+          "pt": "De onde o senhor é?"
+        },
+        {
+          "frase": "Mi jefe es estadounidense.",
+          "en": "My boss is American.",
+          "pt": "Meu chefe é americano."
+        }
+      ],
+      "palavras": [
+        {
+          "palavra": "¿de dónde?",
+          "classe": "phrase",
+          "en": "where from?",
+          "pt": "de onde?",
+          "exemplo": "¿De dónde eres?",
+          "exemploEn": "Where are you from?",
+          "exemploPt": "De onde você é?"
+        },
+        {
+          "palavra": "brasileño",
+          "classe": "adjective",
+          "en": "Brazilian",
+          "pt": "brasileiro",
+          "exemplo": "Mi esposa es brasileña.",
+          "exemploEn": "My wife is Brazilian.",
+          "exemploPt": "Minha esposa é brasileira."
+        },
+        {
+          "palavra": "mexicano",
+          "classe": "adjective",
+          "en": "Mexican",
+          "pt": "mexicano",
+          "exemplo": "La comida mexicana es deliciosa.",
+          "exemploEn": "Mexican food is delicious.",
+          "exemploPt": "A comida mexicana é deliciosa."
+        },
+        {
+          "palavra": "estadounidense",
+          "classe": "adjective",
+          "en": "American (from the USA)",
+          "pt": "estadunidense, americano",
+          "exemplo": "Mi jefe es estadounidense.",
+          "exemploEn": "My boss is American.",
+          "exemploPt": "Meu chefe é americano."
+        },
+        {
+          "palavra": "español",
+          "classe": "adjective",
+          "en": "Spanish",
+          "pt": "espanhol",
+          "exemplo": "Estudio español todos los días.",
+          "exemploEn": "I study Spanish every day.",
+          "exemploPt": "Estudo espanhol todos os dias."
+        },
+        {
+          "palavra": "chino",
+          "classe": "adjective",
+          "en": "Chinese",
+          "pt": "chinês",
+          "exemplo": "También estudio chino.",
+          "exemploEn": "I also study Chinese.",
+          "exemploPt": "Também estudo chinês."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "escolha",
+          "pergunta": "Complete: Soy ___ Brasil.",
+          "opcoes": [
+            "de",
+            "en",
+            "a",
+            "del"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "Ana is from Mexico. Ana es ___.",
+          "opcoes": [
+            "mexicano",
+            "mexicana",
+            "Mexicana",
+            "mexicanos"
+          ],
+          "correta": 1,
+          "explicacao": "The nationality agrees with Ana (feminine) and is written in lowercase."
+        },
+        {
+          "tipo": "ouvir",
+          "audio": "¿De dónde eres?",
+          "pergunta": "What did you hear?",
+          "opcoes": [
+            "Where are you from?",
+            "Where do you live?",
+            "What's your name?",
+            "How are you?"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "montar",
+          "traducao": "I'm Brazilian, but I live in Mexico.",
+          "blocos": [
+            "Soy",
+            "brasileño",
+            "pero",
+            "vivo",
+            "en",
+            "México"
+          ],
+          "extras": [
+            "de",
+            "estoy"
+          ]
+        },
+        {
+          "tipo": "ditado",
+          "frase": "Soy de Brasil.",
+          "traducao": "I'm from Brazil."
+        },
+        {
+          "tipo": "escolha",
+          "pergunta": "Which nationality is the same for men and women?",
+          "opcoes": [
+            "estadounidense",
+            "mexicano",
+            "español",
+            "chino"
+          ],
+          "correta": 0
+        },
+        {
+          "tipo": "montar",
+          "traducao": "Where are you from? (formal)",
+          "blocos": [
+            "De",
+            "dónde",
+            "es",
+            "usted"
+          ],
+          "extras": [
+            "eres",
+            "está"
+          ]
+        },
+        {
+          "tipo": "falar",
+          "frase": "Soy brasileño y vivo en São Paulo.",
+          "traducao": "I'm Brazilian and I live in São Paulo."
         }
       ]
     }

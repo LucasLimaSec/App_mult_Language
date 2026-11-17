@@ -73,6 +73,24 @@ export async function diagnosticarVoz(): Promise<DiagnosticoVoz> {
   return diagnostico;
 }
 
+let diagnosticoEmCache: Promise<DiagnosticoVoz> | null = null;
+
+/**
+ * Locale que o reconhecimento do aparelho espera para o idioma (por exemplo
+ * "cmn-Hans-CN" em vez de "zh-CN"). Consulta o aparelho uma vez por execução.
+ */
+export async function localeParaReconhecer(idioma: Idioma): Promise<string | undefined> {
+  diagnosticoEmCache ??= diagnosticarVoz().catch((erro) => {
+    diagnosticoEmCache = null;
+    throw erro;
+  });
+  try {
+    return (await diagnosticoEmCache).modelos[idioma].localeDoAparelho;
+  } catch {
+    return undefined;
+  }
+}
+
 export type ResultadoDownload = 'dialogo_aberto' | 'baixado' | 'agendado';
 
 /** Pede ao Android o download do modelo offline do idioma (Android 13 ou mais novo). */

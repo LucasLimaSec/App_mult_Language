@@ -56,6 +56,8 @@ export default function LayoutRaiz() {
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="revisar/[idioma]" options={{ title: 'Revisão' }} />
         <Stack.Screen name="adicionar" options={{ title: 'Adicionar palavra' }} />
+        <Stack.Screen name="unidade/[id]" options={{ title: 'Unidade' }} />
+        <Stack.Screen name="licao/[id]" options={{ title: 'Lição' }} />
         <Stack.Screen name="testes/banco" options={{ title: 'Teste do banco' }} />
         <Stack.Screen name="testes/audio" options={{ title: 'Teste de áudio' }} />
         <Stack.Screen name="testes/voz" options={{ title: 'Teste de voz' }} />

@@ -15,6 +15,7 @@ export default function LayoutAbas() {
   return (
     <Tabs screenOptions={{ tabBarActiveTintColor: '#208AEF' }}>
       <Tabs.Screen name="index" options={{ title: 'Início', tabBarIcon: icone('home') }} />
+      <Tabs.Screen name="licoes" options={{ title: 'Lições', tabBarIcon: icone('book') }} />
       <Tabs.Screen name="cartoes" options={{ title: 'Cartões', tabBarIcon: icone('albums') }} />
       <Tabs.Screen name="ajustes" options={{ title: 'Ajustes', tabBarIcon: icone('settings') }} />
     </Tabs>

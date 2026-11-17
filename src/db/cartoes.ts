@@ -120,12 +120,18 @@ export function registrarResposta(card: Card, resposta: Resposta, agora: Date, d
   return { ...card, ...estado };
 }
 
-/** Grava um bloco de estudo de flashcards, para o painel de progresso. */
-export async function registrarSessao(idioma: Idioma, iniciadaEm: Date, terminadaEm: Date, itens: number) {
+/** Grava um bloco de estudo, para o painel de progresso. */
+export async function registrarSessao(
+  idioma: Idioma,
+  iniciadaEm: Date,
+  terminadaEm: Date,
+  itens: number,
+  tipo: 'flashcards' | 'licao' | 'fala' = 'flashcards',
+) {
   if (itens === 0) return;
   await db.insert(sessions).values({
     dia: chaveDoDia(iniciadaEm),
-    tipo: 'flashcards',
+    tipo,
     idioma,
     duracaoSeg: Math.round((terminadaEm.getTime() - iniciadaEm.getTime()) / 1000),
     itens,
